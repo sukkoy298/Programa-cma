@@ -1,3 +1,3 @@
 function volver() {
-    document.location.href="file:../Laboratorio/MenuLaboratorio.html"; 
+    document.location.href="file:../Programa-cma/MenuLaboratorio.html"; 
 }
