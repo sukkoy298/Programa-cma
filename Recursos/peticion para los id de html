@@ -1,0 +1,14 @@
+para mayor manejo en el arpatado de configuraciones, pido que sus id de objetos de html esten estructurados de la siguiente forma:
+-abreviacion del nombre del objeto
+-al final del id que tengan un numero que vaya en escala
+ejemplos:
+
+<label id="l1">label 1</label>
+<label id="l2">label 2</label>
+
+<input type="button" id ="btn1">
+<button id ="btn2">
+algo mas, los botones en especifico requiero que el aumento sea desde el 3 en adelante.
+por ultimo, pido que los id que creen los coloquen en este txt, para que todos sepamos que abreviatura utilizar en cada objeto,
+solo la abreviatura, los numeros en cada html tiene que empesar desde 0,(o 3 en caso del buttom):
+---------------------------------------------------------------------------------------------------------------------------------
