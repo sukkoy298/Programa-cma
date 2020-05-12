@@ -63,7 +63,7 @@ console.log(enviar[i]);
   break;
 }
 if (comprobante = true) {
-  document.location.href="file:///D:/Documents/Laboratorio/MenuLaboratorio.html";
+  document.location.href="file:file:../Programa-cma-master/MenuLaboratorio.html";
 }
 }
 }/* cierre envento enviar*/
@@ -87,5 +87,5 @@ if (comprobante = true) {
     }
 }/*cierre evento rectifiar*/
 function irmenu(){
-  document.location.href="file:../Laboratorio/MenuLaboratorio.html";
+  document.location.href="file:../Programa-cma-master/MenuLaboratorio.html";
 }/*cierre eventro ir menu*/
