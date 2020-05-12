@@ -87,5 +87,5 @@ if (comprobante = true) {
     }
 }/*cierre evento rectifiar*/
 function irmenu(){
-  document.location.href="file:../Laboratorio/MenuLaboratorio.html";
+  document.location.href="file:../Programa-cma/MenuLaboratorio.html";
 }/*cierre eventro ir menu*/
