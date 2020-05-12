@@ -1,0 +1,193 @@
+/*Configuraciones generales*/
+*{
+	border-radius: 10px;
+	font-family: "sans-serif";
+	font-size: 98%;
+	}
+	/*Configuraciones generales para distintos objetos*/
+body{
+	background-color: #E0E0E0;
+	margin: 10px;
+	width: auto;
+	height: auto;
+	position: relative;
+}
+header {
+	background-color: #4267B2;
+	height: 15%;
+	width: 100%;
+	border: 3px #dfdfdf;
+	border-style: inset;
+	border: 4px double #009245;
+			border-top: 5px solid #614385;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#Logo {
+	position: static;
+	margin-top: 0.7%;
+	margin-right: 0.7%;
+	height: 80%;
+	width: 13%;
+border-radius: 0px;
+float: right;
+
+}
+input[type = "Button"]{
+	position: relative;
+	border-style: inset;
+	border: 4px double #009245;
+			border-top: 5px solid #614385;
+				background-color: transparent;
+				height: 34%;
+				width: 15%;
+						top: 15%;
+						transition: .6s ease all;
+}
+input[type = "text"]{
+	width: 100%;
+	height: 100%;
+border: 1px solid #444444;
+padding: 3%;
+}
+table{
+	background-color: #eeecec;
+	border: 4px double #009245;
+			border-top: 5px solid #614385;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+tr,th{
+ border:2px solid #bdc1bd;
+ padding: 1%;
+}
+/*Animaciones y cambios basicos al seleccionar*/
+input[type = "Button"]:hover{
+	border-color:rgba(90, 169, 127, 0.6);
+	border-top-color:rgba(127, 102, 156, 0.6);
+}
+input[type = "Button"]:active{
+	height: 30%;			
+	width: 12%;
+}
+/*Barra de configuraciones*/
+.Opacacion{
+	position: fixed;
+	top:0%;
+	left:0%;
+	right:0%;
+	bottom:0%;
+	background:rgba(0, 0, 0, 0.6);
+	display: flex;
+	visibility: hidden;
+	transition: .3s ease all;
+}
+/*Activar la visibilidad de configurar*/
+.Opacacion.activo{
+visibility: visible;
+}
+.ElFormulario{
+background: #E0E0E0;
+position: relative;
+top:10%;
+left:26%;
+right:26%;
+bottom:10%;
+height: 80%;
+width: 50%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*Acomodar de manera general los objetos de eleccion*/
+input[type = "color"]{
+float: left;
+clear: left;
+height: 16%;
+width: 25%;
+margin: 1%;
+margin-left: 2%;
+}
+#Acomodar_Configuraciones{
+	position: relative;
+	left:4.5%;
+	bottom: 1%;
+height: 80%;
+	width: 90%;
+	border: 0.5px solid #CACACA;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.EtiquetasC {
+	float: left;
+	clear: left;
+	margin-left: 2%;
+	margin-top: 1%;
+	margin-bottom: 0%;
+
+}
+/*Acomodar objetos especificos de muestra y accion*/
+#TLetra{
+	position: relative;
+	top: 2%;
+	left: 2%;
+float: left;
+clear: left;
+width: 25%;
+height: 5%;
+}
+#Tipografia{
+	position: relative;
+	top: 6%;
+	left: 2%;
+	float: left;
+	clear: left;
+	width: 25%;
+	height: 5%;
+	margin-bottom: 2%;
+}
+#etiqueta_del_colorfondo{
+	margin-top: 4%;
+	margin-left: 7%;
+}
+#Titulo_Cofiguraciones{
+	position: relative;
+	left: 41%;
+	right: 44%;
+}
+
+/*Muestras*/
+
+#prueba_Tipografia{
+	position: relative;
+	right:23%;
+	bottom:65%;
+	top:-65%;
+	float: right;
+}
+
+#muestra{
+	position: relative;
+	top: 20%;
+	left: 25%;
+	right: 20%;
+	width: 40%;
+	height: 10%;
+}
+/*Acciones*/
+#btn1{
+	position: relative;
+	top: 0%;
+	left: 18%;
+	width: 15%;
+	height: 8%;
+
+}
+#btn2{
+position: relative;
+top: 0%;
+left: 50%;
+width: 15%;
+height: 8%;
+}
+#cancelar{
+	border: 5px solid #d76767;
+}
+#cancelar:hover{
+border-color:rgba(215, 103, 103, 0.6);
+}

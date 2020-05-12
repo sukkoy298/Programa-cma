@@ -1,0 +1,7 @@
+Gama de Colores
+#E0E0E0 GRIS - Background (Body)
+#614385 MORADO
+#009245 VERDE - Border (Header)
+#4267B2 AZUL - Background (Header)
+#1668C4 - Background (input=submit y reset)
+#4A88F4 - Background (input=submit y reset):hover

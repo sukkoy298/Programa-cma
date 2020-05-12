@@ -1,0 +1,68 @@
+input[type="text"]{
+	position: relative;
+	top:1%;
+	left: 1%;
+	bottom: 1%;
+	width: 46%;
+	height: 18%;
+	padding: 0%;
+	padding-left: 2%;
+	margin-top: 2%;
+	margin-left: 2%;
+	clear: left;
+}
+#acomodarBusqueda{
+	margin-top: 2%;
+	width: 32%;
+	height: 30%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	float: left;
+}
+#btn4{
+position: relative;
+left: 25%;
+	width: 45%;
+	height: 20%;
+}
+.pacientes{
+	position: relative;
+	left: 4%;
+	top: 4%;
+	width: 40%;
+	float: left;
+}
+.historialMedico{
+	position: relative;
+	top: 4%;
+	right: 1%;
+	float: right;
+	width: 20%;
+}
+#cancelar{
+	position: relative;
+	left: 2%;
+	top: 25%;
+	width: 10%;
+	height: 40%;
+}
+.HistorialEspecifico{
+	position: fixed;
+	top:0%;
+	left:0%;
+	right:0%;
+	bottom:0%;
+	background:rgba(0, 0, 0, 0.6);
+	display: flex;
+	visibility: hidden;
+	transition: .3s ease all;
+}
+.HistorialEspecifico.activo{
+	visibility: visible;	
+}
+.DatoEspecificos{
+	position: relative;
+	left: 25%;
+	top:5%;
+	width: 50%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
