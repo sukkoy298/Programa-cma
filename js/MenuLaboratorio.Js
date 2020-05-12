@@ -37,7 +37,7 @@ window.addEventListener("load", function iniciar(){
             }
 });
 function siguiente() {
-    document.location.href="file:../Programa-cma-master/Laboratorio.html";
+    document.location.href="file:../Programa-cma-master/index-Laboratorio.html";
 }
 var condi = true;
 function seleccionManual() {
@@ -61,7 +61,7 @@ var aumenta = 0;
 function Cuestionar() {
 while (condi === false) {
     manual[aumenta].addEventListener("click", function(){
-        document.location.href="file:../Programa-cma-master/Laboratorio.html";
+        document.location.href="file:../Programa-cma-master/index-Laboratorio.html";
     });    
     aumenta ++;
 }
