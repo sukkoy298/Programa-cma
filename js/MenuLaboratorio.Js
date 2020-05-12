@@ -37,7 +37,7 @@ window.addEventListener("load", function iniciar(){
             }
 });
 function siguiente() {
-    document.location.href="file:../Laboratorio/Laboratorio.html";
+    document.location.href="file:../Programa-cma/Laboratorio.html";
 }
 var condi = true;
 function seleccionManual() {
@@ -61,11 +61,11 @@ var aumenta = 0;
 function Cuestionar() {
 while (condi === false) {
     manual[aumenta].addEventListener("click", function(){
-        document.location.href="file:///D:/Documents/Laboratorio/Laboratorio.html";
+        document.location.href="file:../Programa-cma/Laboratorio.html";
     });    
     aumenta ++;
 }
 }
 function Historial() {
-    document.location.href="file:../Laboratorio/Historial Medico.html";  
+    document.location.href="file:../Programa-cma/Historial Medico.html";  
 }
