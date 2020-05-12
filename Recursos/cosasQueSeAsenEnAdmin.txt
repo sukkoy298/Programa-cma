@@ -1,0 +1,3 @@
+-control de costos en examenes
+-ver historias medicas
+-inventario de reactivos
