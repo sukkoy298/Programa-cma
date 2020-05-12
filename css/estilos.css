@@ -146,12 +146,6 @@ main form .btn {
 	display: inline-block;
 	width: 48.49%;
 }
-
-.btn2 {
-	display: inline-block;
-	width: 48.49%;
-}
-
 .btn input[type=submit], input[type=reset] {
 	width: 100%;
 	padding: 12px;
