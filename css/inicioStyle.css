@@ -6,6 +6,8 @@
 }
 body{
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 .btn{
     padding: 5px;
@@ -22,7 +24,6 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: relative;
     top:100px;
-    left: 35%;
     background-color: #E0E0E0;
     height: 350px;
     width: 320px;
