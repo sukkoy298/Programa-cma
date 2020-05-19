@@ -1,188 +1,82 @@
-/*acciones de configuraciones*/
-var configurar = document.getElementById("Logo");
 var btncambiar = document.getElementById("btn2");
-/*datos iniciales */
-var color;
-var borde;
-var bordesSuperior;
-var valoresIniciales = [];/*por si el usuario desea cancelar los cambios*/
-var tipografias = ["","\"sans-serif\"","\"Arial\"" ];/*tipografias a disposicion*/
-valoresIniciales[0] = document.getElementById("color_Fondo").value;
-valoresIniciales[1] = document.getElementById("Color_Bordes").value;
-valoresIniciales[2] = document.getElementById("Color_Borde_superior").value;
-/*objetos a cambiar*/
-  var tLetras = document.getElementById("prueba_Tipografia");/*esto es un label*/
-  var letrasT = document.getElementById("TLetra");/*esto es la lista tama;os*/
-  var tipografia = document.getElementById("Tipografia");/*la lista de la tipografia*/
-  var seleccion = document.getElementById("muestra");/*este el boton pruebas*/
-  var pruebasFondo = document.getElementById("FondoPrueba");/**este es el fondo de configuraciones*/
-
-/*al inciar la pagina*/
+  var valorPropiedad = [];
+  var letrasT = document.getElementById("TLetra");/*tamaño de las letras,(no es optimo usar Ñ)*/
+  var tipografia = document.getElementById("Tipografia");
+  var valoresIniciales = ["#E0E0E0", "#009245", "#614385", 14,"\"sans-serif\""];/*por si el usuario desea cancelar los cambios*/
+  var tipografias = ["","\"sans-serif\"","\"Arial\"" ];/*tipografias a disposicion*/
+function colorfondo(valor){
+  valorPropiedad[0] = valor;
+  $('#FondoPrueba').css({'background-color': valorPropiedad[0]});
+  btncambiar.disabled = false;
+}
+function cambiarBorde(valor){
+  valorPropiedad[1] = valor;
+  $('#muestra').css({'border-color':valorPropiedad[1]});
+  btncambiar.disabled = false;
+}
+function cambiarBordeSuperior(valor){
+  valorPropiedad[2] = valor; 
+  $('#muestra').css({'border-top-color':valorPropiedad[2]});
+  btncambiar.disabled = false;
+}
+letrasT.addEventListener("change", function(){
+  valorPropiedad[3] = letrasT.value; 
+  $('#prueba_Tipografia').css({'font-size':valorPropiedad[3]});
+  btncambiar.disabled = false;
+});
+  tipografia.addEventListener("change", function(){
+  valorPropiedad[4] = tipografia.value;
+  $('#prueba_Tipografia').css({'font-family':valorPropiedad[4]});
+  btncambiar.disabled = false;
+});
 window.addEventListener("load", function(){
-for (var i = 12; i < 23; i++) {
-var t = document.createElement("option");/*creo la opcion de la lista*/
-t.value = i;/*le doy un valor*/
-  var texto = document.createTextNode(i);/*un texto*/
-  t.appendChild(texto);/*agrego el texto a la option*/
-letrasT.appendChild(t);/*agrego la option a el select*/
-}
-/*lo mismo de arriba pero con tipografias*/
-for (var i = 1; i <= 2; i++) {
-var t = document.createElement("option");
-t.value = tipografias[i];
-  var texto = document.createTextNode(tipografias[i]);
-  t.appendChild(texto);
-tipografia.appendChild(t);
-}
+  for (var i = 12; i < 23; i++) {
+    var size = document.createElement("option");/*creo la opcion de la lista*/
+    size.value = i;/*le doy un valor*/
+    var texto = document.createTextNode(i);/*un texto*/
+    size.appendChild(texto);/*agrego el texto a la option*/
+    letrasT.appendChild(size);/*agrego la option a el select*/
+  }
+  for (var i = 1; i <= 2; i++) {
+    var tipo = document.createElement("option");
+    tipo.value = tipografias[i];
+    var texto = document.createTextNode(tipografias[i]);
+    tipo.appendChild(texto);
+    tipografia.appendChild(tipo);
+  }
 });
-  /*entrada y salida de configuraciones*/
-configurar.addEventListener("click", function(){
-Opacacion.classList.add("activo");
+$('#Logo').click(function(){
+  Opacacion.classList.add("activo");
 });
-
-function salir_configuraciones(){
-pruebasFondo.style.backgroundColor = valoresIniciales[0];
-seleccion.style.borderColor = valoresIniciales[1];
-seleccion.style.borderTopColor = valoresIniciales[2];
-
-document.getElementById("color_Fondo").value = valoresIniciales[0];
-document.getElementById("Color_Bordes").value = valoresIniciales[1];
-document.getElementById("Color_Borde_superior").value = valoresIniciales[2];
- btncambiar.disabled = true;
+function realizarCambios(){
+  /* 0 = background, 1 = border color , 2 = borderTopColor, 3 = fontSize, 4 = fontFamily*/ 
+  document.body.style.backgroundColor = valorPropiedad[0];
+  if (valorPropiedad[1] != undefined){
+    $('.btn').css({'border-color': valorPropiedad[1]});  
+  } 
+  if (valorPropiedad[2] != undefined){
+    $('.btn').css({'border-top-color': valorPropiedad[2]});
+  }   
+  if (valorPropiedad[3] != undefined){
+    $('input').css({'font-size': valorPropiedad[3]});
+    $('label').css({'font-size': valorPropiedad[3]});
+    $('th').css({'font-size': valorPropiedad[3]});
+  }  
+  if (valorPropiedad[4] != undefined){
+    $('input').css({'font-family': valorPropiedad[4]});
+    $('label').css({'font-family': valorPropiedad[4]});
+    $('th').css({'font-family': valorPropiedad[4]}); 
+  }  
+  btncambiar.disabled = true;
   Opacacion.classList.remove("activo");
 }
-function realizarCambios(){
-  if (color != undefined ) {
-    document.body.style.backgroundColor = color;
-  }
-if (borde != undefined) {
-var x = 1
-var btn = document.getElementById("btn" + x);
-  while (btn != undefined) {
-    btn.style.borderColor = borde;
-    x ++;
-    btn = document.getElementById("btn" + x);
-  }
+function salir_configuraciones(){
+  color.value = valoresIniciales[0];
+  borde.value = valoresIniciales[1];
+  bordesSuperior.value = valoresIniciales[2];
+  colorfondo();
+  cambiarBorde();
+  cambiarBordeSuperior();
+  btncambiar.disabled = true;
+  $('.activo').removeClass('activo');
 }
-/*********************************************************************/
-if (bordesSuperior != undefined){
-  var x = 1
-  var btn = document.getElementById("btn" + x);
-    while (btn != undefined) {
-      btn.style.borderTopColor = bordesSuperior;
-      x ++;
-      btn = document.getElementById("btn" + x);
-    }
-}
-/*********************************************************************/
-if (letrasT.value != undefined){
-  var x = 1
-  var btn = document.getElementById("btn" + x);
-    while (btn != undefined) {
-      btn.style.fontSize = letrasT.value;
-      x ++;
-      btn = document.getElementById("btn" + x);
-    }
-     /*este esta orientado a tablas, y sus elementos*/
-     var y = 0;/*este sera el controlador de los 3 siguientes whiles*/ 
-     var filaTablauno = document.getElementById("filaUno" + y);
-     var filaTablados = document.getElementById("textfile" + y);
-     var filaTablatres = document.getElementById("filaTres" + y);
-       while ( filaTablauno != undefined) {
-       filaTablauno.style.fontSize = letrasT.value;
-         y ++;
-      filaTablauno = document.getElementById("filaUno" + y);
-       }
-       /*separacion, esta es para textfiles*/
-       y = 0;
-         while ( filaTablados != undefined) {
-         filaTablados.style.fontSize = letrasT.value;
-           y ++;
-        filaTablados = document.getElementById("textfile" + y);
-         }
-          y = 0;
-          /*separacion, esta es para labels o tablas*/ 
-           while ( filaTablatres != undefined) {
-           filaTablatres.style.fontSize = letrasT.value;
-             y ++;
-          filaTablatres = document.getElementById("filaTres" + y);
-           }
-           /*este apartado es para todo tipo de texto(etiquetas)*/
-      var z = 0;
-      var labels = document.getElementById("label" + z);
-      while ( labels != undefined) {
-      labels.style.fontSize = letrasT.value;
-        z ++;
-     labels = document.getElementById("label" + z);
-      }
-}
-/*********************************************************************/
-if (tipografia.value != undefined) {
-  var x = 1; 
-  var btn = document.getElementById("btn" + x);
-    while (btn != undefined) {
-      btn.style.fontFamily = tipografia.value;
-      x ++;
-      btn = document.getElementById("btn" + x);
-    }
-    /*este esta orientado a tablas, y sus elementos*/
-    var y = 0;/*este sera el controlador de los 3 siguientes whiles*/ 
-    var filaTablauno = document.getElementById("filaUno" + y);
-    var filaTablados = document.getElementById("textfile" + y);
-    var filaTablatres = document.getElementById("filaTres" + y);
-      while ( filaTablauno != undefined) {
-      filaTablauno.style.fontFamily = tipografia.value;
-        y ++;
-     filaTablauno = document.getElementById("filaUno" + y);
-      }
-      /*separacion, esta es para textfiles*/
-      y = 0;
-        while ( filaTablados != undefined) {
-        filaTablados.style.fontFamily = tipografia.value;
-          y ++;
-       filaTablados = document.getElementById("textfile" + y);
-        }
-         y = 0;
-         /*separacion, esta es para labels o tablas*/ 
-          while ( filaTablatres != undefined) {
-          filaTablatres.style.fontFamily =tipografia.value;
-            y ++;
-         filaTablatres = document.getElementById("filaTres" + y);
-          }
-          /*este apartado es para todo tipo de texto(etiquetas)*/
-      var z = 0;
-      var labels = document.getElementById("label" + z);
-      while ( labels != undefined) {
-      labels.style.fontFamily = tipografia.value;
-        z ++;
-     labels = document.getElementById("label" + z);
-      }
-}
-Opacacion.classList.remove("activo");
-}
-/*cambios*/
-function colorfondo(){
-color = document.getElementById("color_Fondo").value;
-pruebasFondo.style.backgroundColor = color;
-btncambiar.disabled = false;
-}
-function cambiarBorde(){
-  borde = document.getElementById("Color_Bordes").value;
- seleccion.style.borderColor = borde;
- btncambiar.disabled = false;
-}
-function cambiarBordeSuperior(){
-  bordesSuperior = document.getElementById("Color_Borde_superior").value;
- seleccion.style.borderTopColor = bordesSuperior;
- btncambiar.disabled = false;
-}
-
-letrasT.addEventListener("change", function(){
-tLetras.style.fontSize = letrasT.value;
-btncambiar.disabled = false;
-});
-
-tipografia.addEventListener("change", function(){
-tLetras.style.fontFamily = tipografia.value;
-btncambiar.disabled = false;
-});
