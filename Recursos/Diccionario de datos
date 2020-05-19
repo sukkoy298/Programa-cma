@@ -95,3 +95,11 @@ Name         varchar()	         no nulo	            ***                      ***
 Existencia   decimal	           no nulo             ***  	                   ****			        existencia de los reactivos.
 Uni_Medida  tinytext()	         no nulo	             ***		                 ****		         	unidad de medida de la cantidad de reactivos, sea gramos, Litros(Y sus variantes de cada 1), o unidades.	
 -----------------------------------------------------------------------------------------------------------------------------
+
+
+direcciones de los archivos:
+ Nombre     tipo                nulo         Valor Predeterminado         Extas			           Comentario(campos en ingles para diferenciarlos de las variables del codigo)
+-----------------------------------------------------------------------------------------------------------------------------
+nivel    varchar()            no nulo	          ***			   ***				identificador de los usuarios mediantes el campo status
+direcc    varchar()  	      no nulo             ***                      ***                          los nombres de los archivos HTML que se van a abrir
+-----------------------------------------------------------------------------------------------------------------------------
