@@ -4,20 +4,21 @@
 	box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
 	font-family: Arial, Helvetica, sans-serif;
 	height: 100%;
 }
 
 body {
-	background-color: #E0E0E0;
+	background-color: #e0e0e0;
 }
 
 /* HEADER */
 
 header {
 	overflow: hidden;
-	background-color: #4267B2;
+	background-color: #4267b2;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -52,8 +53,8 @@ header a.logo img {
 	line-height: 54px;
 	border-radius: 4px;
 	margin-right: 10px;
-	border-right: 1px solid #304B83;
-	border-left: 1px solid #304B83;
+	border-right: 1px solid #304b83;
+	border-left: 1px solid #304b83;
 }
 
 .header-right a:active {
@@ -61,15 +62,15 @@ header a.logo img {
 }
 
 @media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .header-right {
-    float: none;
-  }
+	.header a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+
+	.header-right {
+		float: none;
+	}
 }
 
 /* HEADER */
@@ -92,7 +93,7 @@ header a.logo img {
 
 .tablink:hover {
 	background-color: #777777;
-	transition: .5s ease all;
+	transition: 0.5s ease all;
 }
 
 .tabcontent {
@@ -107,12 +108,12 @@ header a.logo img {
 /* Formulario de los datos del cliente */
 
 .tabcontent form {
-	width: 32%;	
+	width: 32%;
 	margin: auto;
 }
 
 fieldset {
-	border:2px solid #AAAAAA;
+	border: 2px solid #aaaaaa;
 	padding: 20px;
 }
 
@@ -126,41 +127,43 @@ fieldset {
 	width: 100%;
 	padding: 12px;
 	margin-bottom: 20px;
-	border: 1px solid #E0E0E0;
+	border: 1px solid #e0e0e0;
 	border-radius: 10px;
 	outline: none;
 	font-size: 14px;
 }
 
 .data input:focus {
-	border-color: #1668C4;
-	transition: .5s ease all;
+	border-color: #1668c4;
+	transition: 0.5s ease all;
 	outline: none;
 }
 
 main form .btn {
 	width: 100%;
-	border-top: 2px solid #AAAAAA;
+	border-top: 2px solid #aaaaaa;
 }
 
 .btn1 {
 	display: inline-block;
 	width: 48.49%;
 }
-.btn input[type=submit], input[type=reset] {
+.btn input[type='submit'],
+input[type='reset'] {
 	width: 100%;
 	padding: 12px;
-	background: #1668C4;
-	color: #FFFFFF;
+	background: #1668c4;
+	color: #ffffff;
 	border: none;
 	border-radius: 10px;
 	outline: none;
 	margin-top: 10px;
 }
 
-.form1 form .btn input[type="submit"]:hover, input[type="reset"]:hover {
-	background: #4A88F4;
-	transition: .5s ease all;
+.form1 form .btn input[type='submit']:hover,
+input[type='reset']:hover {
+	background: #4a88f4;
+	transition: 0.5s ease all;
 	cursor: pointer;
 	border: none;
 	outline: none;
