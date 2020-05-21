@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" type="image/x-icon" href="img/ICONO.png" />
+		<link rel="stylesheet" href="css/estilosML.css" />
+		<script src="https://kit.fontawesome.com/cc605f9d1f.js" crossorigin="anonymous"></script>
+		<title>Laboratorio</title>
+	</head>
+	<body>
+		<header>
+			<a href="#default" class="logo" title="Menu Principal"><img src="img/LOGO.png" alt="Logo del Centro Medico el Ángel" /></a>
+			<div class="header-right">
+				<a href="#config" id="Logo"><i class="fas fa-cog" title="Configuraciones"></i></a>
+				<a href="#back" onclick="volver()"><i class="fas fa-sign-in-alt"></i></i></a>
+			</div>
+		</header>
+		<main>
+			<div class="trabajadores" style="overflow-x: auto;">
+				<table class="Datos_Varios" id="Datos_Varios">
+					<thead>
+						<th colspan="2" id="label0">Datos de la seccion</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td id="label4">Usuario</td>
+							<td id="label1"></td>
+						</tr>
+						<tr>
+							<td id="label5">Tiempo Trabajando</td>
+							<td id="label2"></td>
+						</tr>
+						<tr>
+							<td id="label6">Pacientes Atendidos</td>
+							<td id="label3"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<form action="" class="form1">
+				<fieldset>
+					<legend>Pacientes</legend>
+					<table class="clientes_del_dia" id="clientes_del_dia">
+						<tbody id="cuerpo_T_Cliente"></tbody>
+					</table>
+				</fieldset>
+			</form>
+
+			<div class="Opacacion" id="Opacacion">
+				<div class="ElFormulario" id="FondoPrueba">
+					<h4 id="Titulo_Cofiguraciones">Configuraciones</h4>
+
+					<div id="Acomodar_Configuraciones">
+						<select class="TLetra" id="TLetra">
+							<option selected="true" disabled="disabled">Tamaño de las letras</option>
+						</select>
+						<select class="Tipografia" id="Tipografia">
+							<option>Tipo de tipografia</option>
+						</select>
+						<label for="color_Fondo" id="etiqueta_del_colorfondo" class="EtiquetasC">Color del fondo</label>
+						<input type="color" name="color_Fondo" id="color_Fondo" value="#E0E0E0" onchange="colorfondo()" />
+
+						<label for="Color_Bordes" class="EtiquetasC">Color de los bordes de los objetos</label>
+						<input type="color" id="Color_Bordes" value="#009245" onchange="cambiarBorde()" />
+
+						<label for="Color_Fondo_Objetos" class="EtiquetasC">Color del borde superio de los objetos</label>
+						<input type="color" id="Color_Borde_superior" value="#614385" onchange="cambiarBordeSuperior()" />
+
+						<label id="prueba_Tipografia">Texto de ejemplo</label>
+
+						<input type="button" name="btn4" id="muestra" value="Soy el boton de muestra" />
+					</div>
+					<input type="button" name="cancelacion" id="btn1" value="Cancelar" onclick="salir_configuraciones()" />
+					<input type="button" name="Cambiar" id="btn2" value="Aceptar" onclick="realizarCambios()" disabled="true" />
+				</div>
+			</div>
+		</main>
+		<div class="panel">
+			<input type="button" class="HistorialMedico" id="btn3" value="Ver Historial Medico" onclick="Historial()" />
+			<input type="button" class="SelectManual" id="btn4" value="Seleccion Manual" onclick="seleccionManual()" />
+			<input type="button" class="Siguiente" id="btn5" value="Siguiente Paciente" onclick="siguiente()" />
+		</div>
+		<script src="Js\jquery-3.5.1.min.js"></script>
+		<script type="text/javascript" src="js\MenuLaboratorio.Js"></script>
+		<script src="js\config.Js"></script>
+	</body>
+</html>
