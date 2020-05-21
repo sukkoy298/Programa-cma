@@ -1,55 +1,81 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="img/ICONO.png" type="image/x-icon" />
+		<link rel="stylesheet" href="css/estilosL.css" />
+		<script src="https://kit.fontawesome.com/cc605f9d1f.js" crossorigin="anonymous"></script>
 		<title>Laboratorio</title>
-		<link rel="icon" href="img/ICONO.png" type="image/png" />
-		<link rel="stylesheet" href="css/Estilos Generales.css" />
-		<link rel="stylesheet" href="css/EstiloLaboratorio.css" />
-		<body>
-			<header id="cabeza">
-				<img id="Logo" class="logo" src="img/LOGO.png" />
-				<input type="button" value="Menu" id="btn6" onclick="irmenu()" />
-				<input type="Button" class="cancelar" name="" id="cancelar" value="Cancelar" onclick="Cancel()" />
-				<input type="Button" name="" id="btn3" value="Rectificar Resultados" onclick="Rectificar()" />
-				<input type="Button" name="" id="btn4" value="Cargar Resultados" onclick="enviar()" />
-			</header>
+	</head>
+	<body>
+		<header>
+			<a href="#default" class="logo" title="Menu Principal"><img src="img/LOGO.png" alt="Logo del Centro Medico el Ángel" /></a>
+			<div class="header-right">
+				<a href="#config" id="Logo"><i class="fas fa-cog" title="Configuraciones"></i></a>
+				<a href="#back" onclick="volver()"><i class="fas fa-sign-in-alt"></i></a>
+			</div>
+		</header>
+		<main>
+			<div class="panel">
+				<button id="btn6" onclick="irmenu()"><i class="fas fa-bars"></i> Menu</button>
+				<button class="cancelar" name="" id="cancelar" value="Cancelar" onclick="Cancel()"><i class="fas fa-ban"></i> Cancelar</button>
+				<button name="" id="btn3" onclick="Rectificar()"><i class="fas fa-search"></i> Rectificar Resultados</button>
+				<button name="" id="btn4" onclick="enviar()"><i class="fas fa-upload"></i> Cargar Resultados</button>
+			</div>
 			<!-- datos del paciente -->
-			<table class="datos_del_paciente">
-				<thead>
-					<tr>
-						<th colspan="2" id="label0">Datos Del Paciente</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th id="label5">Nombre</th>
-						<th><label id="label1" align="center"></label></th>
-					</tr>
-					<tr>
-						<th id="label6">Numero del paciente</th>
-						<th><label id="label2" align="center"></label></th>
-					</tr>
-					<tr>
-						<th id="label7">Edad:</th>
-						<th><label id="label3"></label></th>
-					</tr>
-					<tr>
-						<th id="label8">Cedula</th>
-						<th><label id="label4"></label></th>
-					</tr>
-				</tbody>
-			</table>
-			<!-- Tabla para cologar los resultados-->
-			<table class="Entrada_de_datos" name="formulario">
-				<thead>
-					<tr>
-						<th colspan="3" id="label9">Hoja de Resultados</th>
-					</tr>
-				</thead>
-				<tbody id="cuerpo" name="cuerpo" class="cuerpo"></tbody>
-			</table>
+			<div class="datosP" style="overflow-x: auto;">
+				<table>
+					<thead>
+						<tr>
+							<th colspan="2" id="label0">Datos Del Paciente</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Nombre</td>
+							<td><label id="label1"></label></td>
+						</tr>
+						<tr>
+							<td>Numero del paciente</td>
+							<td><label id="label2"></label></td>
+						</tr>
+						<tr>
+							<td>Edad</td>
+							<td><label id="label3"></label></td>
+						</tr>
+						<tr>
+							<td>Cedula</td>
+							<td><label id="label4"></label></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th colspan="2">Observaciones</th>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<form action="">
+									<textarea placeholder="Observaciones"></textarea>
+								</form>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
 
-			<textarea name="Comentario" id="btn5" rows="8" cols="60" placeholder="Observaciones"></textarea>
-		</body>
+			<!-- Tabla para cologar los resultados-->
+			<div class="resultadosP" style="overflow-x: auto;">
+				<table>
+					<thead>
+						<tr>
+							<th colspan="3">Hoja de Resultados</th>
+						</tr>
+					</thead>
+					<tbody id="cuerpo" name="cuerpo" class="cuerpo"></tbody>
+				</table>
+			</div>
+		</main>
 		<!-- Objetos obciones-->
 		<div class="Opacacion" id="Opacacion">
 			<div class="ElFormulario" id="FondoPrueba">
@@ -79,8 +105,8 @@
 				<input type="button" name="Cambiar" id="btn2" value="Aceptar" onclick="realizarCambios()" disabled="true" />
 			</div>
 		</div>
-	</head>
-	<script src="Js\jquery-3.5.1.min.js"></script>
-	<script src="Js\Laboratorio.Js"></script>
-	<script src="Js\config.Js"></script>
+		<script src="Js\jquery-3.5.1.min.js"></script>
+		<script src="Js\Laboratorio.Js"></script>
+		<script src="Js\config.Js"></script>
+	</body>
 </html>

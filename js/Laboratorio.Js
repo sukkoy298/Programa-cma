@@ -15,13 +15,13 @@ window.addEventListener('load', function () {
 		examen[x] = 'Tipo Examen';
 		rectify[x] = '0000000.0000000';
 		/*Nombre del valor del examen*/
-		var filaUno = document.createElement('th');
+		var filaUno = document.createElement('td');
 		filaUno.id = 'filaUno' + x;
 		var textoCelda = document.createTextNode(examen[x]);
 		filaUno.appendChild(textoCelda);
 		columna.appendChild(filaUno);
 		/*Donde se llenaran los datos*/
-		var filaDos = document.createElement('th'); /*la fila donde estara*/
+		var filaDos = document.createElement('td'); /*la fila donde estara*/
 		filaDos.id = 'filaDos' + x;
 		var textfile = document.createElement('input'); /*donde se pondran los datos*/
 		filaDos.appendChild(textfile);
@@ -30,7 +30,7 @@ window.addEventListener('load', function () {
 		textfile.id = 'textfile' + x;
 		textfile.placeholder = '000000000.00000000';
 		/*El valor promedio*/
-		var filaTres = document.createElement('th');
+		var filaTres = document.createElement('td');
 		filaTres.id = 'filaTres' + x;
 		var textoCelda2 = document.createTextNode(rectify[x]);
 		filaTres.appendChild(textoCelda2);
