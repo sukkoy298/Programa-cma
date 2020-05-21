@@ -1,90 +1,107 @@
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel= "icon" href="img/ICONO.png" type="image/png">
-      <link rel = "stylesheet" href="css/Estilos Generales.css">
-    <link rel="stylesheet" href="css/EstiloHistorial.css">
-    <title>Historial Medico</title>
-  </head>
-<header>
-  <img id = "Logo" class = "logo"src="img/LOGO.png">
-  <input type="Button" id="cancelar" value="Volver al Menu" onclick="volver()">
-</header>
-  <body>
-    <div id="acomodarBusqueda">
-      <input type="text" class = "nroBuscar" id= "label0" placeholder="Numero de paciente">
-      <input type="text" class = "ceduBuscar" id= "label1" placeholder="Cedula del paciente">
-      <input type="text" class = "fechBuscar" id= "label2" placeholder="Fecha del examen">
-      <input type="text" class = "nomBuscar" id= "label3" placeholder="Nombre completo del paciente">
-      <input type="Button" id="btn4" value="Buscar"></div>
-    
-      <table class="Pacientes">
-        <thead>
-          <tr>
-            <th colspan="3" >Pacientes</th>
-          </tr>            
-        </thead>
-    <tr>
-      <th>Nombre y Apellido</th>
-      <th>Fecha de nacimiento</th>
-      <th>sexo</th>
-    </tr>
-    <tr onclick="">
-  <th>antoni morillo</th>
-<th>21 de febrero del 2002</th>
-<th>Masculino</th>
-      </tr>
-      </table>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" type="image/x-icon" href="img/ICONO.png" />
+		<link rel="stylesheet" href="css/estilosHm.css" />
+		<script src="https://kit.fontawesome.com/cc605f9d1f.js" crossorigin="anonymous"></script>
+		<title>Historial Medico</title>
+	</head>
+	<body>
+		<header>
+			<a href="#default" class="logo" title="Menu Principal"><img src="img/LOGO.png" alt="Logo del Centro Medico el Ángel" /></a>
+			<div class="header-right">
+				<a href="#config" id="config"><i class="fas fa-cog" title="Configuraciones"></i></a>
+				<a href="#back" onclick="volver()"><i class="fas fa-arrow-alt-circle-left" title="Volver al Menu"></i></a>
+			</div>
+		</header>
+		<main>
+			<form action="" class="myForm">
+				<fieldset class="search">
+					<legend>Buscar paciente</legend>
+					<input type="text" id="ftxt1" placeholder="Cedula del paciente" required />
+					<input type="text" id="ftxt2" placeholder="Fecha de nacimiento del paciente" required />
+					<input type="text" id="ftxt3" placeholder="Nombre completo del paciente" required />
+					<input type="submit" title="Buscar al Paciente" id="fsubmit" value="Buscar" required />
+				</fieldset>
+			</form>
 
-      <table class="HistorialMedico">
-        <tr>
-            <th colspan="2">antoni morillo</th>
-        </tr>
-<tr>
-<th>Fecha del examen</th>
-<th>9/4/2020</th>
-</tr>
-      </table>
+			<div class="pacientes" style="overflow-x: auto;">
+				<table>
+					<thead>
+						<tr>
+							<th>Cedula</th>
+							<th>Nombre</th>
+							<th>Fecha de nacimiento</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>3490</td>
+							<td>Peter Griffin</td>
+							<td>Tue May 19 2001</td>
+						</tr>
+						<tr>
+							<td>25104</td>
+							<td>Lois Griffin</td>
+							<td>Fri Aug 23 1950</td>
+						</tr>
+						<tr>
+							<td>30462</td>
+							<td>Joe Swanson</td>
+							<td>Sun Apr 12 1983</td>
+						</tr>
+						<tr>
+							<td>43860</td>
+							<td>Cleveland Brown</td>
+							<td>Fri Sep 06 1994</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th colspan="3">(Nombre del paciente)</th>
+						</tr>
+						<tr>
+							<td colspan="1">Fecha del Examen</td>
+							<td colspan="2">(Fecha del Examen del Paciente)</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
 
-      <!-- Objetos obciones-->
-<div class="Opacacion" id = "Opacacion">
-  <div class="ElFormulario" id="FondoPrueba">
-  
-      <h4 id = "Titulo_Cofiguraciones">Configuraciones</h4>
-  
-    <div id="Acomodar_Configuraciones">
-  
-      <select class="TLetra" id="TLetra">
-        <option selected="true" disabled="disabled">Tamaño de las letras</option>
-      </select>
-      <select class="Tipografia" id="Tipografia">
-        <option value="">Tipos de Tipografias</option>
-      </select>
-      <label for="color_Fondo" id="etiqueta_del_colorfondo" class="EtiquetasC">Color del fondo</label>
-      <input type="color" name="color_Fondo" id = "color_Fondo" value="#E0E0E0" onchange="colorfondo()">
-  
-      <label for="Color_Bordes" class="EtiquetasC" >Color de los bordes de los objetos</label>
-      <input type="color" id="Color_Bordes" value="#009245" onchange="cambiarBorde()">
-  
-      <label for="Color_Fondo_Objetos" class="EtiquetasC" >Color del borde superio de los objetos</label>
-      <input type="color" id="Color_Borde_superior" value="#614385" onchange="cambiarBordeSuperior()">
-  
-        <label id="prueba_Tipografia">Texto de ejemplo</label>
-  
-        <input type="button" name="btn4" id= "muestra" value="Soy el boton de muestra">
-  
-      </div>
-  <input type="button"  name="cancelacion" id ="btn1" value="Cancelar" onclick="salir_configuraciones()">
-  <input type="button"  name="Cambiar" id="btn2" value="Aceptar" onclick="realizarCambios()" disabled = "true">
-  </div>
-  </div>
-  <div class="HistorialEspecifico" id="HistorialEspecifico">
-    <table id="DatoEspecificos" class="DatoEspecificos">
+			<!-- Objetos obciones-->
+			<div class="Opacacion" id="Opacacion">
+				<div class="ElFormulario" id="FondoPrueba">
+					<h4 id="Titulo_Cofiguraciones">Configuraciones</h4>
 
-    </table>
-  </div>
-    <script src="Js\jquery-3.5.1.min.js"></script>
-      <script src="js\config.Js"></script>
-      <script src="js\HistorialMedico.Js"></script>
-  </body>
+					<div id="Acomodar_Configuraciones">
+						<select class="TLetra" id="TLetra">
+							<option selected="true" disabled="disabled">Tamaño de las letras</option>
+						</select>
+						<select class="Tipografia" id="Tipografia">
+							<option value="">Tipos de Tipografias</option>
+						</select>
+						<label for="color_Fondo" id="etiqueta_del_colorfondo" class="EtiquetasC">Color del fondo</label>
+						<input type="color" name="color_Fondo" id="color_Fondo" value="#E0E0E0" onchange="colorfondo()" />
+
+						<label for="Color_Bordes" class="EtiquetasC">Color de los bordes de los objetos</label>
+						<input type="color" id="Color_Bordes" value="#009245" onchange="cambiarBorde()" />
+
+						<label for="Color_Fondo_Objetos" class="EtiquetasC">Color del borde superio de los objetos</label>
+						<input type="color" id="Color_Borde_superior" value="#614385" onchange="cambiarBordeSuperior()" />
+
+						<label id="prueba_Tipografia">Texto de ejemplo</label>
+
+						<input type="button" name="btn4" id="muestra" value="Soy el boton de muestra" />
+					</div>
+					<input type="button" name="cancelacion" id="btn1" value="Cancelar" onclick="salir_configuraciones()" />
+					<input type="button" name="Cambiar" id="btn2" value="Aceptar" onclick="realizarCambios()" disabled="true" />
+				</div>
+			</div>
+		</main>
+		<script src="js\jquery-3.5.1.min.js"></script>
+		<script src="js\config.Js"></script>
+		<script src="js\HistorialMedico.Js"></script>
+	</body>
 </html>
