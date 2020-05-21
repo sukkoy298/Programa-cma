@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {});
 function volver() {
-	document.location.href = 'file:../Programa-cma/MenuLaboratorio.html';
+	document.location.href = 'file:../Programa-cma/index-menuLaboratorio.html';
 }
 var idAnterior = '';
 function buscar(id) {

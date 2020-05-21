@@ -122,30 +122,32 @@ fieldset {
 
 /* Formulario de los datos del cliente */
 .panel {
-	margin-top: 20px;
 	width: 100%;
-	bottom: 0%;
-	position: absolute;
-	padding: 20px;
-	overflow: hidden;
-	background-color: #4267b2;
+	background-color: #555;
+	overflow: auto;
 }
 
-.panel input[type='button'] {
+.panel button {
+	float: left;
 	padding: 12px;
-	background: #009245;
-	color: #ffffff;
+	background-color: #555;
+	color: white;
+	text-decoration: none;
+	font-size: 17px;
 	border: none;
-	border-radius: 10px;
-	outline: none;
 }
 
-.panel input[type='button']:hover {
+.panel button:hover {
 	background: #00b655;
 	transition: 0.5s ease all;
 	cursor: pointer;
-	border: none;
-	outline: none;
+}
+
+@media screen and (max-width: 500px) {
+	.panel button {
+		float: none;
+		display: block;
+	}
 }
 
 /* MAIN */
