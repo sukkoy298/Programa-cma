@@ -25,6 +25,7 @@ Nombre         	tipo                nulo         Valor Predeterminado         Ex
 -----------------------------------------------------------------------------------------------------------------------------
 ID_Reacti 	    varchar()	         no nulo		       *******		              *****			Union de los campos ID_Alfa y ID_Num de la tabla reactivos.
 Cant_Requerida	decimal		         no nulo		       *******		              *****			Cantidad de reactivos requerida para el examen.
+ID_Examen	    varchar()	         no nulo		       *******		              *****			Union de los campos ID_Alfa y ID_Num de la tabla Examenes.
 -----------------------------------------------------------------------------------------------------------------------------
 
 
