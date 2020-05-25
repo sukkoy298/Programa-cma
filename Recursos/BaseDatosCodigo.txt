@@ -1,0 +1,68 @@
+
+CREATE TABLE Pacientes(
+ID_Alfa char(1) not null DEFAULT 'P',
+ID_Num int(11) not null PRIMARY KEY auto_increment,
+Name varchar(25) not null,
+lastName varchar(25) not null,
+Fecha_Nacimiento date not null,
+Tipo_Sangre varchar(4) not null,
+CI int(11) not null 
+);
+CREATE TABLE users(
+ID_Alfa char(1) not null DEFAULT 'U',
+ID_Num int(11) not null PRIMARY KEY auto_increment,
+Usering tinytext not null,
+Password text not null,
+Status tinytext not null
+);
+CREATE TABLE Examenes(
+ID_Alfa char(1) not null DEFAULT 'E',
+ID_Num int(11) not null PRIMARY KEY auto_increment,
+Name varchar(30) not null,
+ValuePr float not null,
+Costo float not null,
+Disponible boolean not null
+);
+CREATE TABLE ReactivosNecesarios(
+ID_Reacti varchar(20) not null,
+Cantidad_Requerida decimal,
+ID_Examen varchar(20) not null
+);
+CREATE TABLE Facturas(
+ID_Alfa char(1) not null DEFAULT 'F',
+ID_Num int(11) not null PRIMARY KEY auto_increment,
+ID_Pacient varchar(20) not null,
+Fecha date not null,
+Costo float not null,
+Tip_Servi char(2) not null
+);
+CREATE TABLE DatosExtrasFactu(
+ID_Factura varchar(20) not null,
+Dat_Es varchar(20) not null,
+);
+CREATE TABLE HistorialMedico(
+ID_Alfa char(1) not null DEFAULT 'H',
+ID_Num int(11) not null PRIMARY KEY auto_increment,
+ID_Factura varchar(20) not null
+);
+CREATE TABLE ResultadosHistorial(
+ID_Historial varchar(20) not null,
+Evaluacion varchar(30) not null,
+resultado varchar(50) not null
+);
+CREATE TABLE datosVariosPacient(
+ID_Pacient varchar(20) not null,
+DatoVario varchar(50) not null,
+clacificador varchar(20) not null
+);
+CREATE TABLE Reactivos(
+ID_Alfa char(1) not null DEFAULT 'R',
+ID_Num int(11) not null PRIMARY KEY auto_increment,
+Name varchar(20) not null,
+Existencia decimal not null,
+Uni_Medida tinytext not null
+);
+CREATE TABLE Direcciones de los archivos(
+nivel varchar(25) not null,
+direcc varchar(40) not null
+);
