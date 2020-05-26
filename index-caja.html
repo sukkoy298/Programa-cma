@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="shortcut icon" href="img/Icon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="img/Icon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="css/estilosC.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 		<script src="https://kit.fontawesome.com/cc605f9d1f.js" crossorigin="anonymous"></script>
 		<title>Pacientes</title>
 	</head>
@@ -20,115 +21,96 @@
 			<button class="tablink" onclick="openPage('Data', this, '#009245')" id="defaultOpen">Datos del Cliente</button>
 			<button class="tablink" onclick="openPage('Exams', this, '#1E79E0')">Solicitud de examenes</button>
 
-			<div id="Data" class="tabcontent">
+			<div id="Data" class="tabcontent datosP">
 				<form name="Form1" action="" method="get">
 					<fieldset>
 						<legend>Datos del Paciente</legend>
 
-						<div class="data">
-							<label for="idfac">N° de Factura</label>
-							<input type="number" name="idfac" id="idfactura" disabled />
+						<label for="idfac">N° de Factura</label>
+						<input type="number" name="idfac" id="idfactura" disabled />
 
-							<label for="fname">Nombre</label>
-							<input type="text" name="fname" id="fname" placeholder="Nombre" required autofocus />
+						<label for="fname">Nombre</label>
+						<input type="text" name="fname" id="fname" placeholder="Nombre" required autofocus />
 
-							<label for="flastn">Apellido</label>
-							<input type="text" name="flastn" id="flastn" placeholder="Apellido" required />
+						<label for="flastn">Apellido</label>
+						<input type="text" name="flastn" id="flastn" placeholder="Apellido" required />
 
-							<label for="fcedula">Cedula de identidad</label>
-							<input type="number" name="fcedula" id="fcedula" placeholder="C.I." required />
+						<label for="fcedula">Cedula de identidad</label>
+						<input type="number" name="fcedula" id="fcedula" placeholder="C.I." required />
 
-							<label for="fdateN">Fecha de nacimiento</label>
-							<input type="date" name="fdateN" id="fdateN" required />
+						<label for="fdateN">Fecha de nacimiento</label>
+						<input type="date" name="fdateN" id="fdateN" required />
 
-							<label for="ftelf">Teléfono (Opcional)</label>
-							<input type="tel" name="ftelf" id="ftelf" placeholder="Número telefónico" />
-						</div>
-						<div class="btn">
-							<div class="btn1">
+						<label for="ftelf">Teléfono (Opcional)</label>
+						<input type="tel" name="ftelf" id="ftelf" placeholder="Número telefónico" />
+
+						<div class="fAction">
+							<div class="fbtn">
 								<input type="reset" value="Limpiar" />
 							</div>
-							<div class="btn1">
-								<input type="button" id="fsubmit" value="Enviar" onclick="enviar()">
+							<div class="fbtn">
+								<input type="button" id="fsubmit" value="Enviar" onclick="enviar()" />
 							</div>
 						</div>
 					</fieldset>
 				</form>
 			</div>
 
-			<div id="Exams" class="tabcontent">
+			<div id="Exams" class="tabcontent datosE">
 				<div class="formH">
 					<form action="">
 						<fieldset>
 							<legend>Hematología</legend>
-							<div>
-								<input type="checkbox" name="hematologia" id="1"/>
-								<label for="1" id="L1">Hematología Completa</label>
-							</div>
-							<div>
-								<input type="checkbox" name="hematologia" id="2" />
-								<label for="2" id="L2">Hematología Especial</label>
-							</div>
-							<div>
-								<input type="checkbox" name="hematologia" id="3" />
-								<label for="3" id="L3">Hemoglobina y Hematocritos</label>
-							</div>
-							<div>
-								<input type="checkbox" name="hematologia" id="4"/>
-								<label for="4" id="L4">C. Blanco y fórmula</label>
-							</div>
-							<div>
-								<input type="checkbox" name="hematologia" id="5" />
-								<label for="5">Contaje de Plaquetas</label>
-							</div>
-							<div>
-								<input type="checkbox" name="hematologia" id="6" />
-								<label for="6">Contaje de Reticulocitos</label>
-							</div>
-							<div>
-								<input type="checkbox" name="hematologia" id="7" />
-								<label for="7">Frotis de Sangre Periférica</label>
-							</div>
-							<div>
-								<input type="checkbox" name="hematologia" id="8" />
-								<label for="8">Velocidad de Sedimentación Globular</label>
-							</div>
-							<div>
-								<input type="checkbox" name="hematologia" id="9" />
-								<label for="9">Grupo y Factor Rh</label>
-							</div>
-							<div>
-								<input type="checkbox" name="hematologia" id="10" />
-								<label for="10">Prueba de Drepanocitos</label>
-							</div>
-							<div>
-								<input type="checkbox" name="hematologia" id="11" />
-								<label for="11">Tiempo de Sangría Estandarizado</label>
-							</div>
-							<div>
-								<input type="checkbox" name="hematologia" id="12" />
-								<label for="12">Tiempo de Protrombina</label>
-							</div>
-							<div>
-								<input type="checkbox" name="hematologia" id="13" />
-								<label for="13">Tiempo de Tromboplastina Parcial</label>
-							</div>
-							<div>
-								<input type="checkbox" name="hematologia" id="14" />
-								<label for="14">Fibrinógeno</label>
-							</div>
-							<div>
-								<input type="checkbox" name="hematologia" id="15" />
-								<label for="15">Tiempo de Trombina</label>
-							</div>
-							<div>
-								<input type="checkbox" name="hematologia" id="16" />
-								<label for="16">Mezcla 50/50</label>
-							</div>
-							<div>
-								<input type="checkbox" name="hematologia" id="17" />
-								<label for="17">Otros</label>
-							</div>
+							<input type="checkbox" name="hematologia" id="1" />
+							<label for="1" id="L1">Hematología Completa</label>
+
+							<input type="checkbox" name="hematologia" id="2" />
+							<label for="2" id="L2">Hematología Especial</label>
+
+							<input type="checkbox" name="hematologia" id="3" />
+							<label for="3" id="L3">Hemoglobina y Hematocritos</label>
+
+							<input type="checkbox" name="hematologia" id="4" />
+							<label for="4" id="L4">C. Blanco y fórmula</label>
+
+							<input type="checkbox" name="hematologia" id="5" />
+							<label for="5">Contaje de Plaquetas</label>
+
+							<input type="checkbox" name="hematologia" id="6" />
+							<label for="6">Contaje de Reticulocitos</label>
+
+							<input type="checkbox" name="hematologia" id="7" />
+							<label for="7">Frotis de Sangre Periférica</label>
+
+							<input type="checkbox" name="hematologia" id="8" />
+							<label for="8">Velocidad de Sedimentación Globular</label>
+
+							<input type="checkbox" name="hematologia" id="9" />
+							<label for="9">Grupo y Factor Rh</label>
+
+							<input type="checkbox" name="hematologia" id="10" />
+							<label for="10">Prueba de Drepanocitos</label>
+
+							<input type="checkbox" name="hematologia" id="11" />
+							<label for="11">Tiempo de Sangría Estandarizado</label>
+
+							<input type="checkbox" name="hematologia" id="12" />
+							<label for="12">Tiempo de Protrombina</label>
+
+							<input type="checkbox" name="hematologia" id="13" />
+							<label for="13">Tiempo de Tromboplastina Parcial</label>
+
+							<input type="checkbox" name="hematologia" id="14" />
+							<label for="14">Fibrinógeno</label>
+
+							<input type="checkbox" name="hematologia" id="15" />
+							<label for="15">Tiempo de Trombina</label>
+
+							<input type="checkbox" name="hematologia" id="16" />
+							<label for="16">Mezcla 50/50</label>
+
+							<input type="checkbox" name="hematologia" id="17" />
+							<label for="17">Otros</label>
 						</fieldset>
 					</form>
 				</div>
@@ -138,170 +120,104 @@
 						<fieldset>
 							<legend>Química</legend>
 
-							<div>
-								<input type="checkbox" name="" id="18" />
-								<label for="18">Glicemia en Ayunas</label>
-							</div>
+							<input type="checkbox" name="" id="18" />
+							<label for="18">Glicemia en Ayunas</label>
 
-							<div>
-								<input type="checkbox" name="" id="19" />
-								<label for="19">Urea</label>
-							</div>
+							<input type="checkbox" name="" id="19" />
+							<label for="19">Urea</label>
 
-							<div>
-								<input type="checkbox" name="" id="20" />
-								<label for="20">Creatinina</label>
-							</div>
+							<input type="checkbox" name="" id="20" />
+							<label for="20">Creatinina</label>
 
-							<div>
-								<input type="checkbox" name="" id="21" />
-								<label for="21">Colesterol Total</label>
-							</div>
+							<input type="checkbox" name="" id="21" />
+							<label for="21">Colesterol Total</label>
 
-							<div>
-								<input type="checkbox" name="" id="22" />
-								<label for="22">Perfil lipídico</label>
-							</div>
+							<input type="checkbox" name="" id="22" />
+							<label for="22">Perfil lipídico</label>
 
-							<div>
-								<input type="checkbox" name="" id="23" />
-								<label for="23">Triglicéridos</label>
-							</div>
+							<input type="checkbox" name="" id="23" />
+							<label for="23">Triglicéridos</label>
 
-							<div>
-								<input type="checkbox" name="" id="24" />
-								<label for="24">Ácido úrico</label>
-							</div>
+							<input type="checkbox" name="" id="24" />
+							<label for="24">Ácido úrico</label>
 
-							<div>
-								<input type="checkbox" name="" id="25" />
-								<label for="25">Transaminasas (TGO)-(TGP)</label>
-							</div>
+							<input type="checkbox" name="" id="25" />
+							<label for="25">Transaminasas (TGO)-(TGP)</label>
 
-							<div>
-								<input type="checkbox" name="" id="26" />
-								<label for="26">Fosfatasas Alcalinas</label>
-							</div>
+							<input type="checkbox" name="" id="26" />
+							<label for="26">Fosfatasas Alcalinas</label>
 
-							<div>
-								<input type="checkbox" name="" id="27" />
-								<label for="27">LDH</label>
-							</div>
+							<input type="checkbox" name="" id="27" />
+							<label for="27">LDH</label>
 
-							<div>
-								<input type="checkbox" name="" id="28" />
-								<label for="28">Amilasa</label>
-							</div>
+							<input type="checkbox" name="" id="28" />
+							<label for="28">Amilasa</label>
 
-							<div>
-								<input type="checkbox" name="" id="29" />
-								<label for="29">Bilirrubina total y Fraccionada</label>
-							</div>
+							<input type="checkbox" name="" id="29" />
+							<label for="29">Bilirrubina total y Fraccionada</label>
 
-							<div>
-								<input type="checkbox" name="" id="30" />
-								<label for="30">Proteínas total y Fraccionada</label>
-							</div>
+							<input type="checkbox" name="" id="30" />
+							<label for="30">Proteínas total y Fraccionada</label>
 
-							<div>
-								<input type="checkbox" name="" id="31" />
-								<label for="31">Calcio</label>
-							</div>
+							<input type="checkbox" name="" id="31" />
+							<label for="31">Calcio</label>
 
-							<div>
-								<input type="checkbox" name="" id="32" />
-								<label for="32">Fósforo</label>
-							</div>
+							<input type="checkbox" name="" id="32" />
+							<label for="32">Fósforo</label>
 
-							<div>
-								<input type="checkbox" name="" id="33" />
-								<label for="33">Sodio</label>
-							</div>
+							<input type="checkbox" name="" id="33" />
+							<label for="33">Sodio</label>
 
-							<div>
-								<input type="checkbox" name="" id="34" />
-								<label for="34">Potasio</label>
-							</div>
+							<input type="checkbox" name="" id="34" />
+							<label for="34">Potasio</label>
 
-							<div>
-								<input type="checkbox" name="" id="35" />
-								<label for="35">Cloro</label>
-							</div>
+							<input type="checkbox" name="" id="35" />
+							<label for="35">Cloro</label>
 
-							<div>
-								<input type="checkbox" name="" id="36" />
-								<label for="36">Magnesio</label>
-							</div>
+							<input type="checkbox" name="" id="36" />
+							<label for="36">Magnesio</label>
 
-							<div>
-								<input type="checkbox" name="" id="37" />
-								<label for="37">Gamma Glutamil Transpeptidasa</label>
-							</div>
+							<input type="checkbox" name="" id="37" />
+							<label for="37">Gamma Glutamil Transpeptidasa</label>
 
-							<div>
-								<input type="checkbox" name="" id="38" />
-								<label for="38">Calcio iónico</label>
-							</div>
+							<input type="checkbox" name="" id="38" />
+							<label for="38">Calcio iónico</label>
 
-							<div>
-								<input type="checkbox" name="" id="39" />
-								<label for="39">Hemoglobina glicosilada</label>
-							</div>
+							<input type="checkbox" name="" id="39" />
+							<label for="39">Hemoglobina glicosilada</label>
 
-							<div>
-								<input type="checkbox" name="" id="40" />
-								<label for="40">Depuración de la creatinina</label>
-							</div>
+							<input type="checkbox" name="" id="40" />
+							<label for="40">Depuración de la creatinina</label>
 
-							<div>
-								<input type="checkbox" name="" id="41" />
-								<label for="41">Hierro sérico</label>
-							</div>
+							<input type="checkbox" name="" id="41" />
+							<label for="41">Hierro sérico</label>
 
-							<div>
-								<input type="checkbox" name="" id="42" />
-								<label for="42">Transferrina</label>
-							</div>
+							<input type="checkbox" name="" id="42" />
+							<label for="42">Transferrina</label>
 
-							<div>
-								<input type="checkbox" name="" id="43" />
-								<label for="43">Ferritina sérica</label>
-							</div>
+							<input type="checkbox" name="" id="43" />
+							<label for="43">Ferritina sérica</label>
 
-							<div>
-								<input type="checkbox" name="" id="44" />
-								<label for="44">Nivel de Vitamina B12</label>
-							</div>
+							<input type="checkbox" name="" id="44" />
+							<label for="44">Nivel de Vitamina B12</label>
 
-							<div>
-								<input type="checkbox" name="" id="45" />
-								<label for="45">Ácido fólico</label>
-							</div>
+							<input type="checkbox" name="" id="45" />
+							<label for="45">Ácido fólico</label>
 
-							<div>
-								<input type="checkbox" name="" id="46" />
-								<label for="46">Glicemia Post-Prandial</label>
-							</div>
+							<input type="checkbox" name="" id="46" />
+							<label for="46">Glicemia Post-Prandial</label>
 
-							<div>
-								<input type="checkbox" name="" id="47" />
-								<label for="47">Glicemia Post-Glicolab</label>
-							</div>
+							<input type="checkbox" name="" id="47" />
+							<label for="47">Glicemia Post-Glicolab</label>
 
-							<div>
-								<input type="checkbox" name="" id="48" />
-								<label for="48">Curva de Tolerancia a la Glucosa (3m)</label>
-							</div>
+							<input type="checkbox" name="" id="48" />
+							<label for="48">Curva de Tolerancia a la Glucosa (3m)</label>
 
-							<div>
-								<input type="checkbox" name="" id="49" />
-								<label for="49">Curva de Tolerancia a la Glucosa (5m)</label>
-							</div>
+							<input type="checkbox" name="" id="49" />
+							<label for="49">Curva de Tolerancia a la Glucosa (5m)</label>
 
-							<div>
-								<input type="checkbox" name="" id="50" />
-								<label for="50">Otros</label>
-							</div>
+							<input type="checkbox" name="" id="50" />
+							<label for="50">Otros</label>
 						</fieldset>
 					</form>
 				</div>
@@ -311,94 +227,59 @@
 						<fieldset>
 							<legend>Serología</legend>
 
-							<div>
-								<input type="checkbox" name="" id="51" />
-								<label for="51">V.D.R.L</label>
-							</div>
+							<input type="checkbox" name="" id="51" />
+							<label for="51">V.D.R.L</label>
 
-							<div>
-								<input type="checkbox" name="" id="52" />
-								<label for="52">H.I.V.</label>
-							</div>
+							<input type="checkbox" name="" id="52" />
+							<label for="52">H.I.V.</label>
 
-							<div>
-								<input type="checkbox" name="" id="53" />
-								<label for="53">Helicobacter Pylori IgG</label>
-							</div>
+							<input type="checkbox" name="" id="53" />
+							<label for="53">Helicobacter Pylori IgG</label>
 
-							<div>
-								<input type="checkbox" name="" id="54" />
-								<label for="54">Título de antiestreptolisina</label>
-							</div>
+							<input type="checkbox" name="" id="54" />
+							<label for="54">Título de antiestreptolisina</label>
 
-							<div>
-								<input type="checkbox" name="" id="55" />
-								<label for="55">PCR Cuantitativo</label>
-							</div>
+							<input type="checkbox" name="" id="55" />
+							<label for="55">PCR Cuantitativo</label>
 
-							<div>
-								<input type="checkbox" name="" id="56" />
-								<label for="56">RA-Test Cuantitativo</label>
-							</div>
+							<input type="checkbox" name="" id="56" />
+							<label for="56">RA-Test Cuantitativo</label>
 
-							<div>
-								<input type="checkbox" name="" id="57" />
-								<label for="57">Toxoplasmosis IgM-IgG</label>
-							</div>
+							<input type="checkbox" name="" id="57" />
+							<label for="57">Toxoplasmosis IgM-IgG</label>
 
-							<div>
-								<input type="checkbox" name="" id="58" />
-								<label for="58">Antígeno Superficie hepatitis B</label>
-							</div>
+							<input type="checkbox" name="" id="58" />
+							<label for="58">Antígeno Superficie hepatitis B</label>
 
-							<div>
-								<input type="checkbox" name="" id="59" />
-								<label for="59">Anti-Core Hepatitis B</label>
-							</div>
+							<input type="checkbox" name="" id="59" />
+							<label for="59">Anti-Core Hepatitis B</label>
 
-							<div>
-								<input type="checkbox" name="" id="60" />
-								<label for="60">Hepatitis A</label>
-							</div>
+							<input type="checkbox" name="" id="60" />
+							<label for="60">Hepatitis A</label>
 
-							<div>
-								<input type="checkbox" name="" id="61" />
-								<label for="61">Hepatitis C</label>
-							</div>
+							<input type="checkbox" name="" id="61" />
+							<label for="61">Hepatitis C</label>
 
-							<div>
-								<input type="checkbox" name="" id="62" />
-								<label for="62">Sífilis</label>
-							</div>
+							<input type="checkbox" name="" id="62" />
+							<label for="62">Sífilis</label>
 
-							<div>
-								<input type="checkbox" name="" id="63" />
-								<label for="63">Machado Guerreiro</label>
-							</div>
+							<input type="checkbox" name="" id="63" />
+							<label for="63">Machado Guerreiro</label>
 
-							<div>
-								<input type="checkbox" name="" id="64" />
-								<label for="64">HTLV 1/11</label>
-							</div>
+							<input type="checkbox" name="" id="64" />
+							<label for="64">HTLV 1/11</label>
 
-							<div>
-								<input type="checkbox" name="" id="65" />
-								<label for="65">Monolert</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="66" />
-								<label for="66">Epstein-Barr</label>
-							</div>
+							<input type="checkbox" name="" id="65" />
+							<label for="65">Monolert</label>
 
-							<div>
-								<input type="checkbox" name="" id="67" />
-								<label for="67">Anticuerpos IgG / igM (Dengue)</label>
-							</div>
+							<input type="checkbox" name="" id="66" />
+							<label for="66">Epstein-Barr</label>
 
-							<div>
-								<input type="checkbox" name="" id="68" />
-								<label for="68">Otros</label>
-							</div>
+							<input type="checkbox" name="" id="67" />
+							<label for="67">Anticuerpos IgG / igM (Dengue)</label>
+
+							<input type="checkbox" name="" id="68" />
+							<label for="68">Otros</label>
 						</fieldset>
 					</form>
 				</div>
@@ -408,78 +289,59 @@
 						<fieldset>
 							<legend>Hormonas</legend>
 
-							<div>
-								<input type="checkbox" name="" id="69" />
-								<label for="69">T-3 Total T-4 Total</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="70" />
-								<label for="70">T-3 Libre T-4 Libre</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="71" />
-								<label for="71">T.S.H.</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="72" />
-								<label for="72">Insulina</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="73" />
-								<label for="73">Insulina Post-Prandial</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="74" />
-								<label for="74">Insulina Post-Glicolab</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="75" />
-								<label for="75">Curva de Insulina</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="76" />
-								<label for="76">F.S.H.</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="77" />
-								<label for="77">L.H.</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="78" />
-								<label for="78">Estradiol</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="79" />
-								<label for="79">Progesterona</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="80" />
-								<label for="80">Prolactina</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="81" />
-								<label for="81">Testosterona Total Libre</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="82" />
-								<label for="82">Cortisol A.M.</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="83" />
-								<label for="83">Cortisol P.M.</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="84" />
-								<label for="84">HCG Cuantitativa</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="85" />
-								<label for="85">HCG Cualitativa</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="86" />
-								<label for="86">DHEA - Sulfato</label>
-							</div>
+							<input type="checkbox" name="" id="69" />
+							<label for="69">T-3 Total T-4 Total</label>
+
+							<input type="checkbox" name="" id="70" />
+							<label for="70">T-3 Libre T-4 Libre</label>
+
+							<input type="checkbox" name="" id="71" />
+							<label for="71">T.S.H.</label>
+
+							<input type="checkbox" name="" id="72" />
+							<label for="72">Insulina</label>
+
+							<input type="checkbox" name="" id="73" />
+							<label for="73">Insulina Post-Prandial</label>
+
+							<input type="checkbox" name="" id="74" />
+							<label for="74">Insulina Post-Glicolab</label>
+
+							<input type="checkbox" name="" id="75" />
+							<label for="75">Curva de Insulina</label>
+
+							<input type="checkbox" name="" id="76" />
+							<label for="76">F.S.H.</label>
+
+							<input type="checkbox" name="" id="77" />
+							<label for="77">L.H.</label>
+
+							<input type="checkbox" name="" id="78" />
+							<label for="78">Estradiol</label>
+
+							<input type="checkbox" name="" id="79" />
+							<label for="79">Progesterona</label>
+
+							<input type="checkbox" name="" id="80" />
+							<label for="80">Prolactina</label>
+
+							<input type="checkbox" name="" id="81" />
+							<label for="81">Testosterona Total Libre</label>
+
+							<input type="checkbox" name="" id="82" />
+							<label for="82">Cortisol A.M.</label>
+
+							<input type="checkbox" name="" id="83" />
+							<label for="83">Cortisol P.M.</label>
+
+							<input type="checkbox" name="" id="84" />
+							<label for="84">HCG Cuantitativa</label>
+
+							<input type="checkbox" name="" id="85" />
+							<label for="85">HCG Cualitativa</label>
+
+							<input type="checkbox" name="" id="86" />
+							<label for="86">DHEA - Sulfato</label>
 						</fieldset>
 					</form>
 				</div>
@@ -489,26 +351,20 @@
 						<fieldset>
 							<legend>Heces</legend>
 
-							<div>
-								<input type="checkbox" name="" id="87" />
-								<label for="87">Examen de heces</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="88" />
-								<label for="88">Sangre Oculta</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="89" />
-								<label for="89">Directo y Concentrado</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="90" />
-								<label for="90">Coloración de Quensel</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="91" />
-								<label for="91">Azucares Reductores</label>
-							</div>
+							<input type="checkbox" name="" id="87" />
+							<label for="87">Examen de heces</label>
+
+							<input type="checkbox" name="" id="88" />
+							<label for="88">Sangre Oculta</label>
+
+							<input type="checkbox" name="" id="89" />
+							<label for="89">Directo y Concentrado</label>
+
+							<input type="checkbox" name="" id="90" />
+							<label for="90">Coloración de Quensel</label>
+
+							<input type="checkbox" name="" id="91" />
+							<label for="91">Azucares Reductores</label>
 						</fieldset>
 					</form>
 				</div>
@@ -517,22 +373,17 @@
 					<form action="">
 						<fieldset>
 							<legend>Orina</legend>
-							<div>
-								<input type="checkbox" name="" id="92" />
-								<label for="92">Examen de Orina</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="93" />
-								<label for="93">Proteinuria en orina 24 horas</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="94" />
-								<label for="94">Microalbuminuria</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="95" />
-								<label for="95">Otros</label>
-							</div>
+							<input type="checkbox" name="" id="92" />
+							<label for="92">Examen de Orina</label>
+
+							<input type="checkbox" name="" id="93" />
+							<label for="93">Proteinuria en orina 24 horas</label>
+
+							<input type="checkbox" name="" id="94" />
+							<label for="94">Microalbuminuria</label>
+
+							<input type="checkbox" name="" id="95" />
+							<label for="95">Otros</label>
 						</fieldset>
 					</form>
 				</div>
@@ -542,42 +393,32 @@
 						<fieldset>
 							<legend>Marcadores tumorales</legend>
 
-							<div>
-								<input type="checkbox" name="" id="96" />
-								<label for="96">C.E.A.</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="97" />
-								<label for="97">A.F.P.</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="98" />
-								<label for="98">CA-125</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="99" />
-								<label for="99">CA-15-3</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="100" />
-								<label for="100">CA-19-9</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="101" />
-								<label for="101">P.S.A. Total</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="102" />
-								<label for="102">P.S.A. Total y Libre</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="103" />
-								<label for="103">B-2 Microglobulina</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="104" />
-								<label for="104">Otros</label>
-							</div>
+							<input type="checkbox" name="" id="96" />
+							<label for="96">C.E.A.</label>
+
+							<input type="checkbox" name="" id="97" />
+							<label for="97">A.F.P.</label>
+
+							<input type="checkbox" name="" id="98" />
+							<label for="98">CA-125</label>
+
+							<input type="checkbox" name="" id="99" />
+							<label for="99">CA-15-3</label>
+
+							<input type="checkbox" name="" id="100" />
+							<label for="100">CA-19-9</label>
+
+							<input type="checkbox" name="" id="101" />
+							<label for="101">P.S.A. Total</label>
+
+							<input type="checkbox" name="" id="102" />
+							<label for="102">P.S.A. Total y Libre</label>
+
+							<input type="checkbox" name="" id="103" />
+							<label for="103">B-2 Microglobulina</label>
+
+							<input type="checkbox" name="" id="104" />
+							<label for="104">Otros</label>
 						</fieldset>
 					</form>
 				</div>
@@ -587,22 +428,17 @@
 						<fieldset>
 							<legend>Inmunología</legend>
 
-							<div>
-								<input type="checkbox" name="" id="105" />
-								<label for="105">ANA</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="106" />
-								<label for="106">Anti-DNA</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="107" />
-								<label for="107">CH50</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="108" />
-								<label for="108">Otros</label>
-							</div>
+							<input type="checkbox" name="" id="105" />
+							<label for="105">ANA</label>
+
+							<input type="checkbox" name="" id="106" />
+							<label for="106">Anti-DNA</label>
+
+							<input type="checkbox" name="" id="107" />
+							<label for="107">CH50</label>
+
+							<input type="checkbox" name="" id="108" />
+							<label for="108">Otros</label>
 						</fieldset>
 					</form>
 				</div>
@@ -611,18 +447,14 @@
 					<form action="">
 						<fieldset>
 							<legend>Bacteriología</legend>
-							<div>
-								<input type="checkbox" name="" id="109" />
-								<label for="109">Urocultivo y Antibiograma</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="110" />
-								<label for="110">Coprocultivo y Antibiograma</label>
-							</div>
-							<div>
-								<input type="checkbox" name="" id="111" />
-								<label for="111">Otros</label>
-							</div>
+							<input type="checkbox" name="" id="109" />
+							<label for="109">Urocultivo y Antibiograma</label>
+
+							<input type="checkbox" name="" id="110" />
+							<label for="110">Coprocultivo y Antibiograma</label>
+
+							<input type="checkbox" name="" id="111" />
+							<label for="111">Otros</label>
 						</fieldset>
 					</form>
 				</div>
@@ -632,9 +464,7 @@
 						<fieldset>
 							<legend>Otros Examenes</legend>
 
-							<div>
-								<textarea name="" id="" cols="30" rows="10"></textarea>
-							</div>
+							<textarea name="" id="" cols="30" rows="10"></textarea>
 						</fieldset>
 					</form>
 				</div>
