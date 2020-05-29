@@ -5,7 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="css/estilosR.css" />
+		<script src="https://kit.fontawesome.com/cc605f9d1f.js" crossorigin="anonymous"></script>
 		<title>Formulario</title>
 	</head>
 	<body>
@@ -25,21 +27,33 @@
 							<input type="password" name="pass2" id="pass2" />
 							<label class="label" for="pass2">Repetir Contraseña:</label>
 						</div>
-						<div class="input-group select">
-							<select name="" id="">
-								<option value="laboratorio">laboratorio</option>
-								<option value="caja">caja</option>
-								<option value="administracion">administracion</option>
-								<option value="admin">admin</option>
-							</select>
+						<div class="selectbox">
+							<div class="select" id="select">
+								<div class="contenido-select">
+									<h1 class="titulo">Seleccione su modulo</h1>
+									<p class="descripcion">Lorem ipsum dolor sit.</p>
+								</div>
+								<i class="fas fa-angle-down"></i>
+							</div>
+							<!-- <div class="opciones" id="opciones">
+								<a href="#" class="opcion">
+									<div class="contenido-opcion">
+										<img src="" alt="">
+										<div class="textos">
+											<h2 class="titulo">Admin</h2>
+											<p class="descripcion">Lorem ipsum dolor sit.</p>
+										</div>
+									</div>
+								</a>
+							</div> -->
 						</div>
-				
+
 						<input type="submit" value="Enviar" id="btn-submit" />
 					</div>
 				</form>
 			</div>
 		</div>
-
+		<script src="js/jquery-3.5.1.min.js"></script>
 		<script src="js/formulario.js"></script>
 	</body>
 </html>
