@@ -2,7 +2,7 @@ var btncambiar = document.getElementById('btn2');
 var valorPropiedad = [];
 var letrasT = document.getElementById('TLetra'); /*tamaño de las letras,(no es optimo usar Ñ)*/
 var tipografia = document.getElementById('Tipografia');
-var valoresIniciales = ['#E0E0E0', '#009245', '#614385', 14, '"sans-serif"']; /*por si el usuario desea cancelar los cambios*/
+var valoresIniciales = ['#f2f2f7', '#2ECC40', '#614385', 14, '"sans-serif"']; /*por si el usuario desea cancelar los cambios*/
 var tipografias = ['', '"sans-serif"', '"Arial"']; /*tipografias a disposicion*/
 function colorfondo(valor) {
 	valorPropiedad[0] = valor;

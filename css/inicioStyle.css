@@ -11,20 +11,20 @@ body {
 }
 .btn {
 	padding: 5px;
-	background-color: #1668c4;
+	background-color: #0074D9;
 	color: white;
 	border-radius: 5px;
 	font-weight: bold;
 }
 .btn:hover {
-	background-color: #4a88f4;
+	background-color: #1592ff;
 }
 .panel {
 	border: solid #8f7e4f 1px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	position: relative;
 	top: 100px;
-	background-color: #e0e0e0;
+	background-color: #f2f2f7;
 	height: 350px;
 	width: 320px;
 	border-radius: 5px;
