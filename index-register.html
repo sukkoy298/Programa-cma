@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="css/estilosR.css" />
+		<title>Formulario</title>
+	</head>
+	<body>
+		<div class="contenedor-formulario">
+			<div class="wrap">
+				<form action="" class="formulario" name="formulario_registro" method="post">
+					<div>
+						<div class="input-group">
+							<input type="text" name="nombre" id="nombre" />
+							<label class="label" for="nombre">Nombre:</label>
+						</div>
+						<div class="input-group">
+							<input type="password" name="pass" id="pass" />
+							<label class="label" for="pass">Contraseña:</label>
+						</div>
+						<div class="input-group">
+							<input type="password" name="pass2" id="pass2" />
+							<label class="label" for="pass2">Repetir Contraseña:</label>
+						</div>
+						<div class="input-group select">
+							<select name="" id="">
+								<option value="laboratorio">laboratorio</option>
+								<option value="caja">caja</option>
+								<option value="administracion">administracion</option>
+								<option value="admin">admin</option>
+							</select>
+						</div>
+				
+						<input type="submit" value="Enviar" id="btn-submit" />
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script src="js/formulario.js"></script>
+	</body>
+</html>
