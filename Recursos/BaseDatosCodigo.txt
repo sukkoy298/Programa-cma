@@ -1,20 +1,3 @@
-
-CREATE TABLE Pacientes(
-ID_Alfa char(1) not null DEFAULT 'P',
-ID_Num int(11) not null PRIMARY KEY auto_increment,
-Name varchar(25) not null,
-lastName varchar(25) not null,
-Fecha_Nacimiento date not null,
-Tipo_Sangre varchar(4) not null,
-CI int(11) not null 
-);
-CREATE TABLE users(
-ID_Alfa char(1) not null DEFAULT 'U',
-ID_Num int(11) not null PRIMARY KEY auto_increment,
-Usering tinytext not null,
-Password text not null,
-Status tinytext not null
-);
 CREATE TABLE Examenes(
 ID_Alfa char(1) not null DEFAULT 'E',
 ID_Num int(11) not null PRIMARY KEY auto_increment,
@@ -23,30 +6,32 @@ ValuePr float not null,
 Costo float not null,
 Disponible boolean not null
 );
-CREATE TABLE ReactivosNecesarios(
+CREATE TABLE Reactivos_Necesarios(
 ID_Reacti varchar(20) not null,
 Cantidad_Requerida decimal,
 ID_Examen varchar(20) not null
 );
-CREATE TABLE Facturas(
+CREATE TABLE facturas(
 ID_Alfa char(1) not null DEFAULT 'F',
 ID_Num int(11) not null PRIMARY KEY auto_increment,
 ID_Pacient varchar(20) not null,
 Fecha date not null,
+Siguiente_Pasar char(1) not null,
 Costo float not null,
-Tip_Servi char(2) not null
+Tip_Servi tinytext not null
 );
-CREATE TABLE DatosExtrasFactu(
+CREATE TABLE datos_extras_factura(
 ID_Factura varchar(20) not null,
-Dat_Es varchar(20) not null,
+Dat_Es varchar(20) not null
 );
-CREATE TABLE HistorialMedico(
+CREATE TABLE historial_medico(
 ID_Alfa char(1) not null DEFAULT 'H',
 ID_Num int(11) not null PRIMARY KEY auto_increment,
 ID_Factura varchar(20) not null
 );
-CREATE TABLE ResultadosHistorial(
+CREATE TABLE Resultados_Historial(
 ID_Historial varchar(20) not null,
+id int(11) not null Primary Key auto_increment,
 Evaluacion varchar(30) not null,
 resultado varchar(50) not null
 );
