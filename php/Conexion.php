@@ -1,8 +1,9 @@
 <?php 
+ $conexion = mysqli_connect('localhost', 'root', '','cma');
 function query($encuesta, $campo){
     $conexion = mysqli_connect('localhost', 'root', '','cma');
     if (!$conexion){
-        echo("Error en la conexion ". mysqli_error($conexion));
+        die(mysqli_error($conexion));
     }else{
         $resultado = mysqli_query($conexion,$encuesta);
         $columnas = mysqli_fetch_array($resultado);  
@@ -10,13 +11,13 @@ function query($encuesta, $campo){
     if ($columnas != null) {
         return($columnas[$campo]);
     } else{
-        return("nothing");
+        return((mysqli_error($conexion)));
     }    
 }
 function Update($encuesta){
     $conexion = mysqli_connect('localhost', 'root', '','cma');
     if (!$conexion){
-        echo("Error en la conexion ". mysqli_error($conexion));
+        die(mysqli_error($conexion));
     }else{
          mysqli_query($conexion,$encuesta);  
     }
@@ -24,7 +25,7 @@ function Update($encuesta){
 function AddIndatabase($encuesta){
     $conexion = mysqli_connect('localhost', 'root', '','cma');
     if (!$conexion){
-        echo("Error en la conexion ". mysqli_error($conexion));
+        die(mysqli_error($conexion));
     }else{
         $resultado = mysqli_query($conexion,$encuesta);  
     }
