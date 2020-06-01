@@ -1,70 +1,77 @@
 var nroCliente = [];
-var datosUsuario = ['', 'maria jose', '0.0', '0'];
-var cuerpo = document.getElementById('cuerpo_T_Cliente');
-var clientes = 6;
-var manual = [];
-manual[0] = document.getElementById('btn1');
-window.addEventListener('load', function iniciar() {
-	for (var x = 0; x <= clientes; x++) {
-		var columna = document.createElement('tr'); /*Columna*/
-		columna.id = 'columna' + x;
-
-		nroCliente[x] = x + 1;
-		var filaDos = document.createElement('th');
-		filaDos.id = 'filaDos' + x;
-		var textfile = document.createElement('input');
-		filaDos.appendChild(textfile);
-		columna.appendChild(filaDos);
-		textfile.type = 'checkbox';
-		textfile.id = 'textfile' + x;
-		textfile.disabled = 'true';
-
-		/*El valor promedio*/
-		var filaTres = document.createElement('th');
-		filaTres.id = 'filaTres' + x;
-		var textoCelda2 = document.createTextNode(nroCliente[x]);
-		filaTres.appendChild(textoCelda2);
-		columna.appendChild(filaTres);
-		/*agregar la columna al body de la tabla*/
-		cuerpo.appendChild(columna);
-		/*esto no tiene nada que ver aqui*/
-		manual[x] = document.getElementById('btn1');
-	}
-	for (var i = 1; i <= 3; i++) {
-		var texto = document.createTextNode(datosUsuario[i]);
-		document.getElementById('label' + i).appendChild(texto);
-	}
-});
+var cuerpo = document.getElementById("cuerpo_T_Cliente"); 
+var seleccion_Manual_Activa = 'false';
+var exist = false;
+window.addEventListener("load", function iniciar(){
+    var contador = 1;
+    var columna;
+    var NroPaciente;
+    var texto;
+    var nombre;
+    $.ajax({
+            type: "GET",
+            url: "php/Laboratorio_inicio_menu.php",
+            success: function (response) {
+                console.log(response);
+               let Pacientes = JSON.parse(response);
+               Pacientes.forEach(datos => {  
+                exist = false;
+                columna = document.createElement("tr");/*Columna*/
+                columna.id = "columna" + contador;
+                columna.value = datos.id; 
+                NroPaciente = document.createElement("th");
+                 NroPaciente.id = "fila1" + contador;
+                texto = document.createTextNode(contador);
+                NroPaciente.appendChild(texto);
+                columna.appendChild(NroPaciente);
+                nombre = document.createElement("th");
+                nombre.id = "fila2" + contador;
+                texto = document.createTextNode(datos.Nombre +"  "+ datos.apellido);
+                nombre.appendChild(texto);
+                columna.appendChild(nombre);
+                cuerpo.appendChild(columna);
+                $(columna).attr('onclick','Seleccion(value)');
+                $(columna).attr('value', datos.id);
+                $(NroPaciente).css({"padding":"10"});
+                 if (datos.Comprobante == 'true') {
+                    $(columna).attr('onclick','');
+                    $(columna).css({"background-color":"#A6A6A6"});
+                    $(NroPaciente).css({"background-color":"#A6A6A6"});
+                }
+                exist = true;
+                contador ++;
+               });    
+            }           
+         }); 
+        console.log(exist);
+    }); 
+    function seleccionManual(id){
+        if (seleccion_Manual_Activa == 'false') {
+            $("#" + id).css({"background-color":"#009245"});
+            seleccion_Manual_Activa = 'true'        
+        }else if(seleccion_Manual_Activa == 'true'){
+            $("#" + id).css({"background-color":"#6E6E6E"});
+            seleccion_Manual_Activa = 'false'   
+        }       
+    }
+        function Seleccion(value) {
+           if (seleccion_Manual_Activa == 'true' && exist == true) {
+            $.ajax({
+                type: "POST",
+                url: "php/Laboratorio_menu_seleccion_manual.php",
+                data: {value},
+                success: function (response) {
+                   console.log(response);
+                }
+            });
+            document.location.href="http://localhost/Programa-cma-master/index-Laboratorio.HTML"
+           }     
+        }
 function siguiente() {
-	document.location.href = 'file:../Programa-cma-master/index-Laboratorio.html';
-}
-var condi = true;
-function seleccionManual() {
-	if (condi === true) {
-		for (var i = 0; i <= clientes; i++) {
-			var columna = document.getElementById('columna' + i);
-			var filauno = document.createElement('th');
-			var textfile = document.createElement('input');
-			textfile.type = 'Button';
-			textfile.id = 'btn' + (i + 6);
-			textfile.value = i;
-			filauno.appendChild(textfile);
-			columna.appendChild(filauno);
-			manual[i] = document.getElementById('btn' + (i + 6));
-		}
-		condi = false;
-		Cuestionar();
-	}
-}
-var aumenta = 0;
-function Cuestionar() {
-	while (condi === false) {
-		manual[aumenta].addEventListener('click', function () {
-			document.location.href = 'file:../Programa-cma-master/index-Laboratorio.html';
-		});
-		aumenta++;
-	}
+    if (exist == true) {    
+    document.location.href="http://localhost/Programa-cma-master/index-Laboratorio.HTML";
+    }
 }
 function Historial() {
-	document.location.href = 'file:../Programa-cma/index-historialMedico.html';
+    document.location.href="http://localhost/Programa-cma-master/index-historialMedico.html";  
 }
