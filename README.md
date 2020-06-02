@@ -7,5 +7,5 @@ Centro de Control de aplicaciones con multiples trabajadores, con el fin de opti
 ## Autores ✒️
 
 * **Antoni Morillo** - *BackEnd* - [antdestructor](https://github.com/antdestructor)
-* **Gabriel Perz** - *FrontEnd* - [GabrielPerezZX](https://github.com/GabrielPerezZX)
+* **Gabriel Perez** - *FrontEnd* - [GabrielPerezZX](https://github.com/GabrielPerezZX)
 * **Karlos Rodriguez** - *FrontEnd* - [sukkoy298](https://github.com/sukkoy298)
