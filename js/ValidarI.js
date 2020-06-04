@@ -52,5 +52,4 @@
 			elementos[i].addEventListener('blur', blurInput);
 		}
 	}
-
 }());
