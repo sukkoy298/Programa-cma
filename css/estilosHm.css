@@ -18,7 +18,7 @@ body {
 
 header {
 	overflow: hidden;
-	background-color: #4267B2;
+	background-color: #4267b2;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -79,21 +79,21 @@ header a.logo img {
 
 /* Formulario de los datos del cliente */
 
-form {
+.myForm {
 	width: 25%;
 	margin-top: 20px;
 	margin-left: 20px;
 	float: left;
 }
 
-fieldset {
+.myForm fieldset {
 	border: 2px solid #aaaaaa;
 	padding: 20px;
 	border-radius: 10px;
 	width: 100%;
 }
 
-input[type='text'] {
+.myForm input[type='text'] {
 	width: 100%;
 	padding: 12px;
 	margin-bottom: 20px;
@@ -103,24 +103,24 @@ input[type='text'] {
 	font-size: 14px;
 }
 
-input[type='text']:focus {
-	border-color: #0074D9;
+.myForm input[type='text']:focus {
+	border-color: #0074d9;
 	transition: 0.5s ease all;
 	outline: none;
 }
 
-input[type='submit'] {
+.myForm input[type='submit'] {
 	width: 100%;
 	padding: 12px;
-	background: #0074D9;
+	background: #0074d9;
 	color: #ffffff;
 	border: none;
 	border-radius: 10px;
 	outline: none;
 }
 
-input[type='submit']:hover {
-	background: #1592ff;
+.myForm input[type='submit']:hover {
+	background: rgba(0, 116, 217, .8);
 	transition: 0.5s ease all;
 	cursor: pointer;
 	border: none;
@@ -138,25 +138,167 @@ div.pacientes {
 	border-radius: 10px;
 }
 
-div.pacientes table {
+.pacientes table {
 	border-collapse: collapse;
 	width: 100%;
 }
 
-div.pacientes table th,
+.pacientes table th,
 td {
 	padding: 10px;
 }
 
-div.pacientes table tr:nth-child(even) {
+.pacientes table tr:nth-child(even) {
 	background-color: #f2f2f2;
 }
 
-div.pacientes table th {
+.pacientes table th {
 	background-color: #009245;
 	color: white;
 }
 
-div.pacientes table tfoot {
+.pacientes table tfoot {
 	display: none;
+}
+
+/* ------------------------- */
+/* POPUP */
+/* ------------------------- */
+
+div.overlay {
+	background: rgba(0, 0, 0, 0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+}
+
+div.overlay.active {
+	visibility: visible;
+}
+
+div.popup {
+	background: #f8f8f8;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+	border-radius: 3px;
+	padding: 20px;
+	text-align: center;
+	width: 40%;
+	opacity: 0;
+	transition: .3s ease all;
+	transform: scale(0.7);
+}
+
+div.popup .btn-cerrar-popup {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	color: #bbbbbb;
+	transition: 0.3s ease all;
+}
+
+div.popup .btn-cerrar-popup:hover {
+	color: #000;
+}
+
+div.popup h3 {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	opacity: 0;
+}
+
+div.table-popup {
+	width: 100%;
+	border: 2px solid #009245;
+	border-radius: 10px;
+}
+
+div.table-popup table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+div.table-popup table th,
+td {
+	padding: 10px;
+}
+
+div.table-popup table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+div.table-popup table th {
+	background-color: #009245;
+	color: white;
+}
+
+div.popup button {
+	margin-top: 20px;
+	padding: 0px 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #fff;
+	background: #0074d9;
+	border-radius: 3px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.5s ease all;
+	outline: none;
+}
+
+div.popup button:hover {
+	background: rgba(0, 116, 217, 0.8);
+}
+
+.btn-abrir-popup {
+	padding: 0px 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #fff;
+	background: #0074d9;
+	border-radius: 3px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.5s ease all;
+	outline: none;
+	display: block;
+	position: relative;
+	left: 40px;
+	top: 20px;
+}
+
+.btn-abrir-popup:hover {
+	background: rgba(0, 116, 217, 0.8);
+}
+
+/* ------------------------- */
+/* ANIMACIONES */
+/* ------------------------- */
+.popup.active {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.popup.active h3 {
+	animation: entradaTitulo .8s ease .5s forwards;
+}
+
+@keyframes entradaTitulo {
+	from {
+		transform: translateY(-25px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0px);
+		opacity: 1;
+	}
 }
