@@ -18,7 +18,7 @@ body {
 
 header {
 	overflow: hidden;
-	background-color: #4267B2;
+	background-color: #4267b2;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -130,7 +130,7 @@ div.resultadosP {
 	margin-top: 20px;
 	margin-left: 20px;
 	display: inline-block;
-	border: 2px solid #0074D9;
+	border: 2px solid #0074d9;
 }
 
 div.resultadosP input[type='text'] {
@@ -142,7 +142,7 @@ div.resultadosP input[type='text'] {
 }
 
 div.resultadosP input[type='text']:focus {
-	border: 1px solid #0074D9;
+	border: 1px solid #0074d9;
 	transition: 0.5s ease all;
 }
 
@@ -162,7 +162,7 @@ div.resultadosP table tr:nth-child(even) {
 }
 
 div.resultadosP table th {
-	background-color: #0074D9;
+	background-color: #0074d9;
 	color: white;
 }
 

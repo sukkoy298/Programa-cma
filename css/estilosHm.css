@@ -120,7 +120,7 @@ header a.logo img {
 }
 
 .myForm input[type='submit']:hover {
-	background: rgba(0, 116, 217, .8);
+	background: rgba(0, 116, 217, 0.8);
 	transition: 0.5s ease all;
 	cursor: pointer;
 	border: none;
@@ -190,7 +190,7 @@ div.popup {
 	text-align: center;
 	width: 40%;
 	opacity: 0;
-	transition: .3s ease all;
+	transition: 0.3s ease all;
 	transform: scale(0.7);
 }
 
@@ -289,7 +289,7 @@ div.popup button:hover {
 }
 
 .popup.active h3 {
-	animation: entradaTitulo .8s ease .5s forwards;
+	animation: entradaTitulo 0.8s ease 0.5s forwards;
 }
 
 @keyframes entradaTitulo {

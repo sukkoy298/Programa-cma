@@ -2,8 +2,6 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 }
 
 body,
@@ -23,7 +21,7 @@ body {
 
 header {
 	overflow: hidden;
-	background-color: #4267B2;
+	background-color: #4267b2;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -139,7 +137,7 @@ input[type='tel'] {
 input[type='number']:focus,
 input[type='date']:focus,
 input[type='tel']:focus {
-	border-color: #0074D9;
+	border-color: #0074d9;
 	transition: 0.5s ease all;
 	outline: none;
 }
@@ -157,7 +155,7 @@ input[type='tel']:focus {
 input[type='reset'] {
 	width: 100%;
 	padding: 12px;
-	background: #0074D9;
+	background: #0074d9;
 	color: #ffffff;
 	border: none;
 	border-radius: 10px;
@@ -187,15 +185,13 @@ input[type='reset']:hover {
 }
 
 .datosE label {
-	color: #0074D9;
+	color: #0074d9;
 	padding: 5px 15px 5px 51px;
 	display: inline-block;
 	position: relative;
 	font-size: 1em;
 	border-radius: 3px;
 	cursor: pointer;
-	-webkit-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 	margin-right: 10px;
 	margin-bottom: 10px;
@@ -206,12 +202,12 @@ input[type='reset']:hover {
 }
 
 .datosE label:before {
-	content: "";
+	content: '';
 	width: 17px;
 	height: 17px;
 	display: inline-block;
 	background-color: none;
-	border: 3px solid #0074D9;
+	border: 3px solid #0074d9;
 	border-radius: 3px;
 	position: absolute;
 	left: 17px;
@@ -224,7 +220,7 @@ input[type='reset']:hover {
 
 .datosE input[type='checkbox']:checked + label {
 	padding: 5px 15px;
-	background-color: #0074D9;
+	background-color: #0074d9;
 	border-radius: 2px;
 	color: #fff;
 }

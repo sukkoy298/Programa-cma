@@ -1,7 +1,6 @@
 * {
 	margin: 0;
 	padding: 0;
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -17,7 +16,6 @@ body {
 	padding: 40px;
 	margin: auto;
 	background: #fff;
-	-webkit-box-shadow: 0px 0px 3px grey;
 	box-shadow: 0px 0px 3px grey;
 }
 
@@ -202,13 +200,13 @@ a {
 .select {
 	background: #fff;
 	width: 100%;
-	box-shadow: 0px 0px 0px rgba(0, 0, 0, .16);
+	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.16);
 	border-radius: 10px;
 	cursor: pointer;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	transition: .2s ease all;
+	transition: 0.2s ease all;
 	margin-bottom: 30px;
 	padding: 30px;
 	position: relative;
@@ -218,12 +216,12 @@ a {
 
 .select.active,
 .select:hover {
-	box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.16);
 	border: 2px solid #213f8f;
 }
 
 .select.active:before {
-	content: "";
+	content: '';
 	display: block;
 	height: 0;
 	width: 0;
@@ -257,7 +255,7 @@ a {
 .opciones {
 	background: #fff;
 	border-radius: 10px;
-	box-shadow: 0px 5px 10px rgba(0,0,0,.16);
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.16);
 	max-height: 400px;
 	overflow: auto;
 	z-index: 100;
@@ -267,13 +265,13 @@ a {
 
 .opciones.active {
 	display: block;
-	animation: fadeIn .3s forwards;
+	animation: fadeIn 0.3s forwards;
 	position: absolute;
 }
 
 @keyframes fadeIn {
 	from {
-		transform: translateY(-200px) scale(.5);
+		transform: translateY(-200px) scale(0.5);
 	}
 	to {
 		transform: translateY(0) scale(1);
@@ -284,7 +282,7 @@ a {
 	width: 100%;
 	display: flex;
 	align-items: center;
-	transition: .2s ease all;
+	transition: 0.2s ease all;
 }
 
 .opciones .contenido-opcion {
@@ -298,7 +296,7 @@ a {
 }
 
 .opciones .contenido-opcion:hover {
-	background: #213F8F;
+	background: #213f8f;
 }
 
 .opciones .contenido-opcion:hover .titulo,
@@ -306,7 +304,7 @@ a {
 	color: #fff;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
 	.selectbox {
 		width: 100%;
 	}
