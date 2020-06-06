@@ -23,17 +23,17 @@
 			<form action="" class="myForm">
 				<fieldset class="search">
 					<legend>Buscar paciente</legend>
-					<input type="text" id="ftxt0" placeholder="Numero de paciente" required />
-					<input type="text" id="ftxt1" placeholder="Cedula del paciente" required />
-					<input type="text" id="ftxt2" placeholder="Fecha de nacimiento del paciente" required />
-					<input type="text" id="ftxt3" placeholder="Nombre completo del paciente" required />
-					<input type="submit" title="Buscar al Paciente" id="fsubmit" value="Buscar" required />
+					<input type="text" id="ftxt0" placeholder="Numero de paciente"  />
+					<input type="text" id="ftxt1" placeholder="Cedula del paciente"  />
+					<input type="text" id="ftxt2" placeholder="Fecha de nacimiento del paciente" />
+					<input type="text" id="ftxt3" placeholder="Nombre completo del paciente"  />
+					<input type="button" title="Buscar al Paciente" id="fsubmit" value="Buscar" onclick="buscar()"/>
 				</fieldset>
 			</form>
 		</div>
 
 		<div class="pacientes" style="overflow-x: auto;">
-			<table>
+			<table id = "tabla_pacientes">
 				<thead>
 					<tr>
 						<th>Cedula</th>
@@ -41,60 +41,21 @@
 						<th>Fecha de nacimiento</th>
 					</tr>
 				</thead>
-				<tbody>
-					<tr>
-						<td>3490</td>
-						<td>Peter Griffin</td>
-						<td>Tue May 19 2001</td>
-					</tr>
-					<tr>
-						<td>25104</td>
-						<td>Lois Griffin</td>
-						<td>Fri Aug 23 1950</td>
-					</tr>
-					<tr>
-						<td>30462</td>
-						<td>Joe Swanson</td>
-						<td>Sun Apr 12 1983</td>
-					</tr>
-					<tr>
-						<td>43860</td>
-						<td>Cleveland Brown</td>
-						<td>Fri Sep 06 1994</td>
-					</tr>
-				</tbody>
-				<tfoot>
-					<tr>
-						<th colspan="3">(Nombre del paciente)</th>
-					</tr>
-					<tr>
-						<td colspan="1">Fecha del Examen</td>
-						<td colspan="2">(Fecha del Examen del Paciente)</td>
-					</tr>
+				<tfoot id = "fechas">
 				</tfoot>
 			</table>
 		</div>
-		<button class="btn-abrir-popup" id="btn-abrir-popup">Mostrar tabla</button>
 		<div class="overlay" id="overlay">
 			<div class="popup" id="popup">
 				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-				<h3>Tabla oculta</h3>
+				<h3  id = 'titulo'></h3>
 				<div class="table-popup" style="overflow-x: auto;">
-					<table>
-						<tr>
-							<th>Campo1</th>
-							<td><label for="">Dato1</label></td>
-						</tr>
-						<tr>
-							<th>Campo2</th>
-							<td><label for="">Dato2</label></td>
-						</tr>
+					<table id = 'resultados_servicios'>
 					</table>
 				</div>
-				<button class="btn-aceptar">Aceptar</button>
 			</div>
 		</div>
 		<script src="js/jquery-3.5.1.min.js"></script>
-		<script src="js/historialMedico.js"></script>
+		<script src="js/HistorialMedico.js"></script>
 	</body>
 </html>
