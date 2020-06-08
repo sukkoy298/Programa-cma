@@ -1,0 +1,111 @@
+@import '_variables';
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: $fondo;
+	font-family: $font-family;
+	border-top: 30px solid $primary;
+}
+
+/* ------------------------- */
+/* Formulario */
+/* ------------------------- */
+.wrap {
+	width: 90%;
+	max-width: 500px;
+	padding: 40px;
+	margin: auto;
+	background: #fff;
+	box-shadow: 0px 0px 3px grey;
+	img {
+		width: 100%;
+		height: auto;
+	}
+	h1 {
+		color: #303f9f;
+		border-bottom: 2px solid #c7c7c7;
+	}
+}
+
+.contenedor-formulario {
+	width: 100%;
+	color: $white;
+	padding: 50px;
+	.formulario {
+		width: 100%;
+		margin: auto;
+		.input-group {
+			position: relative;
+			margin-bottom: 32px;
+			// background: rgba(#ccc, .2)
+			input[type='text'],
+			input[type='password'] {
+				font-family: $font-family;
+				font-size: 16px;
+				color: $primary;
+				width: 100%;
+				outline: none;
+				padding: 15px;
+				background: none;
+				border: none;
+				border-bottom: $borde solid $light-primary;
+				&:focus,
+				&:active {
+					outline: none;
+					border-bottom: $borde solid $primary;
+				}
+				&.error {
+					border-bottom: $borde solid $error;
+					+ label {
+						color: $error;
+					}
+				}
+			}
+			label {
+				color: $primary;
+				&.label {
+					-webkit-transition: all 0.3s ease;
+					-o-transition: all 0.3s ease;
+					transition: all 0.3s ease;
+					margin-left: 15px;
+					font-size: 16px;
+					line-height: 16px;
+					position: absolute;
+					top: 16px;
+					left: 0;
+					&.active {
+						top: -12px;
+						font-size: 12px;
+						line-height: 12px;
+						color: $divider;
+					}
+				}
+			}
+		}
+		input[type='submit'] {
+			background: $primary;
+			border-radius: 1px;
+			border: $borde solid $white;
+			color: #fff;
+			cursor: pointer;
+			display: inline-block;
+			font-family: $font-family;
+			font-size: 16px;
+			padding: 15px;
+			width: 100%;
+			-webkit-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+			&:hover {
+				background: #1976d2;
+			}
+		}
+	}
+}

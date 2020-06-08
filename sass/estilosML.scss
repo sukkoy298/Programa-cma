@@ -1,0 +1,120 @@
+@import '_variables';
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: $fondo;
+	font-family: $font-family;
+	border-top: 30px solid $primary;
+}
+
+@import '_header';
+
+.section1 {
+	float: left;
+	width: 30%;
+}
+
+div.trabajadores {
+	width: 100%;
+	margin-top: 20px;
+	margin-left: 20px;
+	border: 2px solid #009245;
+	border-radius: 10px;
+}
+
+div.trabajadores table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+div.trabajadores table th,
+td {
+	padding: 10px;
+}
+
+div.trabajadores table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+div.trabajadores table th {
+	background-color: #009245;
+	color: white;
+}
+
+form {
+	width: 25%;
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 100%;
+}
+
+fieldset {
+	border: 2px solid #aaaaaa;
+	padding: 20px;
+	border-radius: 10px;
+	width: 100%;
+}
+
+div.resultadosP {
+	width: 60%;
+	margin-left: 40px;
+	margin-top: 20px;
+	display: none;
+	border: 2px solid #0074d9;
+}
+
+div.resultadosP table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+div.resultadosP table th,
+td,
+textarea {
+	padding: 10px;
+}
+
+div.resultadosP table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+div.resultadosP table th {
+	background-color: #0074d9;
+	color: white;
+}
+
+.panel {
+	width: 100%;
+	background-color: #555;
+	overflow: auto;
+}
+
+.panel button {
+	float: left;
+	padding: 12px;
+	background-color: #555;
+	color: white;
+	text-decoration: none;
+	font-size: 17px;
+	border: none;
+	transition: 0.5s ease all;
+	cursor: pointer;
+}
+
+.panel button:hover {
+	background: #009245;
+}
+
+@media screen and (max-width: 500px) {
+	.panel button {
+		float: none;
+		display: block;
+	}
+}
