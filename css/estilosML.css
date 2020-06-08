@@ -14,8 +14,6 @@ body {
 	background-color: #f2f2f7;
 }
 
-/* HEADER */
-
 header {
 	overflow: hidden;
 	background-color: #4267b2;
@@ -73,15 +71,15 @@ header a.logo img {
 	}
 }
 
-/* HEADER */
-
-/* MAIN */
+.section1 {
+	float: left;
+	width: 30%;
+}
 
 div.trabajadores {
-	width: 25%;
+	width: 100%;
 	margin-top: 20px;
 	margin-left: 20px;
-	display: inline-block;
 	border: 2px solid #009245;
 	border-radius: 10px;
 }
@@ -105,12 +103,11 @@ div.trabajadores table th {
 	color: white;
 }
 
-/* Formulario de los datos del cliente */
-
 form {
 	width: 25%;
 	margin-top: 20px;
 	margin-left: 20px;
+	width: 100%;
 }
 
 fieldset {
@@ -120,7 +117,34 @@ fieldset {
 	width: 100%;
 }
 
-/* Formulario de los datos del cliente */
+div.resultadosP {
+	width: 60%;
+	margin-left: 40px;
+	margin-top: 20px;
+	display: none;
+	border: 2px solid #0074d9;
+}
+
+div.resultadosP table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+div.resultadosP table th,
+td,
+textarea {
+	padding: 10px;
+}
+
+div.resultadosP table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+div.resultadosP table th {
+	background-color: #0074d9;
+	color: white;
+}
+
 .panel {
 	width: 100%;
 	background-color: #555;
@@ -135,12 +159,12 @@ fieldset {
 	text-decoration: none;
 	font-size: 17px;
 	border: none;
+	transition: 0.5s ease all;
+	cursor: pointer;
 }
 
 .panel button:hover {
 	background: #009245;
-	transition: 0.5s ease all;
-	cursor: pointer;
 }
 
 @media screen and (max-width: 500px) {
