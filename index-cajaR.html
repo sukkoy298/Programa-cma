@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/normalize.css" />
+		<title>Pacientes</title>
+		<link rel="stylesheet" href="css/estilosCr.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/cc605f9d1f.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<a href="#default" class="logo"><img src="img/LOGO.png" alt="Logo del Centro Medico el Ángel" /></a>
+			<div class="header-right">
+				<a href="#config"><i class="fas fa-cog"></i></a>
+				<a href="http://localhost/Programa-cma-master/"><i class="fas fa-sign-in-alt"></i></a>
+			</div>
+		</header>
+		<a href="#" class="tablink active">Registro de pacientes</a>
+		<a href="index-cajaD.html" class="tablink">Datos del paciente</a>
+		<a href="index-cajaE.html" class="tablink">Solicitud de examenes</a>
+
+		<div class="contenedor-formulario">
+			<div class="wrap">
+				<form action="" class="formulario" name="form_registro" method="post">
+					<div>
+						<div class="selectbox">
+							<div class="select" id="select">
+								<div class="contenido-select">
+									<h1 class="titulo">¿Desea registrar un nuevo paciente?</h1>
+								</div>
+								<i class="fas fa-angle-down"></i>
+							</div>
+							<div class="opciones" id="opciones">
+								<a href="#" class="opcion">
+									<div class="contenido-opcion">
+										<img src="img/success-icon.png" alt="Administracion" />
+										<div class="textos">
+											<h2 class="titulo">Si</h2>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="opcion">
+									<div class="contenido-opcion">
+										<img src="img/error-icon.png" alt="Caja" />
+										<div class="textos">
+											<h2 class="titulo">No</h2>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<input type="hidden" name="modulo" id="inputSelect" value="" />
+						<input type="button" id="fsubmit" value="Enviar" />
+					</div>
+				</form>
+				<form action="" class="formulario1" name="form_buscar" method="post">
+					<h1 class="titleS">Introduzca la cedula a buscar:</h1>
+					<div>
+						<div class="input-group">
+							<input type="number" id="cedula" name="cedula" />
+							<label class="label" for="cedula">Cedula:</label>
+						</div>
+						<input type="button" id="fsearch" value="Buscar" onclick="enviar()" />
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/ValidarCr.js"></script>
+	</body>
+</html>

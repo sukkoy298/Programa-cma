@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/normalize.css" />
+		<title>Pacientes</title>
+		<link rel="stylesheet" href="css/estilosCd.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/cc605f9d1f.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<a href="#default" class="logo"><img src="img/LOGO.png" alt="Logo del Centro Medico el Ángel" /></a>
+			<div class="header-right">
+				<a href="#config"><i class="fas fa-cog"></i></a>
+				<a href="http://localhost/Programa-cma-master/"><i class="fas fa-sign-in-alt"></i></a>
+			</div>
+		</header>
+		<a href="index-cajaR.html" class="tablink">Registro de pacientes</a>
+		<a href="#" class="tablink active">Datos del paciente</a>
+		<a href="index-cajaE.html" class="tablink">Solicitud de examenes</a>
+
+		<div class="contenedor-formulario">
+			<div class="wrap">
+				<div class="input-group">
+					<input type="number" name="idfac" id="idfactura" disabled />
+					<label for="idfac" class="label">N° de Factura:</label>
+				</div>
+				<form action="" class="formulario" name="form_datosP" method="post">
+					<div>
+						<div class="input-group">
+							<input type="text" name="fname" id="fname" />
+							<label for="fname" class="label">Nombre:</label>
+						</div>
+						<div class="input-group">
+							<input type="text" name="flastn" id="flastn" />
+							<label for="flastn" class="label">Apellido:</label>
+						</div>
+						<div class="input-group">
+							<input type="number" name="fcedula" id="fcedula" />
+							<label for="fcedula" class="label">Cedula de identidad:</label>
+						</div>
+						<div class="input-group">
+							<input type="date" name="fdateN" id="fdateN" />
+							<label for="fdateN" class="labelD">Fecha de nacimiento:</label>
+						</div>
+						<div class="input-group">
+							<input type="tel" name="ftelf" id="ftelf" />
+							<label for="ftelf" class="label">Teléfono (Opcional):</label>
+						</div>
+						<input type="button" id="fsubmit" value="Enviar" onclick="enviar()" />
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/validarCd.js"></script>
+	</body>
+</html>
