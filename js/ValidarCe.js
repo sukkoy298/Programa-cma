@@ -363,18 +363,6 @@ var enviarOt = function () {
 	}
 };
 
-var focusText = function () {
-	this.parentElement.children[1].className = 'label active';
-	this.parentElement.children[0].className = this.parentElement.children[0].className.replace('error', '');
-};
-
-var blurText = function () {
-	if (this.value <= 0) {
-		this.parentElement.children[1].className = 'label';
-		this.parentElement.children[0].className = this.parentElement.children[0].className + ' error';
-	}
-};
-
 // --- Eventos ---
 var buttonH = document.getElementById('btn-submitH'),
 	buttonQ = document.getElementById('btn-submitQ'),
@@ -397,10 +385,3 @@ buttonMt.addEventListener('click', enviarMt);
 buttonI.addEventListener('click', enviarI);
 buttonB.addEventListener('click', enviarB);
 buttonOt.addEventListener('click', enviarOt);
-
-for (var i = 0; i < elementosOt.length; i++) {
-	if (elementosOt[i].type == 'textarea') {
-		elementosOt[i].addEventListener('focus', focusText);
-		elementosOt[i].addEventListener('blur', blurText);
-	}
-}
