@@ -7,7 +7,7 @@ var formulario = document.formulario_registro,
 var validarInputs = function () {
 	for (var i = 0; i < elementos.length; i++) {
 		// Identificamos si el elemento es de tipo texto, email, password, radio o checkbox
-		if (elementos[i].type == 'text' || elementos[i].type == 'email' || elementos[i].type == 'password') {
+		if (elementos[i].type == 'text' || elementos[i].type == 'password') {
 			// Si es tipo texto, email o password vamos a comprobar que esten completados los input
 			if (elementos[i].value.length == 0) {
 				console.log('El campo ' + elementos[i].name + ' esta incompleto');
@@ -25,6 +25,8 @@ var validarInputs = function () {
 		elementos.pass2.value = '';
 		elementos.pass.className = elementos.pass.className + ' error';
 		elementos.pass2.className = elementos.pass2.className + ' error';
+		console.log('Las contraseñas son diferentes');
+		return false;
 	} else {
 		elementos.pass.className = elementos.pass.className.replace(' error', '');
 		elementos.pass2.className = elementos.pass2.className.replace(' error', '');
@@ -36,10 +38,8 @@ var validarInputs = function () {
 var enviar = function (e) {
 	if (!validarInputs()) {
 		console.log('Falto validar los Input');
-		e.preventDefault();
 	} else {
-		console.log('Envia');
-		e.preventDefault();
+		console.log('Enviando');
 	}
 };
 
@@ -55,11 +55,14 @@ var blurInput = function () {
 	}
 };
 
-// --- Eventos ---
-formulario.addEventListener('submit', enviar);
+/* ------------------------- */
+/* Eventos */
+/* ------------------------- */
+var button = document.getElementById('btn-submit');
+button.addEventListener('click', enviar);
 
 for (var i = 0; i < elementos.length; i++) {
-	if (elementos[i].type == 'text' || elementos[i].type == 'email' || elementos[i].type == 'password') {
+	if (elementos[i].type == 'text' || elementos[i].type == 'password') {
 		elementos[i].addEventListener('focus', focusInput);
 		elementos[i].addEventListener('blur', blurInput);
 	}

@@ -92,7 +92,7 @@ body {
   color: #b6b6b6;
 }
 
-.contenedor-formulario .formulario input[type='submit'] {
+.contenedor-formulario .formulario input[type='button'] {
   background: #303f9f;
   border-radius: 1px;
   border: 2px solid #f2f2f2;
@@ -107,7 +107,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.contenedor-formulario .formulario input[type='submit']:hover {
+.contenedor-formulario .formulario input[type='button']:hover {
   background: #1976d2;
 }
 

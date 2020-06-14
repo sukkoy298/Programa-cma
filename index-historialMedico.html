@@ -19,17 +19,30 @@
 				<a href="http://localhost/Programa-cma-master/" onclick="volver()"><i class="fas fa-arrow-alt-circle-left" title="Volver al Menu"></i></a>
 			</div>
 		</header>
-		<div>
-			<form action="" class="myForm">
-				<fieldset class="search">
-					<legend>Buscar paciente</legend>
-					<input type="text" id="ftxt0" placeholder="Numero de paciente" />
-					<input type="text" id="ftxt1" placeholder="Cedula del paciente" />
-					<input type="text" id="ftxt2" placeholder="Fecha de nacimiento del paciente" />
-					<input type="text" id="ftxt3" placeholder="Nombre completo del paciente" />
-					<input type="button" title="Buscar al Paciente" id="fsubmit" value="Buscar" onclick="buscar()" />
-				</fieldset>
-			</form>
+		<div class="contenedor-formulario">
+			<div class="wrap">
+				<form action="" class="formulario" name="form_buscar" method="post">
+					<div>
+						<div class="input-group">
+							<input type="number" id="ftxt0" name="numeroP" />
+							<label class="label" for="ftxt0">Numero de paciente:</label>
+						</div>
+						<div class="input-group">
+							<input type="number" id="ftxt1" name="cedulaP" />
+							<label class="label" for="ftxt1">Cedula del paciente:</label>
+						</div>
+						<div class="input-group">
+							<input type="date" id="ftxt2" name="dateNP" />
+							<label class="labelD" for="ftxt2">Fecha de nacimiento del paciente:</label>
+						</div>
+						<div class="input-group">
+							<input type="text" id="ftxt3" name="nombreP" />
+							<label class="label" for="ftxt3">Nombre completo del paciente:</label>
+						</div>
+						<input type="button" title="Buscar al Paciente" id="btn-submit" value="Buscar" onclick="buscar()" />
+					</div>
+				</form>
+			</div>
 		</div>
 
 		<div class="pacientes" style="overflow-x: auto;">
@@ -55,5 +68,6 @@
 		</div>
 		<script src="js/jquery-3.5.1.min.js"></script>
 		<script src="js/historialMedico.js"></script>
+		<script src="js/ValidarHm.js"></script>
 	</body>
 </html>

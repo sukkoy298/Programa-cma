@@ -18,15 +18,15 @@ var validarInputs = function () {
 			}
 		}
 	}
+	return true;
 };
 
 var enviar = function (e) {
 	if (!validarInputs()) {
 		console.log('Falto validar los Input');
-		e.preventDefault();
 	} else {
-		console.log('Envia');
-		e.preventDefault();
+		console.log('Enviando');
+		//Antoni coloca el codigo para enviar los datos a la base de datos aqui :v
 	}
 };
 
@@ -42,8 +42,13 @@ var blurInput = function () {
 	}
 };
 
-// --- Eventos ---
-formulario.addEventListener('submit', enviar);
+/* ------------------------- */
+/* Eventos */
+/* ------------------------- */
+
+/* ----- ----- Boton para validar la cedula ----- ----- */
+var button = document.getElementById('btn-search');
+button.addEventListener('click', enviar);
 
 for (var i = 0; i < elementos.length; i++) {
 	if (elementos[i].type == 'number') {
@@ -52,7 +57,22 @@ for (var i = 0; i < elementos.length; i++) {
 	}
 }
 
-// --- Select ---
+/* ----- ----- Boton para mostrar si se quiere buscar la cedula del cliente ----- ----- */
+var opcion = function () {
+	var inputS = document.getElementById('inputSelect').value;
+	if (inputS == 'No') {
+		formulario.className += ' visible';
+	} else {
+		document.location.href = 'http://localhost/Programa-cma-master/index-cajaD.html';
+	}
+};
+
+var enviar = document.getElementById('btn-submit');
+enviar.addEventListener('click', opcion);
+
+/* ------------------------- */
+/* Select de si se desea registrar un paciente */
+/* ------------------------- */
 const select = document.querySelector('#select');
 const opciones = document.querySelector('#opciones');
 const contenidoSelect = document.querySelector('#select .contenido-select');
@@ -72,15 +92,3 @@ select.addEventListener('click', () => {
 	select.classList.toggle('active');
 	opciones.classList.toggle('active');
 });
-
-var opcion = function () {
-	var inputS = document.getElementById('inputSelect').value;
-	if (inputS == 'No') {
-		formulario.className += ' visible';
-	} else {
-		document.location.href = 'http://localhost/Programa-cma-master/index-caja%23Datos.html';
-	}
-};
-
-var enviar = document.getElementById('fsubmit');
-enviar.addEventListener('click', opcion);

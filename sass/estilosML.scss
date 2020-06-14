@@ -20,31 +20,27 @@ body {
 	width: 30%;
 }
 
-div.trabajadores {
+.trabajadores {
 	width: 100%;
 	margin-top: 20px;
 	margin-left: 20px;
-	border: 2px solid #009245;
+	border: 2px solid $color-secundario;
 	border-radius: 10px;
-}
-
-div.trabajadores table {
-	border-collapse: collapse;
-	width: 100%;
-}
-
-div.trabajadores table th,
-td {
-	padding: 10px;
-}
-
-div.trabajadores table tr:nth-child(even) {
-	background-color: #f2f2f2;
-}
-
-div.trabajadores table th {
-	background-color: #009245;
-	color: white;
+	table {
+		border-collapse: collapse;
+		width: 100%;
+		th,
+		td {
+			padding: 10px;
+		}
+		tr:nth-child(even) {
+			background-color: $white;
+		}
+		th {
+			background: $color-secundario;
+			color: white;
+		}
+	}
 }
 
 form {
@@ -55,60 +51,53 @@ form {
 }
 
 fieldset {
-	border: 2px solid #aaaaaa;
+	border: 2px solid $divider;
 	padding: 20px;
 	border-radius: 10px;
 	width: 100%;
 }
 
-div.resultadosP {
+.resultadosP {
 	width: 60%;
 	margin-left: 40px;
 	margin-top: 20px;
 	display: none;
-	border: 2px solid #0074d9;
-}
-
-div.resultadosP table {
-	border-collapse: collapse;
-	width: 100%;
-}
-
-div.resultadosP table th,
-td,
-textarea {
-	padding: 10px;
-}
-
-div.resultadosP table tr:nth-child(even) {
-	background-color: #f2f2f2;
-}
-
-div.resultadosP table th {
-	background-color: #0074d9;
-	color: white;
-}
-
-.panel {
-	width: 100%;
-	background-color: #555;
-	overflow: auto;
-}
-
-.panel button {
-	float: left;
-	padding: 12px;
-	background-color: #555;
-	color: white;
-	text-decoration: none;
-	font-size: 17px;
-	border: none;
-	transition: 0.5s ease all;
-	cursor: pointer;
-}
-
-.panel button:hover {
-	background: #009245;
+	border: 2px solid $color-primario;
+	table {
+		border-collapse: collapse;
+		width: 100%;
+		th,
+		td,
+		textarea {
+			padding: 10px;
+		}
+		tr:nth-child(even) {
+			background: $white;
+		}
+		th {
+			background: $color-primario;
+			color: white;
+		}
+	}
+	.panel {
+		width: 100%;
+		background: #555;
+		overflow: auto;
+		button {
+			float: left;
+			padding: 12px;
+			background: #555;
+			color: white;
+			text-decoration: none;
+			font-size: 17px;
+			border: none;
+			transition: 0.5s ease all;
+			cursor: pointer;
+			&:hover {
+				background: $color-secundario;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 500px) {

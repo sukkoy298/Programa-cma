@@ -18,15 +18,14 @@ var validarInputs = function () {
 			}
 		}
 	}
+	return true;
 };
 
 var enviar = function (e) {
 	if (!validarInputs()) {
 		console.log('Falto validar los Input');
-		e.preventDefault();
 	} else {
-		console.log('Envia');
-		e.preventDefault();
+		console.log('Enviando');
 	}
 };
 
@@ -43,7 +42,8 @@ var blurInput = function () {
 };
 
 // --- Eventos ---
-formulario.addEventListener('submit', enviar);
+var button = document.getElementById('btn-submit');
+button.addEventListener('click', enviar);
 
 for (var i = 0; i < elementos.length; i++) {
 	if (elementos[i].type == 'text' || elementos[i].type == 'password') {

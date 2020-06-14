@@ -75,7 +75,7 @@ header .header-right a:active {
   width: 30%;
 }
 
-div.trabajadores {
+.trabajadores {
   width: 100%;
   margin-top: 20px;
   margin-left: 20px;
@@ -83,22 +83,22 @@ div.trabajadores {
   border-radius: 10px;
 }
 
-div.trabajadores table {
+.trabajadores table {
   border-collapse: collapse;
   width: 100%;
 }
 
-div.trabajadores table th,
-td {
+.trabajadores table th,
+.trabajadores table td {
   padding: 10px;
 }
 
-div.trabajadores table tr:nth-child(even) {
+.trabajadores table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-div.trabajadores table th {
-  background-color: #009245;
+.trabajadores table th {
+  background: #009245;
   color: white;
 }
 
@@ -110,13 +110,13 @@ form {
 }
 
 fieldset {
-  border: 2px solid #aaaaaa;
+  border: 2px solid #b6b6b6;
   padding: 20px;
   border-radius: 10px;
   width: 100%;
 }
 
-div.resultadosP {
+.resultadosP {
   width: 60%;
   margin-left: 40px;
   margin-top: 20px;
@@ -124,36 +124,36 @@ div.resultadosP {
   border: 2px solid #0074d9;
 }
 
-div.resultadosP table {
+.resultadosP table {
   border-collapse: collapse;
   width: 100%;
 }
 
-div.resultadosP table th,
-td,
-textarea {
+.resultadosP table th,
+.resultadosP table td,
+.resultadosP table textarea {
   padding: 10px;
 }
 
-div.resultadosP table tr:nth-child(even) {
-  background-color: #f2f2f2;
+.resultadosP table tr:nth-child(even) {
+  background: #f2f2f2;
 }
 
-div.resultadosP table th {
-  background-color: #0074d9;
+.resultadosP table th {
+  background: #0074d9;
   color: white;
 }
 
-.panel {
+.resultadosP .panel {
   width: 100%;
-  background-color: #555;
+  background: #555;
   overflow: auto;
 }
 
-.panel button {
+.resultadosP .panel button {
   float: left;
   padding: 12px;
-  background-color: #555;
+  background: #555;
   color: white;
   text-decoration: none;
   font-size: 17px;
@@ -163,7 +163,7 @@ div.resultadosP table th {
   cursor: pointer;
 }
 
-.panel button:hover {
+.resultadosP .panel button:hover {
   background: #009245;
 }
 

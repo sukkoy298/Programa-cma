@@ -37,7 +37,7 @@ var validarCheckboxH = function () {
 
 			if (resultado == false) {
 				elementosH[i].parentNode.className = elementosH[i].parentNode.className + ' error';
-				console.log('El campo checkbox esta incompleto');
+				console.log('El formulario Hematologia esta incompleto');
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -63,7 +63,7 @@ var validarCheckboxQ = function () {
 
 			if (resultado == false) {
 				elementosQ[i].parentNode.className = elementosQ[i].parentNode.className + ' error';
-				console.log('El campo checkbox esta incompleto');
+				console.log('El formulario Quimica esta incompleto');
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -89,7 +89,7 @@ var validarCheckboxS = function () {
 
 			if (resultado == false) {
 				elementosS[i].parentNode.className = elementosS[i].parentNode.className + ' error';
-				console.log('El campo checkbox esta incompleto');
+				console.log('El formulario Serologia esta incompleto');
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -115,7 +115,7 @@ var validarCheckboxHr = function () {
 
 			if (resultado == false) {
 				elementosHr[i].parentNode.className = elementosHr[i].parentNode.className + ' error';
-				console.log('El campo checkbox esta incompleto');
+				console.log('El formulario Hormonas esta incompleto');
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -141,7 +141,7 @@ var validarCheckboxHc = function () {
 
 			if (resultado == false) {
 				elementosHc[i].parentNode.className = elementosHc[i].parentNode.className + ' error';
-				console.log('El campo checkbox esta incompleto');
+				console.log('El formulario Heces esta incompleto');
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -167,7 +167,7 @@ var validarCheckboxO = function () {
 
 			if (resultado == false) {
 				elementosO[i].parentNode.className = elementosO[i].parentNode.className + ' error';
-				console.log('El campo checkbox esta incompleto');
+				console.log('El formulario Orina esta incompleto');
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -193,7 +193,7 @@ var validarCheckboxMt = function () {
 
 			if (resultado == false) {
 				elementosMt[i].parentNode.className = elementosMt[i].parentNode.className + ' error';
-				console.log('El campo checkbox esta incompleto');
+				console.log('El formulario Marcadores Tumulares esta incompleto');
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -219,7 +219,7 @@ var validarCheckboxI = function () {
 
 			if (resultado == false) {
 				elementosI[i].parentNode.className = elementosI[i].parentNode.className + ' error';
-				console.log('El campo checkbox esta incompleto');
+				console.log('El formulario Inmunologa esta incompleto');
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -245,7 +245,7 @@ var validarCheckboxB = function () {
 
 			if (resultado == false) {
 				elementosB[i].parentNode.className = elementosB[i].parentNode.className + ' error';
-				console.log('El campo checkbox esta incompleto');
+				console.log('El formulario Bacterologia esta incompleto');
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -275,7 +275,7 @@ var validarTextareaOt = function () {
 
 var enviarH = function () {
 	if (!validarCheckboxH()) {
-		console.log('Falto validar Checkbox');
+		console.log('Falto validar por lo menos un checkbox');
 	} else {
 		console.log('Enviando');
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
@@ -284,7 +284,7 @@ var enviarH = function () {
 
 var enviarQ = function () {
 	if (!validarCheckboxQ()) {
-		console.log('Falto validar Checkbox');
+		console.log('Falto validar por lo menos un checkbox');
 	} else {
 		console.log('Enviando');
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
@@ -293,7 +293,7 @@ var enviarQ = function () {
 
 var enviarS = function () {
 	if (!validarCheckboxS()) {
-		console.log('Falto validar Checkbox');
+		console.log('Falto validar por lo menos un checkbox');
 	} else {
 		console.log('Enviando');
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
@@ -302,7 +302,7 @@ var enviarS = function () {
 
 var enviarHr = function () {
 	if (!validarCheckboxHr()) {
-		console.log('Falto validar Checkbox');
+		console.log('Falto validar por lo menos un checkbox');
 	} else {
 		console.log('Enviando');
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
@@ -311,7 +311,7 @@ var enviarHr = function () {
 
 var enviarHc = function () {
 	if (!validarCheckboxHc()) {
-		console.log('Falto validar Checkbox');
+		console.log('Falto validar por lo menos un checkbox');
 	} else {
 		console.log('Enviando');
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
@@ -320,7 +320,7 @@ var enviarHc = function () {
 
 var enviarO = function () {
 	if (!validarCheckboxO()) {
-		console.log('Falto validar Checkbox');
+		console.log('Falto validar por lo menos un checkbox');
 	} else {
 		console.log('Enviando');
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
@@ -329,7 +329,7 @@ var enviarO = function () {
 
 var enviarMt = function () {
 	if (!validarCheckboxMt()) {
-		console.log('Falto validar Checkbox');
+		console.log('Falto validar por lo menos un checkbox');
 	} else {
 		console.log('Enviando');
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
@@ -338,7 +338,7 @@ var enviarMt = function () {
 
 var enviarI = function () {
 	if (!validarCheckboxI()) {
-		console.log('Falto validar Checkbox');
+		console.log('Falto validar por lo menos un checkbox');
 	} else {
 		console.log('Enviando');
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
@@ -347,7 +347,7 @@ var enviarI = function () {
 
 var enviarB = function () {
 	if (!validarCheckboxB()) {
-		console.log('Falto validar Checkbox');
+		console.log('Falto validar por lo menos un checkbox');
 	} else {
 		console.log('Enviando');
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd

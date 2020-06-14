@@ -15,90 +15,144 @@ body {
 
 @import '_header';
 
-.myForm {
-	width: 25%;
-	margin-top: 20px;
-	margin-left: 20px;
+.wrap {
+	width: 100%;
+	max-width: 516px;
+	padding: 40px;
+	background: #fff;
+	box-shadow: 0px 0px 3px grey;
+}
+
+.contenedor-formulario {
+	width: 40%;
+	color: $white;
+	padding: 30px;
 	float: left;
+	.formulario {
+		width: 100%;
+		margin: auto;
+		.input-group {
+			position: relative;
+			margin-bottom: 32px;
+			// background: rgba(#ccc, .2)
+			input[type='text'],
+			input[type='date'],
+			input[type='number'] {
+				font-family: $font-family;
+				font-size: 16px;
+				color: $primary;
+				width: 100%;
+				outline: none;
+				padding: 15px;
+				background: none;
+				border: none;
+				border-bottom: $borde solid $light-primary;
+				&:focus,
+				&:active {
+					outline: none;
+					border-bottom: $borde solid $primary;
+				}
+				&.error {
+					border-bottom: $borde solid $error;
+					+ label {
+						color: $error;
+					}
+				}
+			}
+			label {
+				color: $primary;
+				cursor: text;
+				&.label {
+					-webkit-transition: all 0.3s ease;
+					-o-transition: all 0.3s ease;
+					transition: all 0.3s ease;
+					margin-left: 15px;
+					font-size: 16px;
+					line-height: 16px;
+					position: absolute;
+					top: 16px;
+					left: 0;
+					&.active {
+						top: -12px;
+						font-size: 12px;
+						line-height: 12px;
+						color: $divider;
+					}
+				}
+				&.labelD {
+					-webkit-transition: all 0.3s ease;
+					-o-transition: all 0.3s ease;
+					transition: all 0.3s ease;
+					margin-left: 15px;
+					font-size: 16px;
+					line-height: 16px;
+					position: absolute;
+					top: 18px;
+					left: 110px;
+					&.active {
+						top: -12px;
+						left: 0;
+						font-size: 12px;
+						line-height: 12px;
+						color: $divider;
+					}
+				}
+			}
+		}
+		input[type='button'] {
+			background: $primary;
+			border-radius: 1px;
+			border: $borde solid $white;
+			color: #fff;
+			cursor: pointer;
+			display: inline-block;
+			font-family: $font-family;
+			font-size: 16px;
+			padding: 15px;
+			width: 100%;
+			outline: none;
+			-webkit-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+			&:hover {
+				background: rgba($primary, $alpha: 0.9);
+			}
+		}
+	}
 }
 
-.myForm fieldset {
-	border: 2px solid #aaaaaa;
-	padding: 20px;
-	border-radius: 10px;
-	width: 100%;
-}
-
-.myForm input[type='text'] {
-	width: 100%;
-	padding: 12px;
-	margin-bottom: 20px;
-	border: 1px solid #f2f2f7;
-	border-radius: 10px;
-	outline: none;
-	font-size: 14px;
-}
-
-.myForm input[type='text']:focus {
-	border-color: #0074d9;
-	transition: 0.5s ease all;
-	outline: none;
-}
-
-.myForm input[type='button'] {
-	width: 100%;
-	padding: 12px;
-	background: #0074d9;
-	color: #ffffff;
-	border: none;
-	border-radius: 10px;
-	outline: none;
-}
-
-.myForm input[type='button']:hover {
-	background: rgba(0, 116, 217, 0.8);
-	transition: 0.5s ease all;
-	cursor: pointer;
-	border: none;
-	outline: none;
-}
-
-div.pacientes {
+.pacientes {
 	width: 40%;
 	margin-top: 30px;
 	margin-left: 40px;
-	display: inline-block;
-	border: 2px solid #009245;
+	border: $borde solid $color-secundario;
 	border-radius: 10px;
-}
-
-.pacientes table {
-	border-collapse: collapse;
-	width: 100%;
-}
-
-.pacientes table th,
-td {
-	padding: 10px;
-}
-
-.pacientes table tr:nth-child(even) {
-	background-color: #f2f2f2;
-}
-
-.pacientes table th {
-	background-color: #009245;
-	color: white;
-}
-
-.pacientes table tfoot {
-	display: none;
+	table {
+		border-collapse: collapse;
+		width: 100%;
+		th,
+		td {
+			padding: 10px;
+		}
+		th {
+			background: $color-secundario;
+			color: #fff;
+		}
+		tr {
+			&:nth-child(even) {
+				background: $white;
+			}
+		}
+		tfoot {
+			display: none;
+		}
+	}
 }
 
 /* ------------------------- */
 /* POPUP */
 /* ------------------------- */
-div.overlay {
+.overlay {
 	background: rgba(0, 0, 0, 0.3);
 	position: fixed;
 	top: 0;
@@ -109,108 +163,77 @@ div.overlay {
 	align-items: center;
 	justify-content: center;
 	visibility: hidden;
-}
-
-div.overlay.active {
-	visibility: visible;
-}
-
-div.popup {
-	background: #f8f8f8;
-	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-	border-radius: 3px;
-	padding: 20px;
-	text-align: center;
-	width: 40%;
-	opacity: 0;
-	transition: 0.3s ease all;
-	transform: scale(0.7);
-}
-
-div.popup .btn-cerrar-popup {
-	font-size: 16px;
-	line-height: 16px;
-	display: block;
-	text-align: right;
-	color: #bbbbbb;
-	transition: 0.3s ease all;
-}
-
-div.popup .btn-cerrar-popup:hover {
-	color: #000;
-}
-
-div.popup h3 {
-	font-size: 36px;
-	font-weight: 600;
-	margin-bottom: 10px;
-	opacity: 0;
-}
-
-div.table-popup {
-	width: 100%;
-	border: 2px solid #009245;
-	border-radius: 10px;
-}
-
-div.table-popup table {
-	border-collapse: collapse;
-	width: 100%;
-}
-
-div.table-popup table th,
-td {
-	padding: 10px;
-}
-
-div.table-popup table tr:nth-child(even) {
-	background-color: #f2f2f2;
-}
-
-div.table-popup table th {
-	background-color: #009245;
-	color: white;
-}
-
-div.popup button {
-	margin-top: 20px;
-	padding: 0px 20px;
-	height: 40px;
-	line-height: 40px;
-	border: none;
-	color: #fff;
-	background: #0074d9;
-	border-radius: 3px;
-	font-size: 16px;
-	cursor: pointer;
-	transition: 0.5s ease all;
-	outline: none;
-}
-
-div.popup button:hover {
-	background: rgba(0, 116, 217, 0.8);
-}
-
-.btn-abrir-popup {
-	padding: 0px 20px;
-	height: 40px;
-	line-height: 40px;
-	border: none;
-	color: #fff;
-	background: #0074d9;
-	border-radius: 3px;
-	font-size: 16px;
-	cursor: pointer;
-	transition: 0.5s ease all;
-	outline: none;
-	display: block;
-	position: relative;
-	left: 40px;
-	top: 20px;
-}
-
-.btn-abrir-popup:hover {
-	background: rgba(0, 116, 217, 0.8);
+	&.active {
+		visibility: visible;
+	}
+	.popup {
+		background: #f8f8f8;
+		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+		border-radius: 3px;
+		padding: 20px;
+		text-align: center;
+		width: 40%;
+		opacity: 0;
+		transition: 0.3s ease all;
+		transform: scale(0.7);
+		.btn-cerrar-popup {
+			font-size: 16px;
+			line-height: 16px;
+			display: block;
+			text-align: right;
+			color: #bbbbbb;
+			transition: 0.3s ease all;
+			&:hover {
+				color: #000;
+			}
+		}
+		h3 {
+			font-size: 36px;
+			font-weight: 600;
+			margin-bottom: 10px;
+			opacity: 0;
+		}
+		.table-popup {
+			width: 100%;
+			border: 2px solid $color-secundario;
+			border-radius: 10px;
+			table {
+				border-collapse: collapse;
+				width: 100%;
+				th,
+				td {
+					padding: 10px;
+				}
+				tr:nth-child(even) {
+					background: $white;
+				}
+				th {
+					background: $color-secundario;
+					color: white;
+				}
+			}
+		}
+		.btn-abrir-popup {
+			padding: 0px 20px;
+			height: 40px;
+			line-height: 40px;
+			border: none;
+			color: #fff;
+			background: $color-primario;
+			border-radius: 3px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: 0.5s ease all;
+			outline: none;
+			display: block;
+			position: relative;
+			left: 40px;
+			top: 20px;
+			&:hover {
+				background: rgba($color-primario, $alpha: 0.9);
+			}
+		}
+	}
 }
 
 /* ------------------------- */
@@ -219,10 +242,9 @@ div.popup button:hover {
 .popup.active {
 	opacity: 1;
 	transform: scale(1);
-}
-
-.popup.active h3 {
-	animation: entradaTitulo 0.8s ease 0.5s forwards;
+	h3 {
+		animation: entradaTitulo 0.8s ease 0.5s forwards;
+	}
 }
 
 @keyframes entradaTitulo {
