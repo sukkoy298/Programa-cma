@@ -15,6 +15,26 @@ body {
 
 @import '_header';
 
+.panel {
+	width: 100%;
+	background: #555;
+	overflow: auto;
+	button {
+		float: left;
+		padding: 12px;
+		background: #555;
+		color: white;
+		text-decoration: none;
+		font-size: 17px;
+		border: none;
+		transition: 0.5s ease all;
+		cursor: pointer;
+		&:hover {
+			background: $color-secundario;
+		}
+	}
+}
+
 .section1 {
 	float: left;
 	width: 30%;
@@ -34,7 +54,7 @@ body {
 			padding: 10px;
 		}
 		tr:nth-child(even) {
-			background-color: $white;
+			background: $white;
 		}
 		th {
 			background: $color-secundario;

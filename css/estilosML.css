@@ -70,6 +70,29 @@ header .header-right a:active {
   }
 }
 
+.panel {
+  width: 100%;
+  background: #555;
+  overflow: auto;
+}
+
+.panel button {
+  float: left;
+  padding: 12px;
+  background: #555;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  border: none;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  cursor: pointer;
+}
+
+.panel button:hover {
+  background: #009245;
+}
+
 .section1 {
   float: left;
   width: 30%;
@@ -94,7 +117,7 @@ header .header-right a:active {
 }
 
 .trabajadores table tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background: #f2f2f2;
 }
 
 .trabajadores table th {

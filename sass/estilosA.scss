@@ -1,3 +1,20 @@
+@import '_variables';
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: $fondo;
+	font-family: $font-family;
+}
+
+@import '_header';
+
 .menu {
 	margin: 20px;
 	height: 700px;
