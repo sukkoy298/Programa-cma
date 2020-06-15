@@ -50,54 +50,6 @@ body {
 	margin: auto;
 	background: #fff;
 	box-shadow: 0px 0px 3px grey;
-	.input-group {
-		position: relative;
-		margin-bottom: 32px;
-		// background: rgba(#ccc, .2)
-		input[type='number'] {
-			font-family: $font-family;
-			font-size: 16px;
-			color: $primary;
-			width: 100%;
-			outline: none;
-			padding: 15px;
-			background: none;
-			border: none;
-			border-bottom: $borde solid $light-primary;
-			&:focus,
-			&:active {
-				outline: none;
-				border-bottom: $borde solid $primary;
-			}
-			&.error {
-				border-bottom: $borde solid $error;
-				+ label {
-					color: $error;
-				}
-			}
-		}
-		label {
-			color: $primary;
-			cursor: text;
-			&.label {
-				-webkit-transition: all 0.3s ease;
-				-o-transition: all 0.3s ease;
-				transition: all 0.3s ease;
-				margin-left: 15px;
-				font-size: 16px;
-				line-height: 16px;
-				position: absolute;
-				top: 16px;
-				left: 0;
-				&.active {
-					top: -12px;
-					font-size: 12px;
-					line-height: 12px;
-					color: $divider;
-				}
-			}
-		}
-	}
 }
 
 .contenedor-formulario {
@@ -168,6 +120,7 @@ body {
 					left: 110px;
 					&.active {
 						top: -12px;
+						left: 0;
 						font-size: 12px;
 						line-height: 12px;
 						color: $divider;

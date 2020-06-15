@@ -113,59 +113,6 @@ header .header-right a:active {
           box-shadow: 0px 0px 3px grey;
 }
 
-.wrap .input-group {
-  position: relative;
-  margin-bottom: 32px;
-}
-
-.wrap .input-group input[type='number'] {
-  font-family: "Roboto", arial;
-  font-size: 16px;
-  color: #303f9f;
-  width: 100%;
-  outline: none;
-  padding: 15px;
-  background: none;
-  border: none;
-  border-bottom: 2px solid #bbdefb;
-}
-
-.wrap .input-group input[type='number']:focus, .wrap .input-group input[type='number']:active {
-  outline: none;
-  border-bottom: 2px solid #303f9f;
-}
-
-.wrap .input-group input[type='number'].error {
-  border-bottom: 2px solid #d32f2f;
-}
-
-.wrap .input-group input[type='number'].error + label {
-  color: #d32f2f;
-}
-
-.wrap .input-group label {
-  color: #303f9f;
-  cursor: text;
-}
-
-.wrap .input-group label.label {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  margin-left: 15px;
-  font-size: 16px;
-  line-height: 16px;
-  position: absolute;
-  top: 16px;
-  left: 0;
-}
-
-.wrap .input-group label.label.active {
-  top: -12px;
-  font-size: 12px;
-  line-height: 12px;
-  color: #b6b6b6;
-}
-
 .contenedor-formulario {
   width: 100%;
   color: #f2f2f2;
@@ -258,6 +205,7 @@ header .header-right a:active {
 
 .contenedor-formulario .formulario .input-group label.labelD.active {
   top: -12px;
+  left: 0;
   font-size: 12px;
   line-height: 12px;
   color: #b6b6b6;

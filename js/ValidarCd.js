@@ -5,7 +5,7 @@ var formulario = document.form_datosP,
 // Funcion que se ejecuta cuando el evento click es activado
 
 var validarInputs = function () {
-	for (var i = 0; i < elementos.length; i++) {
+	for (var i = 1; i < elementos.length; i++) {
 		// Identificamos si el elemento es de tipo texto, email, password, radio o checkbox
 		if (elementos[i].type == 'text' || elementos[i].type == 'number' || elementos[i].type == 'date') {
 			// Si es tipo texto o password vamos a comprobar que esten completados los input
@@ -24,9 +24,9 @@ var validarInputs = function () {
 var enviar = function () {
 	if (!validarInputs()) {
 		console.log('Falto validar los Input');
-		e.preventDefault();
 	} else {
 		console.log('Enviando');
+		// Antoni coloca el codigo de para enviar los datos aqui xd
 	}
 };
 
@@ -59,7 +59,7 @@ var button = document.getElementById('btn-submit');
 button.addEventListener('click', enviar);
 
 for (var i = 0; i < elementos.length; i++) {
-	if (elementos[i].type == 'text' || elementos[i].type == 'number') {
+	if (elementos[i].type == 'text' || elementos[i].type == 'number' || elementos[i].type == 'tel') {
 		elementos[i].addEventListener('focus', focusInput);
 		elementos[i].addEventListener('blur', blurInput);
 	}
