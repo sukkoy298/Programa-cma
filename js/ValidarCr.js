@@ -3,14 +3,24 @@ var formulario = document.form_buscar,
 	elementos = formulario.elements;
 
 // Funcion que se ejecuta cuando el evento click es activado
-
 var validarInputs = function () {
 	for (var i = 0; i < elementos.length; i++) {
 		// Identificamos si el elemento es de tipo texto, email, password, radio o checkbox
 		if (elementos[i].type == 'number') {
 			// Si es tipo texto o password vamos a comprobar que esten completados los input
 			if (elementos[i].value.length == 0) {
-				console.log('El campo ' + elementos[i].name + ' esta incompleto');
+				// console.log('El campo ' + elementos[i].name + ' esta incompleto');
+				Swal.fire({
+					title: 'El campo cedula esta incompleto',
+					icon: 'error',
+					timer: '4000',
+					timerProgressBar: true,
+					toast: true,
+					position: 'top-end',
+					allowEscapeKey: false,
+					stopKeydownPropagation: false,
+					showConfirmButton: false,
+				});
 				elementos[i].className = elementos[i].className + ' error';
 				return false;
 			} else {
@@ -21,12 +31,23 @@ var validarInputs = function () {
 	return true;
 };
 
-var enviar = function (e) {
+var enviar = function () {
 	if (!validarInputs()) {
 		console.log('Falto validar los Input');
 	} else {
-		console.log('Enviando');
+		// console.log('Enviando');
 		//Antoni coloca el codigo para enviar los datos a la base de datos aqui :v
+		Swal.fire({
+			title: 'Enviando',
+			icon: 'success',
+			timer: '4000',
+			timerProgressBar: true,
+			toast: true,
+			position: 'top-end',
+			allowEscapeKey: false,
+			stopKeydownPropagation: false,
+			showConfirmButton: false,
+		});
 	}
 };
 
@@ -60,10 +81,26 @@ for (var i = 0; i < elementos.length; i++) {
 /* ----- ----- Boton para mostrar si se quiere buscar la cedula del cliente ----- ----- */
 var opcion = function () {
 	var inputS = document.getElementById('inputSelect').value;
+	var SelectBox = document.getElementById('select');
 	if (inputS == 'No') {
 		formulario.className += ' visible';
-	} else {
+		SelectBox.className = SelectBox.className.replace(' error', '');
+	} else if (inputS == 'Si') {
 		document.location.href = 'http://localhost/Programa-cma-master/index-cajaD.html';
+		SelectBox.className = SelectBox.className.replace(' error', '');
+	} else {
+		Swal.fire({
+			title: 'Seleccione una opcion',
+			icon: 'error',
+			timer: '4000',
+			timerProgressBar: true,
+			toast: true,
+			position: 'top-end',
+			allowEscapeKey: false,
+			stopKeydownPropagation: false,
+			showConfirmButton: false,
+		});
+		SelectBox.className = SelectBox.className + ' error';
 	}
 };
 

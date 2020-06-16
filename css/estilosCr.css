@@ -128,7 +128,7 @@ header .header-right a:active {
 .contenedor-formulario .formulario input[type='button'],
 .contenedor-formulario .formulario1 input[type='button'] {
   background: #303f9f;
-  border-radius: 1px;
+  border-radius: 10px;
   border: 2px solid #f2f2f2;
   color: #fff;
   cursor: pointer;
@@ -161,6 +161,7 @@ header .header-right a:active {
 .contenedor-formulario .formulario1 .titleS {
   color: #111111;
   font-size: 20px;
+  margin-bottom: 16px;
 }
 
 .contenedor-formulario .formulario1 .input-group {
@@ -249,7 +250,7 @@ a {
 }
 
 .select {
-  background: #fff;
+  background: #bbdefb;
   width: 100%;
   -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.16);
@@ -293,6 +294,12 @@ a {
   left: calc(50% - 15px);
 }
 
+.select.error {
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.16);
+  border: 2px solid #d32f2f;
+}
+
 .select i {
   font-size: 30px;
   margin-left: 30px;
@@ -300,7 +307,7 @@ a {
 }
 
 .titulo {
-  color: #111111;
+  color: #303f9f;
   font-weight: 600;
   font-size: 34px;
 }

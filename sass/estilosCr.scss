@@ -62,7 +62,7 @@ body {
 		margin: auto;
 		input[type='button'] {
 			background: $primary;
-			border-radius: 1px;
+			border-radius: 10px;
 			border: $borde solid $white;
 			color: #fff;
 			cursor: pointer;
@@ -90,6 +90,7 @@ body {
 		.titleS {
 			color: $black;
 			font-size: 20px;
+			margin-bottom: 16px;
 		}
 		.input-group {
 			position: relative;
@@ -160,7 +161,7 @@ a {
 }
 
 .select {
-	background: #fff;
+	background: $light-primary;
 	width: 100%;
 	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.16);
 	border-radius: 10px;
@@ -194,6 +195,10 @@ a {
 			left: calc(50% - 15px);
 		}
 	}
+	&.error {
+		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.16);
+		border: $borde solid $error;
+	}
 	i {
 		font-size: 30px;
 		margin-left: 30px;
@@ -202,7 +207,7 @@ a {
 }
 
 .titulo {
-	color: $black;
+	color: $primary;
 	font-weight: 600;
 	font-size: 34px;
 }
