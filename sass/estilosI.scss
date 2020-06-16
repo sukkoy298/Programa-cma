@@ -91,7 +91,7 @@ body {
 		}
 		input[type='button'] {
 			background: $primary;
-			border-radius: 1px;
+			border-radius: 10px;
 			border: $borde solid $white;
 			color: #fff;
 			cursor: pointer;
@@ -101,7 +101,6 @@ body {
 			padding: 15px;
 			width: 100%;
 			outline: none;
-			border-radius: 10px;
 			-webkit-transition: all 0.3s ease;
 			-o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
