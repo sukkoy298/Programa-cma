@@ -3,14 +3,38 @@ var formulario = document.form_inicioSeccion,
 	elementos = formulario.elements;
 
 // Funcion que se ejecuta cuando el evento click es activado
-
 var validarInputs = function () {
 	for (var i = 0; i < elementos.length; i++) {
 		// Identificamos si el elemento es de tipo texto, email, password, radio o checkbox
 		if (elementos[i].type == 'text' || elementos[i].type == 'password') {
 			// Si es tipo texto o password vamos a comprobar que esten completados los input
 			if (elementos[i].value.length == 0) {
-				console.log('El campo ' + elementos[i].name + ' esta incompleto');
+				if (elementos[i].name == 'user') {
+					Swal.fire({
+						title: 'El campo nombre esta incompleto',
+						icon: 'error',
+						timer: '4000',
+						timerProgressBar: true,
+						toast: true,
+						position: 'top-end',
+						allowEscapeKey: false,
+						stopKeydownPropagation: false,
+						showConfirmButton: false,
+					});
+				} else if (elementos[i].name == 'pass') {
+					Swal.fire({
+						title: 'El campo contraseña esta incompleto',
+						icon: 'error',
+						timer: '4000',
+						timerProgressBar: true,
+						toast: true,
+						position: 'top-end',
+						allowEscapeKey: false,
+						stopKeydownPropagation: false,
+						showConfirmButton: false,
+					});
+				}
+				// console.log('El campo ' + elementos[i].name + ' esta incompleto');
 				elementos[i].className = elementos[i].className + ' error';
 				return false;
 			} else {
@@ -21,11 +45,22 @@ var validarInputs = function () {
 	return true;
 };
 
-var enviar = function (e) {
+var enviar = function () {
 	if (!validarInputs()) {
 		console.log('Falto validar los Input');
 	} else {
-		console.log('Enviando');
+		// console.log('Enviando');
+		Swal.fire({
+			title: 'Enviando',
+			icon: 'success',
+			timer: '4000',
+			timerProgressBar: true,
+			toast: true,
+			position: 'top-end',
+			allowEscapeKey: false,
+			stopKeydownPropagation: false,
+			showConfirmButton: false,
+		});
 	}
 };
 

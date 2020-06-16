@@ -114,11 +114,12 @@ body {
   padding: 15px;
   width: 100%;
   outline: none;
+  border-radius: 10px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .contenedor-formulario .formulario input[type='button']:hover {
-  background: #1976d2;
+  background: #0074d9;
 }
 /*# sourceMappingURL=estilosI.css.map */

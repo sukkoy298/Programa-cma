@@ -101,11 +101,12 @@ body {
 			padding: 15px;
 			width: 100%;
 			outline: none;
+			border-radius: 10px;
 			-webkit-transition: all 0.3s ease;
 			-o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
 			&:hover {
-				background: #1976d2;
+				background: $color-primario;
 			}
 		}
 	}
