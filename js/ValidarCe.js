@@ -37,7 +37,18 @@ var validarCheckboxH = function () {
 
 			if (resultado == false) {
 				elementosH[i].parentNode.className = elementosH[i].parentNode.className + ' error';
-				console.log('El formulario Hematologia esta incompleto');
+				// console.log('El formulario Hematologia esta incompleto');
+				Swal.fire({
+					title: 'No selecciono ninguna de las opciones',
+					icon: 'error',
+					timer: '4000',
+					timerProgressBar: true,
+					toast: true,
+					position: 'top-end',
+					allowEscapeKey: false,
+					stopKeydownPropagation: false,
+					showConfirmButton: false,
+				});
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -63,7 +74,18 @@ var validarCheckboxQ = function () {
 
 			if (resultado == false) {
 				elementosQ[i].parentNode.className = elementosQ[i].parentNode.className + ' error';
-				console.log('El formulario Quimica esta incompleto');
+				// console.log('El formulario Quimica esta incompleto');
+				Swal.fire({
+					title: 'No selecciono ninguna de las opciones',
+					icon: 'error',
+					timer: '4000',
+					timerProgressBar: true,
+					toast: true,
+					position: 'top-end',
+					allowEscapeKey: false,
+					stopKeydownPropagation: false,
+					showConfirmButton: false,
+				});
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -89,7 +111,18 @@ var validarCheckboxS = function () {
 
 			if (resultado == false) {
 				elementosS[i].parentNode.className = elementosS[i].parentNode.className + ' error';
-				console.log('El formulario Serologia esta incompleto');
+				// console.log('El formulario Serologia esta incompleto');
+				Swal.fire({
+					title: 'No selecciono ninguna de las opciones',
+					icon: 'error',
+					timer: '4000',
+					timerProgressBar: true,
+					toast: true,
+					position: 'top-end',
+					allowEscapeKey: false,
+					stopKeydownPropagation: false,
+					showConfirmButton: false,
+				});
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -115,7 +148,18 @@ var validarCheckboxHr = function () {
 
 			if (resultado == false) {
 				elementosHr[i].parentNode.className = elementosHr[i].parentNode.className + ' error';
-				console.log('El formulario Hormonas esta incompleto');
+				// console.log('El formulario Hormonas esta incompleto');
+				Swal.fire({
+					title: 'No selecciono ninguna de las opciones',
+					icon: 'error',
+					timer: '4000',
+					timerProgressBar: true,
+					toast: true,
+					position: 'top-end',
+					allowEscapeKey: false,
+					stopKeydownPropagation: false,
+					showConfirmButton: false,
+				});
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -141,7 +185,18 @@ var validarCheckboxHc = function () {
 
 			if (resultado == false) {
 				elementosHc[i].parentNode.className = elementosHc[i].parentNode.className + ' error';
-				console.log('El formulario Heces esta incompleto');
+				// console.log('El formulario Heces esta incompleto');
+				Swal.fire({
+					title: 'No selecciono ninguna de las opciones',
+					icon: 'error',
+					timer: '4000',
+					timerProgressBar: true,
+					toast: true,
+					position: 'top-end',
+					allowEscapeKey: false,
+					stopKeydownPropagation: false,
+					showConfirmButton: false,
+				});
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -167,7 +222,18 @@ var validarCheckboxO = function () {
 
 			if (resultado == false) {
 				elementosO[i].parentNode.className = elementosO[i].parentNode.className + ' error';
-				console.log('El formulario Orina esta incompleto');
+				// console.log('El formulario Orina esta incompleto');
+				Swal.fire({
+					title: 'No selecciono ninguna de las opciones',
+					icon: 'error',
+					timer: '4000',
+					timerProgressBar: true,
+					toast: true,
+					position: 'top-end',
+					allowEscapeKey: false,
+					stopKeydownPropagation: false,
+					showConfirmButton: false,
+				});
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -193,7 +259,18 @@ var validarCheckboxMt = function () {
 
 			if (resultado == false) {
 				elementosMt[i].parentNode.className = elementosMt[i].parentNode.className + ' error';
-				console.log('El formulario Marcadores Tumulares esta incompleto');
+				// console.log('El formulario Marcadores Tumulares esta incompleto');
+				Swal.fire({
+					title: 'No selecciono ninguna de las opciones',
+					icon: 'error',
+					timer: '4000',
+					timerProgressBar: true,
+					toast: true,
+					position: 'top-end',
+					allowEscapeKey: false,
+					stopKeydownPropagation: false,
+					showConfirmButton: false,
+				});
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -219,7 +296,18 @@ var validarCheckboxI = function () {
 
 			if (resultado == false) {
 				elementosI[i].parentNode.className = elementosI[i].parentNode.className + ' error';
-				console.log('El formulario Inmunologa esta incompleto');
+				// console.log('El formulario Inmunologa esta incompleto');
+				Swal.fire({
+					title: 'No selecciono ninguna de las opciones',
+					icon: 'error',
+					timer: '4000',
+					timerProgressBar: true,
+					toast: true,
+					position: 'top-end',
+					allowEscapeKey: false,
+					stopKeydownPropagation: false,
+					showConfirmButton: false,
+				});
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -245,7 +333,18 @@ var validarCheckboxB = function () {
 
 			if (resultado == false) {
 				elementosB[i].parentNode.className = elementosB[i].parentNode.className + ' error';
-				console.log('El formulario Bacterologia esta incompleto');
+				// console.log('El formulario Bacterologia esta incompleto');
+				Swal.fire({
+					title: 'No selecciono ninguna de las opciones',
+					icon: 'error',
+					timer: '4000',
+					timerProgressBar: true,
+					toast: true,
+					position: 'top-end',
+					allowEscapeKey: false,
+					stopKeydownPropagation: false,
+					showConfirmButton: false,
+				});
 				return false;
 			} else {
 				// Eliminamos la clase Error del checkbox
@@ -262,7 +361,18 @@ var validarTextareaOt = function () {
 		if (elementosOt[i].type == 'textarea') {
 			// Si es tipo texto, email o password vamos a comprobar que esten completados los input
 			if (elementosOt[i].value.length == 0) {
-				console.log('El campo ' + elementosOt[i].name + ' esta incompleto');
+				// console.log('El campo ' + elementosOt[i].name + ' esta incompleto');
+				Swal.fire({
+					title: 'El campo otros examenes esta incompleto',
+					icon: 'error',
+					timer: '4000',
+					timerProgressBar: true,
+					toast: true,
+					position: 'top-end',
+					allowEscapeKey: false,
+					stopKeydownPropagation: false,
+					showConfirmButton: false,
+				});
 				elementosOt[i].className = elementosOt[i].className + ' error';
 				return false;
 			} else {
@@ -277,7 +387,18 @@ var enviarH = function () {
 	if (!validarCheckboxH()) {
 		console.log('Falto validar por lo menos un checkbox');
 	} else {
-		console.log('Enviando');
+		// console.log('Enviando');
+		Swal.fire({
+			title: 'Enviando',
+			icon: 'success',
+			timer: '4000',
+			timerProgressBar: true,
+			toast: true,
+			position: 'top-end',
+			allowEscapeKey: false,
+			stopKeydownPropagation: false,
+			showConfirmButton: false,
+		});
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
 	}
 };
@@ -286,7 +407,18 @@ var enviarQ = function () {
 	if (!validarCheckboxQ()) {
 		console.log('Falto validar por lo menos un checkbox');
 	} else {
-		console.log('Enviando');
+		// console.log('Enviando');
+		Swal.fire({
+			title: 'Enviando',
+			icon: 'success',
+			timer: '4000',
+			timerProgressBar: true,
+			toast: true,
+			position: 'top-end',
+			allowEscapeKey: false,
+			stopKeydownPropagation: false,
+			showConfirmButton: false,
+		});
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
 	}
 };
@@ -295,7 +427,18 @@ var enviarS = function () {
 	if (!validarCheckboxS()) {
 		console.log('Falto validar por lo menos un checkbox');
 	} else {
-		console.log('Enviando');
+		// console.log('Enviando');
+		Swal.fire({
+			title: 'Enviando',
+			icon: 'success',
+			timer: '4000',
+			timerProgressBar: true,
+			toast: true,
+			position: 'top-end',
+			allowEscapeKey: false,
+			stopKeydownPropagation: false,
+			showConfirmButton: false,
+		});
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
 	}
 };
@@ -304,7 +447,18 @@ var enviarHr = function () {
 	if (!validarCheckboxHr()) {
 		console.log('Falto validar por lo menos un checkbox');
 	} else {
-		console.log('Enviando');
+		// console.log('Enviando');
+		Swal.fire({
+			title: 'Enviando',
+			icon: 'success',
+			timer: '4000',
+			timerProgressBar: true,
+			toast: true,
+			position: 'top-end',
+			allowEscapeKey: false,
+			stopKeydownPropagation: false,
+			showConfirmButton: false,
+		});
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
 	}
 };
@@ -313,7 +467,18 @@ var enviarHc = function () {
 	if (!validarCheckboxHc()) {
 		console.log('Falto validar por lo menos un checkbox');
 	} else {
-		console.log('Enviando');
+		// console.log('Enviando');
+		Swal.fire({
+			title: 'Enviando',
+			icon: 'success',
+			timer: '4000',
+			timerProgressBar: true,
+			toast: true,
+			position: 'top-end',
+			allowEscapeKey: false,
+			stopKeydownPropagation: false,
+			showConfirmButton: false,
+		});
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
 	}
 };
@@ -322,7 +487,18 @@ var enviarO = function () {
 	if (!validarCheckboxO()) {
 		console.log('Falto validar por lo menos un checkbox');
 	} else {
-		console.log('Enviando');
+		// console.log('Enviando');
+		Swal.fire({
+			title: 'Enviando',
+			icon: 'success',
+			timer: '4000',
+			timerProgressBar: true,
+			toast: true,
+			position: 'top-end',
+			allowEscapeKey: false,
+			stopKeydownPropagation: false,
+			showConfirmButton: false,
+		});
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
 	}
 };
@@ -331,7 +507,18 @@ var enviarMt = function () {
 	if (!validarCheckboxMt()) {
 		console.log('Falto validar por lo menos un checkbox');
 	} else {
-		console.log('Enviando');
+		// console.log('Enviando');
+		Swal.fire({
+			title: 'Enviando',
+			icon: 'success',
+			timer: '4000',
+			timerProgressBar: true,
+			toast: true,
+			position: 'top-end',
+			allowEscapeKey: false,
+			stopKeydownPropagation: false,
+			showConfirmButton: false,
+		});
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
 	}
 };
@@ -340,7 +527,18 @@ var enviarI = function () {
 	if (!validarCheckboxI()) {
 		console.log('Falto validar por lo menos un checkbox');
 	} else {
-		console.log('Enviando');
+		// console.log('Enviando');
+		Swal.fire({
+			title: 'Enviando',
+			icon: 'success',
+			timer: '4000',
+			timerProgressBar: true,
+			toast: true,
+			position: 'top-end',
+			allowEscapeKey: false,
+			stopKeydownPropagation: false,
+			showConfirmButton: false,
+		});
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
 	}
 };
@@ -349,7 +547,18 @@ var enviarB = function () {
 	if (!validarCheckboxB()) {
 		console.log('Falto validar por lo menos un checkbox');
 	} else {
-		console.log('Enviando');
+		// console.log('Enviando');
+		Swal.fire({
+			title: 'Enviando',
+			icon: 'success',
+			timer: '4000',
+			timerProgressBar: true,
+			toast: true,
+			position: 'top-end',
+			allowEscapeKey: false,
+			stopKeydownPropagation: false,
+			showConfirmButton: false,
+		});
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
 	}
 };
@@ -358,7 +567,18 @@ var enviarOt = function () {
 	if (!validarTextareaOt()) {
 		console.log('Falto validar el textarea');
 	} else {
-		console.log('Enviando');
+		// console.log('Enviando');
+		Swal.fire({
+			title: 'Enviando',
+			icon: 'success',
+			timer: '4000',
+			timerProgressBar: true,
+			toast: true,
+			position: 'top-end',
+			allowEscapeKey: false,
+			stopKeydownPropagation: false,
+			showConfirmButton: false,
+		});
 		//Antoni aqui tienes que colocar el codigo para enviar los datos a la base de datos xd
 	}
 };
