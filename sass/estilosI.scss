@@ -3,15 +3,14 @@
 * {
 	margin: 0;
 	padding: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
 body {
 	background: $fondo;
 	font-family: $font-family;
-	border-top: 30px solid $primary;
+	border-top: 20px solid $primary;
+	font-size: 16px;
 }
 
 /* ------------------------- */
@@ -23,28 +22,26 @@ body {
 	padding: 40px;
 	margin: auto;
 	background: #fff;
-	box-shadow: 0px 0px 3px grey;
-	img {
+	box-shadow: 0px 0px 10px gray;
+	> img {
 		width: 100%;
 		height: auto;
 	}
-	h1 {
-		color: #303f9f;
-		border-bottom: 2px solid #c7c7c7;
+	> h1 {
+		color: $primary;
+		border-bottom: $borde solid $primary;
 	}
 }
 
 .contenedor-formulario {
 	width: 100%;
-	color: $white;
-	padding: 50px;
+	padding: 40px;
 	.formulario {
 		width: 100%;
 		margin: auto;
 		.input-group {
 			position: relative;
 			margin-bottom: 32px;
-			// background: rgba(#ccc, .2)
 			input[type='text'],
 			input[type='password'] {
 				font-family: $font-family;
@@ -58,7 +55,6 @@ body {
 				border-bottom: $borde solid $light-primary;
 				&:focus,
 				&:active {
-					outline: none;
 					border-bottom: $borde solid $primary;
 				}
 				&.error {
@@ -71,10 +67,8 @@ body {
 			label {
 				color: $primary;
 				&.label {
-					-webkit-transition: all 0.3s ease;
-					-o-transition: all 0.3s ease;
 					transition: all 0.3s ease;
-					margin-left: 15px;
+					margin-left: 16px;
 					font-size: 16px;
 					line-height: 16px;
 					position: absolute;
@@ -101,8 +95,6 @@ body {
 			padding: 15px;
 			width: 100%;
 			outline: none;
-			-webkit-transition: all 0.3s ease;
-			-o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
 			&:hover {
 				background: $color-primario;

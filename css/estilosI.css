@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   background: #f2f2f7;
   font-family: "Roboto", arial;
-  border-top: 30px solid #303f9f;
+  border-top: 20px solid #303f9f;
+  font-size: 16px;
 }
 
 /* ------------------------- */
@@ -20,24 +21,23 @@ body {
   padding: 40px;
   margin: auto;
   background: #fff;
-  -webkit-box-shadow: 0px 0px 3px grey;
-          box-shadow: 0px 0px 3px grey;
+  -webkit-box-shadow: 0px 0px 10px gray;
+          box-shadow: 0px 0px 10px gray;
 }
 
-.wrap img {
+.wrap > img {
   width: 100%;
   height: auto;
 }
 
-.wrap h1 {
+.wrap > h1 {
   color: #303f9f;
-  border-bottom: 2px solid #c7c7c7;
+  border-bottom: 2px solid #303f9f;
 }
 
 .contenedor-formulario {
   width: 100%;
-  color: #f2f2f2;
-  padding: 50px;
+  padding: 40px;
 }
 
 .contenedor-formulario .formulario {
@@ -66,7 +66,6 @@ body {
 .contenedor-formulario .formulario .input-group input[type='text']:focus, .contenedor-formulario .formulario .input-group input[type='text']:active,
 .contenedor-formulario .formulario .input-group input[type='password']:focus,
 .contenedor-formulario .formulario .input-group input[type='password']:active {
-  outline: none;
   border-bottom: 2px solid #303f9f;
 }
 
@@ -87,7 +86,7 @@ body {
 .contenedor-formulario .formulario .input-group label.label {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  margin-left: 15px;
+  margin-left: 16px;
   font-size: 16px;
   line-height: 16px;
   position: absolute;

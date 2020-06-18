@@ -3,8 +3,6 @@
 * {
 	margin: 0;
 	padding: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -23,20 +21,18 @@ body {
 	padding: 40px;
 	margin: auto;
 	background: #fff;
-	box-shadow: 0px 0px 3px grey;
+	box-shadow: 0px 0px 10px grey;
 }
 
 .contenedor-formulario {
 	width: 100%;
-	color: $white;
-	padding: 50px;
+	padding: 40px;
 	.formulario {
 		width: 100%;
 		margin: auto;
 		.input-group {
 			position: relative;
 			margin-bottom: 32px;
-			// background: rgba(#ccc, .2)
 			input[type='text'],
 			input[type='password'] {
 				font-family: $font-family;
@@ -50,7 +46,6 @@ body {
 				border-bottom: $borde solid $light-primary;
 				&:focus,
 				&:active {
-					outline: none;
 					border-bottom: $borde solid $primary;
 				}
 				&.error {
@@ -63,10 +58,8 @@ body {
 			label {
 				color: $primary;
 				&.label {
-					-webkit-transition: all 0.3s ease;
-					-o-transition: all 0.3s ease;
 					transition: all 0.3s ease;
-					margin-left: 15px;
+					margin-left: 16px;
 					font-size: 16px;
 					line-height: 16px;
 					position: absolute;
@@ -93,11 +86,9 @@ body {
 			padding: 15px;
 			width: 100%;
 			outline: none;
-			-webkit-transition: all 0.3s ease;
-			-o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
 			&:hover {
-				background: #1976d2;
+				background: $color-primario;
 			}
 		}
 	}
@@ -130,11 +121,11 @@ a {
 	padding: 30px;
 	position: relative;
 	z-index: 200;
-	border: 2px solid transparent;
+	border: $borde solid transparent;
 	&.active,
 	&:hover {
 		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.16);
-		border: $borde solid #213f8f;
+		border: $borde solid $primary;
 	}
 	&.active {
 		&::before {
@@ -142,7 +133,7 @@ a {
 			display: block;
 			height: 0;
 			width: 0;
-			border-top: 15px solid #213f8f;
+			border-top: 15px solid $primary;
 			border-right: 15px solid transparent;
 			border-bottom: 15px solid transparent;
 			border-left: 15px solid transparent;
@@ -156,9 +147,9 @@ a {
 		border: $borde solid $error;
 	}
 	i {
-		font-size: 30px;
-		margin-left: 30px;
-		color: #213f8f;
+		font-size: 40px;
+		margin-left: 20px;
+		color: $primary;
 	}
 }
 
@@ -214,16 +205,10 @@ a {
 .opciones .contenido-opcion {
 	padding: 30px;
 	&:hover {
-		background: #213f8f;
+		background: $primary;
 		.titulo,
 		.descripcion {
 			color: #fff;
 		}
-	}
-}
-
-@media screen and (max-width: 800px) {
-	.selectbox {
-		width: 100%;
 	}
 }

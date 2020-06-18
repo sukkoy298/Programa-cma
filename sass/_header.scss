@@ -3,51 +3,35 @@
 /* ------------------------- */
 header {
 	overflow: hidden;
-	background: #4267b2;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background: $primary;
 	.logo {
 		float: left;
 		padding: 12px;
 		text-decoration: none;
-		border-radius: 4px;
+		border-radius: 16px;
 		&:active {
-			background: $white;
+			background: #fff;
 		}
 		img {
-			height: 50px;
 			width: auto;
+			height: 50px;
 		}
 	}
 	.header-right {
 		float: right;
-		margin-right: 10px;
 		a {
 			float: left;
 			color: $black;
-			text-align: center;
-			padding: 12px;
+			padding: 16px;
 			text-decoration: none;
-			font-size: 18px;
-			line-height: 54px;
-			border-radius: 4px;
-			margin-right: 10px;
-			border-right: 1px solid #304b83;
-			border-left: 1px solid #304b83;
+			font-size: 24px;
+			margin: 8px;
+			border-right: $borde solid #3e4a97;
+			border-left: $borde solid #3e4a97;
+			border-radius: 16px;
 			&:active {
-				color: $white;
+				color: #fff;
 			}
 		}
-	}
-}
-
-@media screen and (max-width: 500px) {
-	.header a {
-		float: none;
-		display: block;
-		text-align: left;
-	}
-
-	.header-right {
-		float: none;
 	}
 }

@@ -3,8 +3,6 @@
 * {
 	margin: 0;
 	padding: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -44,7 +42,7 @@ body {
 	width: 100%;
 	margin-top: 20px;
 	margin-left: 20px;
-	border: 2px solid $color-secundario;
+	border: $borde solid $color-secundario;
 	border-radius: 10px;
 	table {
 		border-collapse: collapse;
@@ -71,7 +69,7 @@ form {
 }
 
 fieldset {
-	border: 2px solid $divider;
+	border: $borde solid $divider;
 	padding: 20px;
 	border-radius: 10px;
 	width: 100%;
@@ -82,7 +80,7 @@ fieldset {
 	margin-left: 40px;
 	margin-top: 20px;
 	display: none;
-	border: 2px solid $color-primario;
+	border: $borde solid $color-primario;
 	table {
 		border-collapse: collapse;
 		width: 100%;
