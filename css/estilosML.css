@@ -54,40 +54,11 @@ header .header-right a:active {
   color: #fff;
 }
 
-.panel {
-  width: 100%;
-  background: #555;
-  overflow: auto;
-}
-
-.panel button {
-  float: left;
-  padding: 12px;
-  background: #555;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-  border: none;
-  -webkit-transition: 0.5s ease all;
-  transition: 0.5s ease all;
-  cursor: pointer;
-}
-
-.panel button:hover {
-  background: #009245;
-}
-
-.section1 {
-  float: left;
-  width: 30%;
-}
-
 .trabajadores {
-  width: 100%;
-  margin-top: 20px;
-  margin-left: 20px;
+  width: 35%;
+  float: left;
+  margin: 20px;
   border: 2px solid #009245;
-  border-radius: 10px;
 }
 
 .trabajadores table {
@@ -101,7 +72,7 @@ header .header-right a:active {
 }
 
 .trabajadores table tr:nth-child(even) {
-  background: #f2f2f2;
+  background: #ffffff;
 }
 
 .trabajadores table th {
@@ -109,26 +80,44 @@ header .header-right a:active {
   color: white;
 }
 
-form {
-  width: 25%;
-  margin-top: 20px;
-  margin-left: 20px;
+.trabajadores .panel {
   width: 100%;
+  background: #555;
+  overflow: auto;
 }
 
-fieldset {
-  border: 2px solid #b6b6b6;
-  padding: 20px;
-  border-radius: 10px;
-  width: 100%;
+.trabajadores .panel button {
+  float: left;
+  padding: 12px;
+  background: #555;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  border: none;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  cursor: pointer;
+}
+
+.trabajadores .panel button:hover {
+  background: #009245;
+}
+
+.pocoTexto {
+  color: #b6b6b6;
+  display: inline-block;
+  width: 58%;
+  padding: 80px 10px 10px 10px;
+  margin: 20px;
+  text-align: center;
+  font-size: 22px;
 }
 
 .resultadosP {
   width: 60%;
-  margin-left: 40px;
-  margin-top: 20px;
-  display: none;
+  margin: 20px;
   border: 2px solid #0074d9;
+  display: none;
 }
 
 .resultadosP table {
@@ -137,18 +126,17 @@ fieldset {
 }
 
 .resultadosP table th,
-.resultadosP table td,
-.resultadosP table textarea {
+.resultadosP table td {
   padding: 10px;
 }
 
 .resultadosP table tr:nth-child(even) {
-  background: #f2f2f2;
+  background: #ffffff;
 }
 
-.resultadosP table th {
+.resultadosP table thead th {
   background: #0074d9;
-  color: white;
+  color: #fff;
 }
 
 .resultadosP .panel {
@@ -163,7 +151,7 @@ fieldset {
   background: #555;
   color: white;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 14px;
   border: none;
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
@@ -171,13 +159,6 @@ fieldset {
 }
 
 .resultadosP .panel button:hover {
-  background: #009245;
-}
-
-@media screen and (max-width: 500px) {
-  .panel button {
-    float: none;
-    display: block;
-  }
+  background: #0074d9;
 }
 /*# sourceMappingURL=estilosML.css.map */

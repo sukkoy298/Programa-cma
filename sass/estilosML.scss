@@ -13,37 +13,11 @@ body {
 
 @import '_header';
 
-.panel {
-	width: 100%;
-	background: #555;
-	overflow: auto;
-	button {
-		float: left;
-		padding: 12px;
-		background: #555;
-		color: white;
-		text-decoration: none;
-		font-size: 17px;
-		border: none;
-		transition: 0.5s ease all;
-		cursor: pointer;
-		&:hover {
-			background: $color-secundario;
-		}
-	}
-}
-
-.section1 {
-	float: left;
-	width: 30%;
-}
-
 .trabajadores {
-	width: 100%;
-	margin-top: 20px;
-	margin-left: 20px;
+	width: 35%;
+	float: left;
+	margin: 20px;
 	border: $borde solid $color-secundario;
-	border-radius: 10px;
 	table {
 		border-collapse: collapse;
 		width: 100%;
@@ -52,48 +26,10 @@ body {
 			padding: 10px;
 		}
 		tr:nth-child(even) {
-			background: $white;
+			background: #ffffff;
 		}
 		th {
 			background: $color-secundario;
-			color: white;
-		}
-	}
-}
-
-form {
-	width: 25%;
-	margin-top: 20px;
-	margin-left: 20px;
-	width: 100%;
-}
-
-fieldset {
-	border: $borde solid $divider;
-	padding: 20px;
-	border-radius: 10px;
-	width: 100%;
-}
-
-.resultadosP {
-	width: 60%;
-	margin-left: 40px;
-	margin-top: 20px;
-	display: none;
-	border: $borde solid $color-primario;
-	table {
-		border-collapse: collapse;
-		width: 100%;
-		th,
-		td,
-		textarea {
-			padding: 10px;
-		}
-		tr:nth-child(even) {
-			background: $white;
-		}
-		th {
-			background: $color-primario;
 			color: white;
 		}
 	}
@@ -107,7 +43,7 @@ fieldset {
 			background: #555;
 			color: white;
 			text-decoration: none;
-			font-size: 17px;
+			font-size: 14px;
 			border: none;
 			transition: 0.5s ease all;
 			cursor: pointer;
@@ -118,9 +54,55 @@ fieldset {
 	}
 }
 
-@media screen and (max-width: 500px) {
-	.panel button {
-		float: none;
-		display: block;
+.pocoTexto {
+	color: $divider;
+	display: inline-block;
+	width: 58%;
+	padding: 80px 10px 10px 10px;
+	margin: 20px;
+	text-align: center;
+	font-size: 22px;
+}
+
+.resultadosP {
+	width: 60%;
+	margin: 20px;
+	border: $borde solid $color-primario;
+	display: none;
+	table {
+		border-collapse: collapse;
+		width: 100%;
+		th,
+		td {
+			padding: 10px;
+		}
+		tr:nth-child(even) {
+			background: #ffffff;
+		}
+		thead {
+			th {
+				background: $color-primario;
+				color: #fff;
+			}
+		}
+	}
+	.panel {
+		width: 100%;
+		background: #555;
+		overflow: auto;
+		button {
+			float: left;
+			padding: 12px;
+			background: #555;
+			color: white;
+			text-decoration: none;
+			font-size: 14px;
+			border: none;
+			transition: 0.5s ease all;
+			cursor: pointer;
+			&:hover {
+				background: $color-primario;
+			}
+		}
 	}
 }
