@@ -144,6 +144,29 @@ body {
 	}
 }
 
+.pacientesR {
+	width: 100%;
+	border: $borde solid $color-primario;
+	table {
+		border-collapse: collapse;
+		width: 100%;
+		th,
+		td {
+			padding: 10px;
+		}
+		tr:nth-child(even) {
+			background: #f0f0f0;
+		}
+		thead {
+			th {
+				background: $color-primario;
+				color: #fff;
+			}
+		}
+	}
+}
+
+
 a {
 	text-decoration: none;
 }

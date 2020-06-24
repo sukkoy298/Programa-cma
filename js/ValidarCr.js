@@ -37,17 +37,26 @@ var enviar = function () {
 	} else {
 		// console.log('Enviando');
 		//Antoni coloca el codigo para enviar los datos a la base de datos aqui :v
+		var cedulaP = document.getElementById('cedula').value;
+
 		Swal.fire({
-			title: 'Enviando',
-			icon: 'success',
-			timer: '4000',
-			timerProgressBar: true,
-			toast: true,
-			position: 'top-end',
+			title: 'Pacientes registrados',
+			html:
+				'<div class="pacientesR"><table><thead><tr><th>Cedula</th><th>Nombre</th><th>Fecha de nacimiento</th><th>Ver registro</th></tr></thead><tbody><tr><td><label id="1"></label></td><td><label id="2"></label></td><td><label id="3"></label></td><td><label id="4"></label></td></tr><tr><td><label id="5"></label></td><td><label id="6"></label></td><td><label id="7"></label></td><td><label id="8"></label></td></tr></tbody></table></div>',
+			width: '50%',
+			allowOutsideClick: false,
 			allowEscapeKey: false,
+			allowEnterKey: false,
 			stopKeydownPropagation: false,
 			showConfirmButton: false,
+			showCloseButton: true,
+			closeButtonAriaLabel: 'Cerrar',
 		});
+		var label1 = document.getElementById('1'),
+			label5 = document.getElementById('5');
+
+		label1.innerText = cedulaP;
+		label5.innerText = cedulaP;
 	}
 };
 

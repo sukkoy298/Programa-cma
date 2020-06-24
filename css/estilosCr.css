@@ -223,6 +223,30 @@ header .header-right a:active {
   }
 }
 
+.pacientesR {
+  width: 100%;
+  border: 2px solid #0074d9;
+}
+
+.pacientesR table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.pacientesR table th,
+.pacientesR table td {
+  padding: 10px;
+}
+
+.pacientesR table tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.pacientesR table thead th {
+  background: #0074d9;
+  color: #fff;
+}
+
 a {
   text-decoration: none;
 }
