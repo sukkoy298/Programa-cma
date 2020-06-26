@@ -16,7 +16,7 @@
 			<a href="#default" class="logo"><img src="img/LOGO.png" alt="Logo del Centro Medico el Ángel" /></a>
 			<div class="header-right">
 				<a href="#config"><i class="fas fa-cog"></i></a>
-				<a href="http://localhost/Programa-cma-master/"><i class="fas fa-sign-in-alt"></i></a>
+				<a href="http://200.8.160.206:80/Programa-cma-master/"><i class="fas fa-sign-in-alt"></i></a>
 			</div>
 		</header>
 		<a href="index-cajaR.html" class="tablink">Registro de pacientes</a>
@@ -24,27 +24,27 @@
 		<a href="index-cajaE.html" class="tablink">Solicitud de examenes</a>
 
 		<div class="contenedor-formulario">
-			<div class="wrap">
-				<form action="" class="formulario" name="form_datosP" method="post">
+			<div class="wrap" id="wrap">
+				<form action="" class="formulario" name="form_datosP" method="post" id='formu'>
 					<div>
 						<div class="input-group">
-							<input type="number" name="idfac" id="idfactura" disabled />
+							<input type="number" name="idfac" id="idfactura"  />
 							<label for="idfac" class="label">N° de Factura:</label>
 						</div>
 						<div class="input-group">
-							<input type="text" name="fname" id="fname" />
+							<input type="text" name="fname" id="fname"/>
 							<label for="fname" class="label">Nombre:</label>
 						</div>
 						<div class="input-group">
-							<input type="text" name="flastn" id="flastn" />
+							<input type="text" name="flastn" id="flastn" onchange="guardar('id')"/>
 							<label for="flastn" class="label">Apellido:</label>
 						</div>
 						<div class="input-group">
-							<input type="number" name="fcedula" id="fcedula" />
+							<input type="number" name="fcedula" id="fcedula" onchange="guardar('id')"/>
 							<label for="fcedula" class="label">Cedula de identidad:</label>
 						</div>
 						<div class="input-group">
-							<input type="date" name="fdateN" id="fdateN" />
+							<input type="date" name="fdateN" id="fdateN" onchange="guardar('id')"/>
 							<label for="fdateN" class="labelD">Fecha de nacimiento:</label>
 						</div>
 						<div class="input-group">
@@ -56,6 +56,13 @@
 				</form>
 			</div>
 		</div>
+
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/sweetalert2.all.min.js"></script>
+		<script src="js/validarCd.js"></script>
+	</body>
+</html>
+
 
 		<script src="js/jquery-3.5.1.min.js"></script>
 		<script src="js/sweetalert2.all.min.js"></script>
