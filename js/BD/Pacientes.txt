@@ -1,0 +1,8 @@
+CREATE TABLE Pacientes(
+ID int(11) not null PRIMARY KEY auto_increment,
+Name varchar(25) not null,
+lastName varchar(25) not null,
+Fecha_Nacimiento date not null,
+CI int(11) not null, 
+Categoria int(1) not null
+);

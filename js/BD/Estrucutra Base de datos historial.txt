@@ -1,0 +1,27 @@
+CREATE TABLE Historia(
+ID_relacionario varchar(14) not null,
+Fecha date not null,
+Estado int(1) not null,
+lugar int(5) not null,
+Tipo varchar(8) not null
+);
+CREATE TABLE Resultados_Examenes(
+ID_relacionario varchar(14) not null,
+ID_Examen varchar(14) not null, el id del examen + categoria
+resultado float not null
+);
+CREATE TABLE Resultados_Consulta(
+ID_relacionario varchar(14) not null,
+ID_Consulta varchar(50) not null,
+resultado varchar(50) not null
+);
+CREATE TABLE Modificaciones(
+ID_relacionario varchar(14) not null,
+accion varchar(10) not null,
+user varchar(14) not null,
+Fecha DATE not null
+);
+estados:
+0 = no atendido;
+1 = atendido(esperando resultados);
+2 = ya con los resultados cargados;

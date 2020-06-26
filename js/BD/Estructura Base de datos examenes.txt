@@ -1,0 +1,22 @@
+CREATE TABLE Examenes(
+ID int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+nombre varchar(40) NOT NULL,
+Costo float not null,
+Disponible boolean not null
+);
+CREATE TABLE Examenes_datos(
+ID int(11) NOT NULL,
+Categoria int(3) NOT NULL,
+Valor_Referencial float NOT NULL,
+definidor_minimo varchar(20) not null,
+definidor_maximo varchar(20) not null,
+Reactivo int(11) not null,
+cantidad_N float not null
+);
+CREATE TABLE Reactivos(
+ID int(11) not null primary key auto_increment,
+nombre varchar(40) not null,
+existencia double not null,
+categoria varchar(10) not null
+);
+/*modificar y acoplar en caja*/

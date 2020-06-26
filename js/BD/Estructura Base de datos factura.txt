@@ -1,0 +1,6 @@
+CREATE TABLE Factura(
+ID int(11) not null primary key auto_increment,
+Fecha date not null,
+Paciente varchar(14) not null,
+Precio float not null
+);
