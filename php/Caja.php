@@ -10,61 +10,73 @@ include ('Conexion.php');
     $FechaNacimiento = $_POST['valor4'];
     $valor5 = $_POST['valor5'];
     $Servicio = $_POST['valor6'];
-    $data= json_decode($_POST['examenes']); 
+    $data = json_decode($_POST['examenes']);
+    $size = $_POST['size'];
+    $ID_Paciente;
 /*comunicacion con la Base de datos*/
 try {
     if ($Nombre != "" && $Apellido != "" && $Cedula != "" && $FechaNacimiento != "") {
-        $ComprobarPaciente = "SELECT ID_Alfa FROM pacientes WHERE Name = '$Nombre' AND lastName = '$Apellido' AND Fecha_Nacimiento = '$FechaNacimiento' AND CI = '$Cedula'";
-        $resultado = query($ComprobarPaciente, 'ID_Alfa');
-        if ($resultado != 'P') {
-            $encuesta = "INSERT INTO pacientes(Name, lastName, Fecha_Nacimiento, CI) VALUES('$Nombre', '$Apellido', '$FechaNacimiento','$Cedula')";
-            $resultado = AddIndatabase($encuesta); 
+        $CI = explode('-', $Cedula);
+        $ComprobarPaciente = "SELECT ID FROM pacientes WHERE Name = '$Nombre' AND lastName = '$Apellido' AND Fecha_Nacimiento = '$FechaNacimiento' AND CI = '$CI[0]' AND Categoria = '$CI[1]'";
+        $ID_Paciente= query($ComprobarPaciente, 'ID');
+        if (!is_numeric($ID_Paciente)) {
+            $encuesta = "INSERT INTO pacientes(Name, lastName, Fecha_Nacimiento, CI, Categoria) VALUES('$Nombre', '$Apellido', '$FechaNacimiento','$CI[0]', '$CI[1]')";
+            $ID_Paciente = AddIndatabase($encuesta); 
+            $encuesta = "SELECT ID FROM pacientes WHERE Name = '$Nombre' AND lastName = '$Apellido' AND Fecha_Nacimiento = '$FechaNacimiento' AND CI = '$CI[0]' AND Categoria = '$CI[1]'";
+            $ID_Paciente= query($encuesta, 'ID');
         }  
-        $encuesta = "SELECT ID_Num FROM pacientes WHERE Name = '$Nombre' AND lastName = '$Apellido' AND Fecha_Nacimiento = '$FechaNacimiento' AND CI = '$Cedula'";
-        $resultado = query($encuesta, 'ID_Num');
-        $ID_Paciente = 'P' . $resultado;
-        $siguiente_Pasar = '1';
-        $encuesta = "SELECT ID_Alfa FROM facturas WHERE Fecha = '$fecha' AND Siguiente_Pasar = 1 AND tip_Servi = '$Servicio'";
-        $resultado = query($encuesta, 'ID_Alfa');
-        if ($resultado == 'F') {
-            $siguiente_Pasar = '0';
-        }
         $Precio_Factura = 0.0;
         $sumador = 0;
-      if ($Servicio == 'Examenes') {
+        $año_nacimiento = explode('-', $FechaNacimiento);
+        $Edad = date('Y') - $año_nacimiento[0];
+      if ($Servicio == 'Examenes' || $Servicio == 'Ambos') {
      /*determinacion del precio en factura y si se cuentan con los reactivos necesarios*/
-         while ($sumador < sizeof($data)) {  
-             $encuesta = "SELECT ID_Alfa FROM examenes WHERE ID_Num = '$data[$sumador]'";
-             $comprobar_Existencia_Examen = query($encuesta, 'ID_Alfa');
-             if ($comprobar_Existencia_Examen != 'E') {
-                 die('Examen No Registrado');
+     for ($i=0; $i < sizeof($data); $i++) {  
+             $encuesta = "SELECT Costo FROM Examenes WHERE ID = '$data[$i]'";
+             $Costo_Examenes = query($encuesta, 'Costo');
+            $encuesta = "SELECT Reactivo, cantidad_N, Categoria FROM examenes_datos WHERE ID  = '$data[$i]' AND definidor_minimo < '$Edad' AND definidor_maximo > '$Edad'";
+             $establecer_conexion = mysqli_query($conexion, $encuesta);
+             $fila_Reactivos = mysqli_fetch_row($establecer_conexion);
+             if ($fila_Reactivos[1] == null || !is_numeric($fila_Reactivos[1])) {
+                 die('Examen No disponible para la edad del paciente');
              }
-             $id_examen = "E" . $data[$sumador];
-             $encuesta = "SELECT ID_Reacti, Cantidad_Requerida FROM Reactivos_Necesarios WHERE ID_Examen = '$id_examen'";
-             $CantidadRequerida = query($encuesta, 'Cantidad_Requerida');
-             if (!is_numeric($CantidadRequerida)) {
-                die('Examen Y/O reactivos no registrados');
-             }
-             $id_Reactivo = query($encuesta, 'ID_Reacti');
-             $id_Num_Reactivos = explode("R", $id_Reactivo);
-             $encuesta = "SELECT Existencia FROM reactivos WHERE ID_Num = '$id_Num_Reactivos[1]'";
-             $CantidadExistente = query($encuesta, 'Existencia');
-           if ($CantidadExistente < $CantidadRequerida) {
+             $encuesta = "SELECT existencia FROM reactivos WHERE ID = '$fila_Reactivos[0]'";
+             $Cantidad_reactivos = query($encuesta, 'existencia');
+           if ($Cantidad_reactivos < $fila_Reactivos[1]) {
                 die('No se cuentan con los reactivos necesarios para realizar el examen');
             }else {
-             $encuesta = "UPDATE reactivos SET Existencia = '$CantidadExistente' - '$CantidadRequerida' WHERE ID_Num = '$id_Num_Reactivos[1]'";
-             Update($encuesta);
-                $encuesta = "SELECT Costo FROM Examenes WHERE ID_Alfa = 'E' AND ID_Num = '$data[$sumador]'";
-                $resultado = query($encuesta, 'Costo');
-                $Precio_Factura = $Precio_Factura + $resultado;
+                $encuesta = "UPDATE reactivos SET existencia = existencia - '$fila_Reactivos[1]' WHERE ID = '$fila_Reactivos[0]'";
+                Update($encuesta);
+             if ($Cantidad_reactivos < $fila_Reactivos[1]) {
+                $encuesta = "UPDATE Examenes SET Disponible = 'false' WHERE ID = '$data[$i]'";
+                Update($encuesta);
+                }
+                $Precio_Factura = $Precio_Factura + $Costo_Examenes;
             }
-            $encuesta = "INSERT INTO datos_extras_factura VALUES('F$ID_Factura', '$id_examen')";
+            $id_Ex = $data[$i] . '-' . $fila_Reactivos[2];
+            $encuesta = "INSERT INTO Resultados_Examenes VALUES('$ID_Factura', '$id_Ex', '0.0')";
             $resultado = AddIndatabase($encuesta);
             $sumador ++;
-     }   
-      }elseif ($Servicio == 'Consulta'){
-     }
-        $encuesta = "INSERT INTO facturas(ID_Pacient, Fecha, Siguiente_Pasar, Costo, tip_Servi) VALUES('$ID_Paciente', '$fecha', '$siguiente_Pasar','$Precio_Factura' , '$Servicio')";
+        }  
+        $contar = "SELECT COUNT(ID_relacionario) as total FROM Historia WHERE Fecha = '$fecha' AND Tipo = 'Examenes'";
+        $lugar = query($contar ,'total');
+        if ($lugar < 1) {
+            $lugar = 1;
+        }
+        $encuesta =  "INSERT INTO Historia VALUES('$ID_Factura', '$fecha', '0', $lugar, 'Examenes')";
+        AddIndatabase($encuesta);
+      }
+      if ($Servicio == "Consulta" || $Servicio == 'Ambos'){
+            $encuesta = "INSERT INTO Resultados_Consulta VALUES('$ID_Factura', '$Consulta', 'false')";
+            $resultado = AddIndatabase($encuesta);
+            $encuesta = "SELECT Costo FROM Consulta WHERE ID = '$consulta'";
+            $precio_Consulta = query($encuesta , 'Costo');
+            $Precio_Factura = $Precio_Factura + $precio_Consulta;
+            $contar = "SELECT count('ID_relacionario') as total FROM Historia WHERE Fecha = '$fecha' AND Tipo = 'Consulta'";
+            $lugar = query($contar ,'total');
+            $encuesta =  "INSERT INTO Historia VALUES('$ID_Factura', '$fecha', '0', $lugar)";
+        }
+        $encuesta = "INSERT INTO factura(Fecha, Paciente, Precio) VALUES('$fecha', '$ID_Paciente','$Precio_Factura')";
         $resultado = AddIndatabase($encuesta);  
     }else{
         die('Rellene todos los campos');
