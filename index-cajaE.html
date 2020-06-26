@@ -16,7 +16,7 @@
 			<a href="#default" class="logo"><img src="img/LOGO.png" alt="Logo del Centro Medico el Ángel" /></a>
 			<div class="header-right">
 				<a href="#config"><i class="fas fa-cog"></i></a>
-				<a href="http://localhost/Programa-cma-master/"><i class="fas fa-sign-in-alt"></i></a>
+				<a href="http://200.8.160.206:80/Programa-cma-master/"><i class="fas fa-sign-in-alt"></i></a>
 			</div>
 		</header>
 		<a href="index-cajaR.html" class="tablink">Registro de pacientes</a>
@@ -24,20 +24,21 @@
 		<a href="#" class="tablink active">Solicitud de examenes</a>
 
 		<div class="contenedor-formulario">
+			<div class='envi'><input type="button" id="btn-envi" value="Enviar" onclick="enviar()"/></div>
 			<div class="wrap">
 				<form action="" class="formulario" name="form_hematologia" method="post">
 					<div>
 						<div class="input-group checkbox">
-							<input type="checkbox" name="hematologia" id="1" />
+							<input type="checkbox" name="hematologia" id="1" value = '1'/>
 							<label for="1" id="L1">Hematología Completa</label>
 
-							<input type="checkbox" name="hematologia" id="2" />
+							<input type="checkbox" name="hematologia" id="2" value = '2'/>
 							<label for="2" id="L2">Hematología Especial</label>
 
-							<input type="checkbox" name="hematologia" id="3" />
+							<input type="checkbox" name="hematologia" id="3" value = '3'/>
 							<label for="3" id="L3">Hemoglobina y Hematocritos</label>
 
-							<input type="checkbox" name="hematologia" id="4" />
+							<input type="checkbox" name="hematologia" id="4" value = '4'/>
 							<label for="4" id="L4">C. Blanco y fórmula</label>
 
 							<input type="checkbox" name="hematologia" id="5" />
@@ -79,7 +80,6 @@
 							<input type="checkbox" name="hematologia" id="17" />
 							<label for="17">Otros</label>
 						</div>
-						<input type="button" id="btn-submitH" value="Enviar" />
 					</div>
 				</form>
 			</div>
@@ -187,7 +187,6 @@
 							<input type="checkbox" name="quimica" id="50" />
 							<label for="50">Otros</label>
 						</div>
-						<input type="button" id="btn-submitQ" value="Enviar" />
 					</div>
 				</form>
 			</div>
@@ -250,7 +249,6 @@
 							<input type="checkbox" name="serologia" id="68" />
 							<label for="68">Otros</label>
 						</div>
-						<input type="button" id="btn-submitS" value="Enviar" />
 					</div>
 				</form>
 			</div>
@@ -313,7 +311,6 @@
 							<input type="checkbox" name="hormonas" id="86" />
 							<label for="86">DHEA - Sulfato</label>
 						</div>
-						<input type="button" id="btn-submitHr" value="Enviar" />
 					</div>
 				</form>
 			</div>
@@ -337,7 +334,6 @@
 							<input type="checkbox" name="heces" id="91" />
 							<label for="91">Azucares Reductores</label>
 						</div>
-						<input type="button" id="btn-submitHc" value="Enviar" />
 					</div>
 				</form>
 			</div>
@@ -358,7 +354,6 @@
 							<input type="checkbox" name="orina" id="95" />
 							<label for="95">Otros</label>
 						</div>
-						<input type="button" id="btn-submitO" value="Enviar" />
 					</div>
 				</form>
 			</div>
@@ -394,7 +389,6 @@
 							<input type="checkbox" name="marcadoresT" id="104" />
 							<label for="104">Otros</label>
 						</div>
-						<input type="button" id="btn-submitMt" value="Enviar" />
 					</div>
 				</form>
 			</div>
@@ -415,7 +409,6 @@
 							<input type="checkbox" name="inmunologia" id="108" />
 							<label for="108">Otros</label>
 						</div>
-						<input type="button" id="btn-submitI" value="Enviar" />
 					</div>
 				</form>
 			</div>
@@ -433,8 +426,6 @@
 							<input type="checkbox" name="bact" id="111" />
 							<label for="111">Otros</label>
 						</div>
-
-						<input type="button" id="btn-submitB" value="Enviar" />
 					</div>
 				</form>
 			</div>
@@ -445,8 +436,6 @@
 						<div class="input-group textarea">
 							<textarea name="otrosE" id="112" placeholder="Escriba los otros examenes"></textarea>
 						</div>
-
-						<input type="button" id="btn-submitOt" value="Enviar" />
 					</div>
 				</form>
 			</div>
