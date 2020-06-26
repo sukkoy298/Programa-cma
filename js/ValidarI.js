@@ -1,7 +1,6 @@
 // Recorrer los elementos y hacer que onchange ejecute una funcion para comprobar el valor de ese input
 var formulario = document.form_inicioSeccion,
 	elementos = formulario.elements;
-
 // Funcion que se ejecuta cuando el evento click es activado
 var validarInputs = function () {
 	for (var i = 0; i < elementos.length; i++) {
@@ -9,32 +8,7 @@ var validarInputs = function () {
 		if (elementos[i].type == 'text' || elementos[i].type == 'password') {
 			// Si es tipo texto o password vamos a comprobar que esten completados los input
 			if (elementos[i].value.length == 0) {
-				if (elementos[i].name == 'user') {
-					Swal.fire({
-						title: 'El campo nombre esta incompleto',
-						icon: 'error',
-						timer: '4000',
-						timerProgressBar: true,
-						toast: true,
-						position: 'top-end',
-						allowEscapeKey: false,
-						stopKeydownPropagation: false,
-						showConfirmButton: false,
-					});
-				} else if (elementos[i].name == 'pass') {
-					Swal.fire({
-						title: 'El campo contraseña esta incompleto',
-						icon: 'error',
-						timer: '4000',
-						timerProgressBar: true,
-						toast: true,
-						position: 'top-end',
-						allowEscapeKey: false,
-						stopKeydownPropagation: false,
-						showConfirmButton: false,
-					});
-				}
-				// console.log('El campo ' + elementos[i].name + ' esta incompleto');
+				console.log('El campo ' + elementos[i].name + ' esta incompleto');
 				elementos[i].className = elementos[i].className + ' error';
 				return false;
 			} else {
@@ -45,22 +19,27 @@ var validarInputs = function () {
 	return true;
 };
 
-var enviar = function () {
+var enviar = function (e) {
 	if (!validarInputs()) {
 		console.log('Falto validar los Input');
 	} else {
-		// console.log('Enviando');
-		Swal.fire({
-			title: 'Enviando',
-			icon: 'success',
-			timer: '4000',
-			timerProgressBar: true,
-			toast: true,
-			position: 'top-end',
-			allowEscapeKey: false,
-			stopKeydownPropagation: false,
-			showConfirmButton: false,
-		});
+		var nombre = $('#nombre').val();
+		var password = $('#pass').val();
+	$.ajax({
+		type: "POST",
+		url: "php/inicio de sesion.php",
+		data: {nombre, password},
+		success: function (response) {
+			if (response == 'a' || response == 'b' || response == 'c' || response == 'd' || response == 'e') {
+				alert('Contraseña y/o Usuario incorrectos');
+				$('#nombre').val('');
+				$('#pass').val('');		
+				validarInputs();	
+			}else{
+				document.location.href= response;
+			}		
+		}
+	});
 	}
 };
 
